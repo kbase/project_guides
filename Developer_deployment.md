@@ -38,7 +38,7 @@ This table summarizes the primary accounts you need to obtain.
 
 | Account Type      | URL                                                                                            | Notes                                                                                         |
 |-------------------|------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| KBase Dev Account | [*https://acounts.kbase.us/*](https://acounts.kbase.us/)                                       |                                                                                               |
+| KBase Dev Account | [*https://accounts.kbase.us/*](https://accounts.kbase.us/)                                       |                                                                                               |
 | User Account      | [*http://kbase.us/sign-up-for-a-kbase-account/*](http://kbase.us/sign-up-for-a-kbase-account/) |                                                                                               |
 | Jira              | [*https://jira.kbase.us/*](https://jira.kbase.us/)                                             | Same as Developer Account                                                                     |
 | GitHub            | [*https://github.com/*](https://github.com/)                                                   | Create a regular github account then request to be added to the KBase Groups via India Gordon |
