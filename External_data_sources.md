@@ -14,7 +14,7 @@ This document should be used for describing each KBase external data source in t
 
 #### How ModelSEED is used in KBase
 
-ModelSEED was the basis for the biochemistry database and the metabolic model reconstruction services in KBase. The KBase biochemistry database was initially based on a reformatted load of the entire ModelSEED biochemistry database. The KBase database has sense undergone additional curation and manual addition of reactions from other data sources, namely published manuscripts and published metabolic models.  
+ModelSEED was the basis for the biochemistry database and the metabolic model reconstruction services in KBase. The KBase biochemistry database was initially based on a reformatted load of the entire ModelSEED biochemistry database. The KBase database has subsequently undergone additional curation and manual addition of reactions from other data sources, namely published manuscripts and published metabolic models.  
 
 #### License for ModelSEED data
 
@@ -46,11 +46,11 @@ KEGG served as one data source for ModelSEED biochemistry database (see above), 
 
 #### License for KEGG data
 
-KEGG data was utilized for the ModelSEED project under the pre 2012 academic license. It is unclear at this time whether a license is required for the limited extent to which KEGG data is exposed in KBase.
+KEGG data was utilized for the ModelSEED project under the free academic license. No KEGG formatted data is directly accessible via KBase.
 
 #### Versions of KEGG utilized
 
-KEGG data in the ModelSEED was last updated in April 2012.
+Release 62.0, April 1, 2012
 
 #### Links to where KEGG can be accessed
 
