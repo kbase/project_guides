@@ -20,6 +20,7 @@ ModelSEED was the basis for the biochemistry database and the metabolic model re
 
 All data specific to ModelSEED is released under the ModelSEED Public License:
 https://github.com/ModelSEED/ModelSEED/blob/master/LICENSE.TXT
+
 However, some data in the ModelSEED is derived from other sources (e.g. KEGG), and that data carries it's own potential licensing restrictions.
 
 #### Versions of ModelSEED utilized
