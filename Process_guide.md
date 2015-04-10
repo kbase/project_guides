@@ -59,7 +59,7 @@ A good PR is one that tackles one individual problem in a fairly atomic way, and
 
 Developers should use their judgment in calling out (via the @user mechanism) to anyone on the project who might have a special interest in a specific PR, or whose input might be particularly valuable.
 
-Since all repositories must have testing enabled and integrated with the Github PR system (see below), a reviewer will indicate to the author any PR that breaks the test suite needs to be put in test-compliant state
+Since all repositories must have testing enabled and integrated with the Github PR system (see below), a reviewer will indicate to the author any PR that breaks the test suite and that needs to be put in a test-compliant state.
 
 In order for this process to work well without creating undue bottlenecks, the teams must be structured with enough people and expertise to provide meaningful review. Furthermore, more senior developers must make good code review an integral part of their workflow, both in terms of providing meaningful feedback to junior developers and colleagues, and in accepting and discussing reviews from junior members. This process ensures that junior members of the team are mentored into becoming good peer reviewers as a natural part of their everyday development work.
 
@@ -77,7 +77,7 @@ The topic of software testing is large and complex, and in order to make meaning
 
 -   Unit tests for single repositories.
 
--   Continuous integration (CI) for all repos that runs unit test suites, hooked to Github for code review via Travis CI.
+-   Continuous integration (CI) for all repos that run unit test suites, hooked to Github for code review via Travis CI.
 
 -   Test coverage for all repos.
 
@@ -113,7 +113,7 @@ These are some potentially useful resources on the topic [FIXME: anyone can sugg
 
 Each repository’s unit test suite must be hooked up to a CI system that runs the entire test suite on every pull request and reports this information directly on the PR page.
 
-On Github, Travis CI provides this service, and it should be enabled for all of our repositories to help validating the status of each pull request. This helps the code review process, as reviewers can know before even starting, what impact the proposed changes will have on the test suite.
+On Github, Travis CI provides this service, and it should be enabled for all of our repositories to help validate the status of each pull request. This helps the code review process, as reviewers can know before even starting, what impact the proposed changes will have on the test suite.
 
 Each repository should report its CI build status at the top of its README file, using the standard Github icons for it.
 
@@ -121,7 +121,7 @@ Each repository should report its CI build status at the top of its README file,
 
 KBase is complex enough that per-repository tests will never be sufficient to uncover problems that may arise due to the *interaction* between components. For this reason, we will also need to run systems-level tests in an environment that is as similar as possible to the development one that is used for staging all new work.
 
-ci.kbase.us will provide an environment for conducting integration tests. This system will update regularly against defined branches for each repo and will run integration tests defined a special github repo. Developers should add to this integration suite in the same way they do for unit-tests.
+ci.kbase.us will provide an environment for conducting integration tests. This system will update regularly against defined branches for each repo and will run integration tests defined in a special github repo. Developers should add to this integration suite in the same way they do for unit-tests.
 
 We have three primary deployment environments. The first is -ci, which generally tracks the develop branch and is deployed frequently. Automated integration testing will happen here, and the bar for passing and being promoted to the next stage will be high. The second stage is -next, which is intended to be as close to what will be deployed to production as possible, and is (currently) deployed weekly. When a service has been deployed in -next for long enough (~1-2 weeks, though this is flexible) the author can request that it be deployed to the production environment. ([*This doc*](Developer_deployment.md) will describe the deploy environments in more detail.)
 
@@ -175,7 +175,7 @@ In the open source scientific space, a good reference for a well documented proj
 
 ## Purpose
 
-By tracking all project activities at a high level in JIRA, we ease communication and coordination across the entire project, we can more easily detect bottlenecks and critical overload on individuals, and allocate resources more effectively.
+By tracking all project activities at a high level in JIRA, we ease communication and coordination across the entire project, can more easily detect bottlenecks and critical overload on individuals, and allocate resources more effectively.
 
 Very importantly: **Tickets are a symmetric tool for peer collaboration, they are not a tool to "toss work over the fence" for someone else**.
 
@@ -189,7 +189,7 @@ Therefore, use the "golden rule": treat others as you would like to be treated. 
 
 <span id="h.qdtg26km9svm" class="anchor"></span>
 
-<span id="h.of49szsvxiyt" class="anchor"></span>As a starting point, we will take as our solution to use JIRA almost exclusively, unless there’s a very good reason to stick to Github issues for a specific repo. For example, the repo that contains this very document, will require lots of early discussion that may be much easier to do directly on github as a combination of issues and PRs than by going all the way over to JIRA. So this repo may be one that uses issues, at least for the early discussion period. But in general, we’ll keep issues disabled on most repos and track all issues on JIRA. If this proves to not work well, we will reconsider and look for better solutions
+<span id="h.of49szsvxiyt" class="anchor"></span>As a starting point, we will take as our solution to use JIRA almost exclusively, unless there’s a very good reason to stick to Github issues for a specific repo. For example, the repo that contains this very document will require lots of early discussion that may be much easier to do directly on github as a combination of issues and PRs than by going all the way over to JIRA. So this repo may be one that uses issues, at least for the early discussion period. But in general, we’ll keep issues disabled on most repos and track all issues on JIRA. If this proves to not work well, we will reconsider and look for better solutions.
 
 <span id="h.oa9xym2zci9m" class="anchor"></span>
 
@@ -207,13 +207,13 @@ It's very important, in order to keep an entire distributed team moving forward,
 
 -   Have a clear, descriptive, one-sentence title. 'usability problem' is not an informative title, 'Color syntax highlighting changes after first execution' is. When writing up an issue title, imagine the following: if you had the same problem, and you could only search across issue titles, could you find your problem based on that title, and get only one hit? Try to write a title and issue description that would provide such an outcome.
 
--   Be as atomic as possible. Don't open one ticket for three different, unrelated problems that will likely require three different people working on them (note that JIRA allows for sub-issues that can be assigned to different people, if necessary). Ideally, one ticket is one problem that one person can fix and close. Obviously, sometimes what appears to be one problem on the surface may turn out to be much more complicated
+-   Be as atomic as possible. Don't open one ticket for three different, unrelated problems that will likely require three different people working on them (note that JIRA allows for sub-issues that can be assigned to different people, if necessary). Ideally, one ticket is one problem that one person can fix and close. Obviously, sometimes what appears to be one problem on the surface may turn out to be much more complicated.
 
 -   Contain all relevant information to understand and reproduce the problem without talking directly to the submitter. Whether code, screenshots, attachments, etc. Ideally, the receiver of the ticket may never need to contact you again, and they will be able to fix your problem without further input from you.
 
 # Repository and license management on Github
 
-On Github, we will create teams that correspond to each of the official teams in the KBase org chart. These teams will have ‘admin privileges’ (in Github parlance), which enables their members to create repos owned by that team. As a matter of policy, team members should check with their team leader before creating a new repository. They can always start work if needed on a personal repo and transfer ownership to the team afterwards if an experiment pans out.
+On Github, we will create teams that correspond to each of the official teams in the KBase org chart. These teams will have ‘admin privileges’ (in Github parlance), which enable their members to create repos owned by that team. As a matter of policy, team members should check with their team leader before creating a new repository. They can always start work if needed on a personal repo and transfer ownership to the team afterwards if an experiment pans out.
 
 On Github, all team members can merge PRs, and should consider all their repos to be a common responsibility, engaging with code review on all of them.
 
