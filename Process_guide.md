@@ -121,7 +121,7 @@ Each repository should report its CI build status at the top of its README file,
 
 KBase is complex enough that per-repository tests will never be sufficient to uncover problems that may arise due to the *interaction* between components. For this reason, we will also need to run systems-level tests in an environment that is as similar as possible to the development one that is used for staging all new work.
 
-ci.kbase.us will provide an environment for conducting integration tests. This system will update regularly against defined branches for each repo and will run integration tests defined for a special github repo. Developers should add to this integration suite in the same way they do for unit-tests.
+ci.kbase.us will provide an environment for conducting integration tests. This system will update regularly against defined branches for each repo and will run integration tests defined in a special github repo. Developers should add to this integration suite in the same way they do for unit-tests.
 
 We have three primary deployment environments. The first is -ci, which generally tracks the develop branch and is deployed frequently. Automated integration testing will happen here, and the bar for passing and being promoted to the next stage will be high. The second stage is -next, which is intended to be as close to what will be deployed to production as possible, and is (currently) deployed weekly. When a service has been deployed in -next for long enough (~1-2 weeks, though this is flexible) the author can request that it be deployed to the production environment. ([*This doc*](Developer_deployment.md) will describe the deploy environments in more detail.)
 
@@ -217,7 +217,7 @@ On Github, we will create teams that correspond to each of the official teams in
 
 On Github, all team members can merge PRs, and should consider all their repos to be a common responsibility, engaging with code review on all of them.
 
-If additional areas of work in KBase require teams that cut across the existing Org chart divisions, the leads of areas 3-7 can either make them directly, or ask any of the owner's team to make a new one.
+If additional areas of work in KBase require teams that cut across the existing Org chart divisions, the leads of areas 3-7 can either make them directly, or ask any of the owners team to make a new one.
 
 ## Notes
 
