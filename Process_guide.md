@@ -63,7 +63,7 @@ Since all repositories must have testing enabled and integrated with the Github 
 
 In order for this process to work well without creating undue bottlenecks, the teams must be structured with enough people and expertise to provide meaningful review. Furthermore, more senior developers must make good code review an integral part of their workflow, both in terms of providing meaningful feedback to junior developers and colleagues, and in accepting and discussing reviews from junior members. This process ensures that junior members of the team are mentored into becoming good peer reviewers as a natural part of their everyday development work.
 
-Github offers documentation about the PR process here (KBase usess the “Fork and Pull” model): [*https://help.github.com/articles/using-pull-requests*](https://help.github.com/articles/using-pull-requests).
+Github offers documentation about the PR process here (KBase uses the “Fork and Pull” model): [*https://help.github.com/articles/using-pull-requests*](https://help.github.com/articles/using-pull-requests).
 
 # Testing
 
