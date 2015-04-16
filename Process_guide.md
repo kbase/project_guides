@@ -213,7 +213,7 @@ It's very important, in order to keep an entire distributed team moving forward,
 
 # Repository and license management on Github
 
-On Github, we will create teams that correspond to each of the official teams in the KBase org chart. These teams will have ‘admin privileges’ (in Github parlance), which enable their members to create repos owned by that team. As a matter of policy, team members should check with their team leader before creating a new repository. They can always start work if needed on a personal repo and transfer ownership to the team afterwards if an experiment pans out.
+On Github, we will create teams that correspond to each of the official teams in the KBase org chart. These teams will have ‘admin privileges’ (in Github parlance), which enable their members to create repos owned by that team. As a matter of policy, team members should check with their team leader before creating a new repository. They can always start work if needed on a personal repo or a repository under the KBaseIncubator organization and transfer ownership to the team afterwards if an experiment pans out.
 
 On Github, all team members can merge PRs, and should consider all their repos to be a common responsibility, engaging with code review on all of them.
 
