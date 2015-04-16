@@ -56,3 +56,17 @@ Release 62.0, April 1, 2012
 
 http://www.genome.jp/kegg/
 
+### IntAct
+
+#### How IntAct is used in KBase
+
+IntAct is one of our primary source for the protein-protein interaction in our central store.  
+
+#### License for IntAct data
+Creative Commons Attribution License 
+http://www.ebi.ac.uk/intact/developer_resources
+
+#### Links to where IntAct can be accessed
+
+http://www.ebi.ac.uk/intact/
+
