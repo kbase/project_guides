@@ -2,7 +2,7 @@
 
 This document should be used for describing each KBase external data source in the following ways:
 
-- How the external data source is being used in KBase, and any references to existing documentation and source code in the KBase github project that describes this in more detail.
+- How the external data source is being used in KBase, and any references to existing documentation and source code in the KBase GitHub project that describes this in more detail.
 - What the license policy is of the data.
 - What version or versions (if more than one copy of the data is used) are being used.
 - A link or links to where the data can be accessed.
@@ -21,7 +21,7 @@ ModelSEED was the basis for the biochemistry database and the metabolic model re
 All data specific to ModelSEED is released under the ModelSEED Public License:
 https://github.com/ModelSEED/ModelSEED/blob/master/LICENSE.TXT
 
-However, some data in the ModelSEED is derived from other sources (e.g. KEGG), and that data carries it's own potential licensing restrictions.
+However, some data in the ModelSEED is derived from other sources (e.g., KEGG), and that data carries its own potential licensing restrictions.
 
 #### Versions of ModelSEED utilized
 
