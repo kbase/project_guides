@@ -61,7 +61,7 @@ A Method in KBase is complete only if it is exposed and executable from within t
 1.  If you are the owner of the existing service, you can make changes directly to your service. Update the KIDL specification, implement any new methods required, add test coverage of the new methods, update the RELEASE\_NOTES and readme as appropriate, and request another test/production deployment.
 2.  If you are not the owner, then typically you should coordinate with the service owner and decide to add the new functionality. If it seems like a good idea, you should fork the service repository, make any changes or additions there, be sure to add additional test coverage, and submit a pull request (ideally to the develop branch ot the service) and work with the owner and Deployment teams to deploy the service.
 
-**C. Narrative Method/App Specification + Documentation**
+<a name="method_specs">**C. Narrative Method/App Specification + Documentation**</a>
 
 To have your new method appear in the Narrative interface, you must define a method specification that describes the user facing descriptions and parameters of your method. The information includes the name of your method, the parameters and the parameter types, the input/output workspace object types, the output visualization, documentation on the method and each parameter, and how these parameters map to parameters sent to the Narrative Job Wrapper (which will route calls to your service or to your NJS command).
 
