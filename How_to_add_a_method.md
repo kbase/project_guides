@@ -1,5 +1,7 @@
 #How to add a method to KBase - Current State
 
+[FIXME: What is the process for deciding whether a proposed new method should become a KBase method? How is the evaluation of the method and the initial code handled? The PR process forces at least some degree of code review whenever there's a change to the code, but how is the *initial* vetting done?]
+
 **Components of a Method**
 
 - Service that conforms to KBase typespec as described by a KBase Interface Description Language (KIDL file)
