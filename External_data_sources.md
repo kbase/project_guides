@@ -93,36 +93,88 @@ Unless otherwise stated, documents and files on NCBI Web servers may be freely d
 ---
 
 ### Obofoundry - The Open Biological and Biomedical Ontologies
-Top level collection of ontologies that are used in KBase.
+Top level collection of ontologies that are used in KBase. 
 
-####Gene Ontologies : GO terms
-molecular function/Cell components/Biological process ontologies - Associated with Features.
+#### License for Obofoundry 
+http://wiki.obofoundry.org/wiki/index.php/FP_001_open
+Creative Commons CC-BY license version 4.0 or later.
+
+#### Link to where obofoundry can be accessed
+
+http://www.obofoundry.org/
+
+---
+
+#### Gene Ontologies : GO terms
+Molecular function/Cellular components/Biological process ontologies - Associated with Features.
 http://geneontology.org/
 
 license - http://geneontology.org/page/use-and-license
 
-####Plant Ontologies : PO terms
-Tissue and development ontologies - Associated with Expression Samples, GWAS and I think more.
+#### Plant Ontologies : PO terms
+Tissue and development ontologies - Associated with Expression Samples, GWAS.
 http://www.plantontology.org/
 
-license - http://www.plantontology.org/node/279
+license - http://www.plantontology.org/node/279 is licensed under a Creative Commons Attribution 4.0 International License. 
 
-####Plant Environmental Ontologies : EO terms
-Environmental ontologies for plants - Associated with Expression Samples, GWAS and I think more.
+#### Plant Environmental Ontologies : EO terms
+Environmental ontologies for plants - Associated with Expression Samples, GWAS.
 http://wiki.plantontology.org/index.php/Plant_Environment_Ontology_Wiki
 
-license - can't find
+license - http://crop.cgrb.oregonstate.edu/node/1 is licensed under a Creative Commons Attribution 3.0 United States License.
 
-####Environmental Ontologies : ENVO terms
+#### Environmental Ontologies : ENVO terms
 Environment Ontologies - Currently no expression data is associated with this, but it has the capability to do so.
 http://environmentontology.org/
 
-license - closest I could find: http://environmentontology.org/home/about-envo
+license - http://environmentontology.org/home/about-envo
 
 "We hope that the community will adopt EnvO and benefit from its potential to promote standardised data integration and access. As an open project, we welcome your use of and participation in this project. Please contact us should you like to learn more!"
 
 ---
 
+### Plant Metabolic Network
 
+#### How Plant Metabolic Network is used in KBase
 
+Plant Metabolic Network includes all of the plant metabolic pathway databases including AraCyc, PlantCyc, BarleyCyc, BrachypodiumCyc, ChlamyCyc, CornCyc, GrapeCyc, MossCyc, OryzaCyc, PapayaCyc, PoplarCyc, SelaginellaCyc, SetariaCyc, SorghumBicolorCyc, SoyCyc, SwitchgrassCyc.  
 
+#### License for Plant Metabolic Network data
+http://plantcyc.org/downloads/license_agreement.faces
+This license is freely available to everyone, including commercial users
+
+#### Links to where Plant Metabolic Network data can be accessed
+
+http://plantcyc.org/downloads/data_downloads.faces
+
+---
+
+### Plant Reactome
+
+#### How Plant Reactome is used in KBase
+
+Plant Reactome is plant pathway database which hosts plant metabolic and regulatory pathways. Plant Reactome pathways are constructed by manual curation of pathways and reactions reported in the published literature or derived by orthology-based computational projections from curated pathways in the MetaCyc, Plant Metabolic Network, and Human Reactome databases. Pathways, reactions and gene entries in Plant Reactome are cross-referenced to many bioinformatics databases such as UniProt, ChEBI, PubChem, PubMed, Gramene and Plant Ensembl genomes and the Gene Ontology (GO).
+
+#### License for Plant Reactome
+http://plantreactome.gramene.org/copyright.html
+Creative Commons Attribution 3.0 United States License.
+
+#### Links to where Plant Reactome data can be accessed
+
+http://plants.reactome.org/about.html
+
+---
+
+### UniProtKB
+
+#### How UniProtKB is used in KBase
+
+The UniProt Knowledgebase (UniProtKB) provides functional information on proteins, with accurate, consistent and rich annotation. It has two sections - Swiss-Prot and TrEMBL. UniProtKB/Swiss-Prot is a high quality manually annotated and non-redundant protein sequence database, which brings together experimental results, computed features and scientific conclusions. UniProtKB/TrEMBL contains high quality computationally analyzed records that are enriched with automatic annotation and classification. These UniProtKB/TrEMBL unreviewed entries are kept separated from the UniProtKB/Swiss-Prot manually reviewed entries so that the high quality data of the latter is not diluted in any way. 
+
+#### License for UniProtKB
+http://www.uniprot.org/help/license
+Creative Commons Attribution-NoDerivs License
+
+#### Links to where UniProtKB can be accessed
+
+http://www.uniprot.org/downloads
