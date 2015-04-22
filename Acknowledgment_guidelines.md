@@ -23,4 +23,4 @@ The following classes of outputs should always cite KBase:
 
 2. Papers that are about new tools or technologies that get incorporated into KBase, where a KBase supported person was involved in that tool creation, should cite KBase support if that support was material to the method or tool. 
 
-3. Papers that use KBase should cite the main KBase paper, if the science was directly supported by KBase. But if the use was by a KBase supported person, it should also cite KBase support. 
+3. Papers about science/technology that was directly supported by KBase should both cite the main KBase paper and acknowledge KBase funding, if the science/technology was part of the agreed upon deliverables of KBase.  
