@@ -15,6 +15,16 @@
 
 A Method in KBase is complete only if it is exposed and executable from within the Narrative interface. All methods require documentation and a method specification. Based on other existing components in KBase, you may also need to do one or all of the following: 1) build and deploy or modify a service if the core functionality does not yet exist, 2) wrap and add the functionality to NJS if the execution is long running, 3) add new data types required for input/output, 4) add new output visualization if the output data types have no viz or if the viz does not show the result of the method.
 
+**Review Process**
+
+KBase Developers should solicit review and approval before embarking on the development of a new method, especially if it 
+is not already in plan.  The level of review should be commensurate with the signficance of the addition.  If the method 
+adds a new class of operation that requires significant additions in data types, UI/UX, documentaiton, etc, then this 
+should be proposed and reviewed by the project leadership.  If the addition modestly extends an existing service, then 
+it should be reviewed by the service lead.  Any development should follow the practices laid out in the Process Guide and other documented processes.
+
+**Detailed Steps**
+
 **A. Building a new Service**
 
 1.  Create a github repository within the KBase organization
