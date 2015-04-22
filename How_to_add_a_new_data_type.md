@@ -4,7 +4,7 @@
 
     1.  A diagram that shows the biological concepts that your data describes, and how it relates to other biological concepts in KBase. This diagram should not be tied to a specific implementation of the data storage of the type.
 
-    2.  A document that describes in detail all elements of the diagram, what each entity is, why it is important, what it describes/contains and why and what the relationships mean and why they are important. You should include known applications (use cases) that use this data type, showing how it is used and why.
+    2.  A document that describes in detail all elements of the diagram, what each entity is, why it is important, what it describes/contains and why and what the relationships mean and why they are important. You should include known applications (use cases) that use this data type, explaining how it is used and why.
 
 2.  You need to create a KBase typespec document that describe the implementation of your data type. This should be well documented to describe the implementation details of your type and how they relate to the conceptual model described by your conceptual diagram and documentation.
 
@@ -350,7 +350,7 @@ Standard Input keywords:
 >
 > **handle\_id** - if data started out in shock and you have a handle reference to this data and the workspace object has a field for saving a handle reference
 >
-> **input\_mapping** - an input mapping that maps input keys [FIXME: to what??]
+> **input\_mapping** - an input mapping that maps input key value pairs to command line arguments and values
 >
 > **workspace\_name** - if saving the workspace object, what workspace to save to
 >
