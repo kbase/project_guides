@@ -24,7 +24,11 @@ Most of the below is covered in Travis-CI's "Getting Started" guide available he
 1. Go to https://travis-ci.org and sign in through your Github account. Github will ask you for permission to share your information with them, including organization membership. This is totally safe - it lets Travis-CI see what repos you can activate.
 2. Click the [+] button on the left next to the "My Repositories" header. This will bring up a list of all repositories that you can activate.
 3. Activate that repo by clicking the gray toggle-slider button. That's it! You can modify settings on particular repos by clicking the gear button next to the activation toggle. By default, a Travis-CI job is run on every pull request and every commit.
-4. Add a build badge to the README.md in the root of your repo. Clicking on the repository under the "My Repository" heading will take you to a build status page. In the header of this page is a little badge, as in the image below. **[FIXME: insert image]** Click on that image to get a popup with several options for the link style (in the pulldown menu on the left). Select Markdown, then you can copy and paste that link into your README.md file.
+4. Add a build badge to the README.md in the root of your repo. Clicking on the repository under the "My Repository" heading will take you to a build status page. In the header of this page is a little badge, as in the image below.
+
+![Travis-CI badge example](images/travis-ci-badge.png)
+
+Click on that image to get a popup with several options for the link style (in the pulldown menu on the left). Select Markdown, then you can copy and paste that link into your README.md file.
 
 ## <a name="travis-config"></a>Travis-CI script configuration
 
