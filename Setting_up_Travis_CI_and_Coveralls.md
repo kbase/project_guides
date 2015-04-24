@@ -93,12 +93,10 @@ Although this document outlines the general form of how to set up Github reposit
   - KBase modules assume they are checked out from inside the dev_container, which is not a standard setup that is easily compatible with Travis.
   - Dev_container tooling assumes a KBase runtime is installed, whereas Travis sets up an environment where runtime tools are directly installed on the VM.
   - Not feasible to install the full KBase runtime on each test (note this is a similar problem faced by outside developers attempting to contribute code to one repo)
-  - We either need to create some hacks to emulate the dev_container and kbase runtime within Travis, or we need to modify the deployment and build process to work outside the dev_container (as we did for the Narrative Method Store).
-  - We also don’t have a good list of system requirements/dependencies per each repo.  We will need this to setup the travis environment.
+  - We also don’t have a good list of system requirements/dependencies per each repo.  We will need this to setup the Travis environment.
 2. **Authentication**
   - Testing authenticated services right now is a challenge because we don’t have test user accounts or a mock Authentication service
-  - Travis-CI supports encrypted environment variables and encrypted files, but they are only available to PRs or commits by people with commit privileges.  If tests depend on this (to get username/passwords for test configs), then many if not most pull requests will fail travis tests defeating much of the purpose of Travis CI.
+  - Travis-CI supports encrypted environment variables and encrypted files, but they are only available to PRs or commits by people with commit privileges.  If tests depend on this (to get username/passwords for test configs), then many if not most pull requests will fail Travis tests defeating much of the purpose of Travis CI.
   - Even if we have KBase test accounts, there is a lot of code that connects directly to Globus to authenticate instead of an internal KBase Auth service.  This code will have to be modified (with configurable urls) to work against an Auth service.
 3. **(minor) MySQL and other DB configs for Workspace tests**
   - Workspace tests (possibly others) start and stop MySQL, Mongo databases for tests.  The standard Travis approach is to have them already running when tests start, so there may need to be some additional configs or checks for the test environment when running in Travis, particularly for the current MySQL setup which requires AppArmor for MySQL to be disabled.
-
