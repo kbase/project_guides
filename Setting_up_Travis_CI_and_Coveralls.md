@@ -82,7 +82,11 @@ Finally, the `script:` command is the command to run to perform the tests, and i
 There are also the `before_install:`, `before_script:`, and `after_success:`/`after_failure:` commands. These are pretty self-explanatory: they run the connected line at that condition. But more details on how to deeply configure your .travis.yml file are available [in the Travis-CI documentation](http://docs.travis-ci.com/user/build-configuration/).
 
 ## <a name="travis-results"></a>Travis-CI test results
-#TODO
+When your tests pass, all is well, and you'll see the [build|passing] badge showing up happily in your README.md. If tests fails, though, that'll be replaced with a [build|failed] badge in red. Clicking that badge (pass or fail) will take you to the Travis-CI status page for that repo.
+
+There are a lot of options here. Under the "Current" tab, the main panel will show the most recent commit message, and whether it passed. Below that are rows for each build job (one for each language version you included in your .travis.yml). Clicking on those will open up a view of the console where that job was run, including any STDOUT and STDERR results from running the build and test scripts.
+
+These should help you diagnose what went wrong.
 
 ## <a name="coveralls-init"></a>Coveralls initial setup
 #TODO
