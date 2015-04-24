@@ -4,6 +4,7 @@ This document will walk through the steps involved in activating Travis-CI for c
 [Background and automated testing](#background)  
 [Travis-CI initial setup](#travis-init)  
 [Travis-CI script configuration](#travis-config)  
+[Travis-CI test results](#travis-results)  
 [Coveralls initial setup](#coveralls-init)  
 [Coveralls configuration](#coveralls-config)  
 [KBase Challenges](#kbase-challenges)  
@@ -49,7 +50,7 @@ if neither of those are found, it just runs
 make test
 ```
 
-Your .travis.yml file, however, is very configurable. In general, you'll probably use something similar to below - this is taken from the [Narrative Method Specs](https://github.com/kbase/narrative_method_specs) store. That store has a small script that just validates the format of each spec file.
+Your .travis.yml file is very configurable. In general, you'll probably use something similar to below - this is taken from the [Narrative Method Specs](https://github.com/kbase/narrative_method_specs) store. That store has a small script invoked from a Makefile that validates the format of each spec file.
 
 ```
 language: perl
@@ -80,13 +81,16 @@ Finally, the `script:` command is the command to run to perform the tests, and i
 
 There are also the `before_install:`, `before_script:`, and `after_success:`/`after_failure:` commands. These are pretty self-explanatory: they run the connected line at that condition. But more details on how to deeply configure your .travis.yml file are available [in the Travis-CI documentation](http://docs.travis-ci.com/user/build-configuration/).
 
-##<a name="coveralls-init"></a>Coveralls initial setup
+## <a name="travis-results"></a>Travis-CI test results
 #TODO
 
-##<a name="coveralls-config"></a>Coveralls configuration
+## <a name="coveralls-init"></a>Coveralls initial setup
 #TODO
 
-##<a name="kbase-challenges"></a>KBase challenges
+## <a name="coveralls-config"></a>Coveralls configuration
+#TODO
+
+## <a name="kbase-challenges"></a>KBase challenges
 Although this document outlines the general form of how to set up Github repositories to work with Travis-CI and Coveralls, there are still numerous challenges with automatically unit-testing KBase code. Here's a few to get started:
 
 1. **KBase Runtime / dev_container Environment**
