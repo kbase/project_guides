@@ -76,9 +76,9 @@ The test script is written in Perl, so it sets the language as Perl. The ```inst
 
 The ```branches:``` command gives a list of which branches to run tests against, and can generate a separate test result for each (default is only master).
 
-Finally, the ```script``` command is the command to run to perform the tests, and its output is used to judge whether tests pass. This can be any valid command, though ```make test``` might be the most common. Tests are judged to have passed only if the script finishes with exit code 0.
+Finally, the ```script:``` command is the command to run to perform the tests, and its output is used to judge whether tests pass. This can be any valid command, though ```make test``` might be the most common. Tests are judged to have passed only if the script finishes with exit code 0.
 
-There are also the ```before_install```, ```before_script```, and ```after_success```/```after_failure``` commands. These are pretty self-explanatory: they run the connected line at that condition. But more details on how to deeply configure your .travis.yml file are available here: http://docs.travis-ci.com/user/build-configuration/
+There are also the ```before_install:```, ```before_script:```, and ```after_success:```/```after_failure:``` commands. These are pretty self-explanatory: they run the connected line at that condition. But more details on how to deeply configure your .travis.yml file are available here: http://docs.travis-ci.com/user/build-configuration/
 
 ##<a name="coveralls-init"></a>Coveralls initial setup
 #TODO
