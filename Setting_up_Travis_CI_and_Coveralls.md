@@ -100,3 +100,8 @@ Although this document outlines the general form of how to set up Github reposit
   - Even if we have KBase test accounts, there is a lot of code that connects directly to Globus to authenticate instead of an internal KBase Auth service.  This code will have to be modified (with configurable urls) to work against an Auth service.
 3. **(minor) MySQL and other DB configs for Workspace tests**
   - Workspace tests (possibly others) start and stop MySQL, Mongo databases for tests.  The standard Travis approach is to have them already running when tests start, so there may need to be some additional configs or checks for the test environment when running in Travis, particularly for the current MySQL setup which requires AppArmor for MySQL to be disabled.
+4. **Mock or temporary dependent services** We need a way to deal with tests that expect the presence dependent services for unit testing. Auth (as mentioned above) is an example, but data services or other computation services are another. Options may include:
+  - Deploying a temporary test service on Travis startup time (in the ```before_script:``` command, maybe)
+  - Maintaining non-production services on ci.kbase.us
+  - Building a service mock system that immediately returns calls with expected values. This might be language/environment dependent, though.
+  - Either way, the goal should be for a unit test suite to run reasonably quickly and independent of running any other code or too many external dependencies.
