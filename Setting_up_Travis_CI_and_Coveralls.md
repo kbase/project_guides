@@ -10,7 +10,7 @@ This document will walk through the steps involved in activating Travis-CI for c
 
 ## <a name="background"></a>Background and automated testing
 
-Using Github gives us numerous tools to help with automatic unit testing of open source projects. Travis-CI (https://travis-ci.org) automatically downloads and tests your repo, returning whether or not all tests pass. If you tests output a .coverage file (see [below](#coveralls-config)), that can be automatically passed to Coveralls (https://coveralls.io/) where the amount of code tested can be reported in your repo.
+Using Github gives us numerous tools to help with automatic unit testing of open source projects. [Travis-CI](https://travis-ci.org) automatically downloads and tests your repo, returning whether or not all tests pass. If you tests output a .coverage file (see [below](#coveralls-config)), that can be automatically passed to [Coveralls](https://coveralls.io/) where the amount of code tested can be reported in your repo.
 
 These tools are intended to help developers build better code. On each pull request, it becomes easy to see if tests fail or pass, adding to the safety of merging in changes. They also give us a handy benchmark of how deeply tested our code is.
 
@@ -19,7 +19,7 @@ This document will walk through the steps involved in setting up a Github reposi
 **Note that going through the initial setup steps requires having administrative privileges on a repository.**
 
 ## <a name="travis-init"></a>Travis-CI initial setup
-Most of the below is covered in Travis-CI's "Getting Started" guide available here: http://docs.travis-ci.com/user/getting-started/
+Most of the below is covered in Travis-CI's ["Getting Started" guide](http://docs.travis-ci.com/user/getting-started/).
 
 1. Go to https://travis-ci.org and sign in through your Github account. Github will ask you for permission to share your information with them, including organization membership. This is totally safe - it lets Travis-CI see what repos you can activate.
 2. Click the [+] button on the left next to the "My Repositories" header. This will bring up a list of all repositories that you can activate.
@@ -32,11 +32,11 @@ Click on that image to get a popup with several options for the link style (in t
 
 ## <a name="travis-config"></a>Travis-CI script configuration
 
-Triggering the automated tests requires a little configuration in your repo. This means creating, in the root of your repo, a YAML-formatted file called ```.travis.yml```. Travis-CI has some very detailed documentation available on how to create these here: http://docs.travis-ci.com/ 
+Triggering the automated tests requires a little configuration in your repo. This means creating, in the root of your repo, a YAML-formatted file called `.travis.yml`. Travis-CI has some very detailed documentation available on how to create these here: http://docs.travis-ci.com/ 
 
-The remainder of this section will include examples in a few of the more prominent langauges in the project. At the very least, you need a ```language:``` line with the project language in all lower case. Follow that with the language itself as a line, and the versions of your language you want to test on proceeding lines.
+The remainder of this section will include examples in a few of the more prominent langauges in the project. At the very least, you need a `language:` line with the project language in all lower case. Follow that with the language itself as a line, and the versions of your language you want to test on proceeding lines.
 
-That's the basics. For each language, however, Travis-CI uses a default mechanism for running the tests. For example, for Perl(see here: http://docs.travis-ci.com/user/languages/perl/), this first searches for a Build.PL file in the repo's root. If it finds one, it runs
+That's the basics. For each language, however, Travis-CI uses a default mechanism for running the tests. For example, for Perl ([see an example](http://docs.travis-ci.com/user/languages/perl/)), this first searches for a Build.PL file in the repo's root. If it finds one, it runs
 ```
 perl Build.PL && .Build test
 ```
@@ -72,13 +72,13 @@ branches:
   - dev
 ```
 
-The test script is written in Perl, so it sets the language as Perl. The ```install:``` command runs each proceeding line in order before running anything. Note that this can include a ```git clone``` line to pull in any dependencies.
+The test script is written in Perl, so it sets the language as Perl. The `install:` command runs each proceeding line in order before running anything. Note that this can include a `git clone` line to pull in any dependencies.
 
-The ```branches:``` command gives a list of which branches to run tests against, and can generate a separate test result for each (default is only master).
+The `branches:` command gives a list of which branches to run tests against, and can generate a separate test result for each (default is only master).
 
-Finally, the ```script:``` command is the command to run to perform the tests, and its output is used to judge whether tests pass. This can be any valid command, though ```make test``` might be the most common. Tests are judged to have passed only if the script finishes with exit code 0.
+Finally, the `script:` command is the command to run to perform the tests, and its output is used to judge whether tests pass. This can be any valid command, though `make test` might be the most common. Tests are judged to have passed only if the script finishes with exit code 0.
 
-There are also the ```before_install:```, ```before_script:```, and ```after_success:```/```after_failure:``` commands. These are pretty self-explanatory: they run the connected line at that condition. But more details on how to deeply configure your .travis.yml file are available here: http://docs.travis-ci.com/user/build-configuration/
+There are also the `before_install:`, `before_script:`, and `after_success:`/`after_failure:` commands. These are pretty self-explanatory: they run the connected line at that condition. But more details on how to deeply configure your .travis.yml file are available [in the Travis-CI documentation](http://docs.travis-ci.com/user/build-configuration/).
 
 ##<a name="coveralls-init"></a>Coveralls initial setup
 #TODO
@@ -101,7 +101,7 @@ Although this document outlines the general form of how to set up Github reposit
 3. **(minor) MySQL and other DB configs for Workspace tests**
   - Workspace tests (possibly others) start and stop MySQL, Mongo databases for tests.  The standard Travis approach is to have them already running when tests start, so there may need to be some additional configs or checks for the test environment when running in Travis, particularly for the current MySQL setup which requires AppArmor for MySQL to be disabled.
 4. **Mock or temporary dependent services** We need a way to deal with tests that expect the presence dependent services for unit testing. Auth (as mentioned above) is an example, but data services or other computation services are another. Options may include:
-  - Deploying a temporary test service on Travis startup time (in the ```before_script:``` command, maybe)
+  - Deploying a temporary test service on Travis startup time (in the `before_script:` command, maybe)
   - Maintaining non-production services on ci.kbase.us
   - Building a service mock system that immediately returns calls with expected values. This might be language/environment dependent, though.
   - Either way, the goal should be for a unit test suite to run reasonably quickly and independent of running any other code or too many external dependencies.
