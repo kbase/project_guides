@@ -10,7 +10,7 @@ This document will walk through the steps involved in activating Travis-CI for c
 
 ## <a name="background"></a>Background and automated testing
 
-Using Github gives us numerous tools to help with automatic unit testing of open source projects. Travis-CI (https://travis-ci.org) automatically downloads and tests your repo, returning whether or not all tests pass. If you tests output a .coverage file (see below), that can be automatically passed to Coveralls (https://coveralls.io/) where the amount of code tested can be reported in your repo.
+Using Github gives us numerous tools to help with automatic unit testing of open source projects. Travis-CI (https://travis-ci.org) automatically downloads and tests your repo, returning whether or not all tests pass. If you tests output a .coverage file (see [below](#coveralls-config)), that can be automatically passed to Coveralls (https://coveralls.io/) where the amount of code tested can be reported in your repo.
 
 These tools are intended to help developers build better code. On each pull request, it becomes easy to see if tests fail or pass, adding to the safety of merging in changes. They also give us a handy benchmark of how deeply tested our code is.
 
