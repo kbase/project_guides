@@ -32,7 +32,7 @@ Click on that image to get a popup with several options for the link style (in t
 
 ## <a name="travis-config"></a>Travis-CI script configuration
 
-Triggering the automated tests requires a little configuration in your repo. This means creating, in the root of your repo, a YAML-formatted file called `.travis.yml`. Travis-CI has some very detailed documentation available on how to create these here: http://docs.travis-ci.com/ 
+Triggering the automated tests requires a little configuration in your repo. This means creating, in the root of your repo, a YAML-formatted file called `.travis.yml`. Travis-CI has some [very detailed documentation](http://docs.travis-ci.com/) available on how to create these.
 
 The remainder of this section will include examples in a few of the more prominent langauges in the project. At the very least, you need a `language:` line with the project language in all lower case. Follow that with the language itself as a line, and the versions of your language you want to test on proceeding lines.
 
