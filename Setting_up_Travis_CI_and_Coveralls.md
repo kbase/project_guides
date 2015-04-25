@@ -89,7 +89,14 @@ There are a lot of options here. Under the "Current" tab, the main panel will sh
 These should help you diagnose what went wrong.
 
 ## <a name="coveralls-init"></a>Coveralls initial setup
-#TODO
+Setting up Coveralls to run against your repo is not very different from setting up Travis-CI, which should be set up first.
+
+1. Login to https://coveralls.io using your Github account. This will pause for a moment while it looks up which repos you have administrative access to.
+2. Click the "Repos" button on the top of the left side menu.
+3. Click the "Add Repo" button on the upper right (if present, this might just drop you in to a list of available repos on your first time)
+4. Select a repo to activate, and click the toggle switch.
+5. Clicking on the 'Details' button that appears after the switch is flipped on will take you - for now - to a page with a little help on configuring your repo to be built against Coveralls, especially with Ruby and Travis-CI pro. You probably don't need this for now.
+6. On the top of that page is a banner that includes a similar badge to Travis-CI. Click the "Badge URLs" button and copy the Markdown block to paste in your README.md.
 
 ## <a name="coveralls-config"></a>Coveralls configuration
 #TODO
