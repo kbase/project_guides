@@ -178,3 +178,39 @@ Creative Commons Attribution-NoDerivs License
 #### Links to where UniProtKB can be accessed
 
 http://www.uniprot.org/downloads
+
+---
+
+### Ensembl Plants/Gramene
+
+#### How Ensembl Plants/Gramene is used in KBase
+
+Ensembl Plants is a joint project of EBI and Gramene. KBase uses Ensembl Plants/Gramene as a resource for plant genomes, ontology, pathway, interpro, and gene trees. 
+
+#### License for Ensembl Plants
+The terms of use of Ensembl data and code are summarised on the following page: http://www.ensembl.org/info/about/legal/index.html.  
+The EMBL-EBI terms of use also apply: http://www.ebi.ac.uk/about/terms-of-use.
+Gramene terms of use is here: http://www.gramene.org/node/225
+Ensembl and Gramene do not place any license restrictions on the data that they produce although they do retain copyright. Their code is explicitly licensed using the Apache v2.0 license.  As noted, their databases may contain information that is subject to third-party constraints of various kinds and users of the Ensembl data and software are solely responsible for determining what these constraints are and complying with them.
+
+
+#### Links to where Ensembl Plants/Gramene can be accessed
+
+Ensembl Plants: http://plants.ensembl.org/index.html
+Gramene: http://gramene.org/
+
+---
+
+### Phytozome
+
+#### How Phytozome is used in KBase
+
+Phytozome is the public portal to JGI's plant genome data and analysis. Currently KBase uses Phytozome as an additional resource for released plant genomes which are not available at Ensembl Plants/Gramene. Phytozome will also be used to provide diversity, expression data and many other data types to KBase in future. 
+
+#### License for Phytozome
+Everything is open source. 
+
+#### Links to where Phytozome can be accessed
+http://phytozome.jgi.doe.gov/pz/portal.html
+
+---
