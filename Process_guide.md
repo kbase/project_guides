@@ -242,3 +242,29 @@ In the event that a third party license has not been used in the jars repo in th
 # Data updates
 
 The process for ingesting and updating the public KBase data stores is described in a separate document.
+
+
+# User Acceptance Tests
+
+## Purpose
+
+UAT (often analogous with beta test) is essentially a process that confirms whether a product or service meets the needs of its end-users. In an agile KBase world, it is highly recommended that we have a frequent UAT cycle, one after every release (minor & major). Such an agile UAT approach has the following proven benefits for KBase:
+1.	It boosts the confidence level in the KBase platform among the KBase team, stakeholders and broader user community.
+2.	It provides a steady stream of valuable feedback on existing KBase capability (functional as well as non-functional)
+3.	When engaged effectively, UA testers provide a rich outsider perspective on desirable/near-future capabilities in KBase.
+4.	From an outreach perspective, it offers a great opportunity to significantly grow the KBase community with users who have already invested their time and efforts in KBase platform.
+5.	When administered appropriately, UAT also serves the training and educational objectives of KBase. 
+6.	UAT feedback based metrics are valuable in transparently communicating our successes and challenges with our stakeholders.
+
+## Process
+
+User acceptance tests will be conducted in one or more rounds depending on the scope of the test and size of tester pool. Testers will be asked to commit a few hours per week and provide feedback via online test forms about all aspects of their experience with the apps, including usability, functionality, performance and any other criteria of interest to them. 
+
+They will be given guidance, instructions and support during the testing process. The test form will include a number of app-specific questions to test user performance and understanding, as well as general questions related to the Narrative Interface and the KBase platform. Testers will be asked about how these apps compare with other systems they are familiar with, and for any additional comments they might have.
+
+During and immediately after each test cycle, tester feedback and comments would be read, analyzed and formulated into actionable JIRA tickets and shared with developers. Tickets are initially assigned into high-level categories and then further reviewed by leads responsible in those areas. At each step, the issue tickets are categorized by priority, impact, level of effort and feasibility to assign and determine how they will be resolved. Tickets include requests for improved usability and desires for functionality. The issues that are not immediately actionable will be captured in JIRA for future development. 
+
+Finally, a summary report will be generated after each test cycle for KBase management that includes analysis of the testing and feedback, including statistics on usability and performance of specific apps, the Narrative Interface, and KBase overall. The reports will also include a summary of the JIRA tickets and how they are being processed.
+
+
+
