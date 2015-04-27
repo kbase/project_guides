@@ -101,6 +101,8 @@ The following are the testing tools we will be using for each language:
 
 -   Perl: Test::More, others??
 
+-   Go: http://golang.org/pkg/testing/
+
 These are some potentially useful resources on the topic [FIXME: anyone can suggest better ones?]:
 
 -   [*http://ivory.idyll.org/blog/automated-testing-and-research-software.html*](http://ivory.idyll.org/blog/automated-testing-and-research-software.html)
@@ -156,6 +158,8 @@ Every repository must contain a documentation directory, where docs can be autom
 -   Java: Javadoc, Doxygen?
 
 -   Perl: POD? Standards for API/function signatures?
+
+-   Go: GoDoc
 
 HTML output - built docs location TBD.
 
