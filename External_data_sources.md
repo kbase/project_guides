@@ -178,3 +178,42 @@ Creative Commons Attribution-NoDerivs License
 #### Links to where UniProtKB can be accessed
 
 http://www.uniprot.org/downloads
+
+---
+
+### Ensembl Plants/Gramene
+
+#### How Ensembl Plants/Gramene is used in KBase
+
+Ensembl Plants is a joint project of EBI and Gramene. KBase uses Ensembl Plants/Gramene as a resource for plant genomes, ontology, pathway, interpro, and gene trees. 
+
+#### License for Ensembl Plants
+The terms of use of Ensembl data and code are summarised on the following page: http://www.ensembl.org/info/about/legal/index.html.  
+The EMBL-EBI terms of use also apply: http://www.ebi.ac.uk/about/terms-of-use.
+Gramene terms of use is here: http://www.gramene.org/node/225
+Ensembl and Gramene do not place any license restrictions on the data that they produce although they do retain copyright. Their code is explicitly licensed using the Apache v2.0 license.  As noted, their databases may contain information that is subject to third-party constraints of various kinds and users of the Ensembl data and software are solely responsible for determining what these constraints are and complying with them.
+
+
+#### Links to where Ensembl Plants/Gramene can be accessed
+
+Ensembl Plants: http://plants.ensembl.org/index.html
+Gramene: http://gramene.org/
+
+---
+
+### Phytozome
+
+#### How Phytozome is used in KBase
+
+Phytozome is the public portal to JGI's plant genome data and analysis. Currently KBase uses Phytozome as an additional resource for released plant genomes which are not available at Ensembl Plants/Gramene. Phytozome will also be used to provide diversity, expression data and many other data types to KBase in future. 
+
+#### License for Phytozome
+Phytozome does not license or distribute any code associated with Phytozome. Phytozome is ©2006-2015 University of California Regents. All rights reserved. 
+
+Download policy is given on this link: http://genome.jgi.doe.gov/pages/dynamicOrganismDownload.jsf?organism=PhytozomeV10
+"Some of the data available on this portal are pre-publication data and may contain errors. The goal of our policy is that early release should enable the progress of science. By accessing these data, you agree not to publish any articles containing analyses of genes or genomic data on a whole genome or chromosome scale prior to publication by JGI and its collaborators of its comprehensive genome analysis. These restrictions will be lifted on the publication of the whole genome description or as specified on the information for each organism. During this waiting period, the data will be available for any kind of publication that does not compete directly with planned publications (e.g. reserved analyses) of the JGI and collaborators. A principal collaborator or "champion," listed in the organsim's Info page and is the point of contact and arbiter regarding publication plans. Scientists are strongly encouraged to contact the principal collaborator and JGI about their intentions and any potential collaboration. Each directory within this portal has a file describing the release policy of that data. People who access data are expected to adhere to those policies."
+
+#### Links to where Phytozome can be accessed
+http://phytozome.jgi.doe.gov/pz/portal.html
+
+---
