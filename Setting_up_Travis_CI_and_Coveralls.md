@@ -82,13 +82,32 @@ Finally, the `script:` command is the command to run to perform the tests, and i
 There are also the `before_install:`, `before_script:`, and `after_success:`/`after_failure:` commands. These are pretty self-explanatory: they run the connected line at that condition. But more details on how to deeply configure your .travis.yml file are available [in the Travis-CI documentation](http://docs.travis-ci.com/user/build-configuration/).
 
 ## <a name="travis-results"></a>Travis-CI test results
-#TODO
+When your tests pass, all is well, and you'll see the [build|passing] badge showing up happily in your README.md. If tests fails, though, that'll be replaced with a [build|failed] badge in red. Clicking that badge (pass or fail) will take you to the Travis-CI status page for that repo.
+
+There are a lot of options here. Under the "Current" tab, the main panel will show the most recent commit message, and whether it passed. Below that are rows for each build job (one for each language version you included in your .travis.yml). Clicking on those will open up a view of the console where that job was run, including any STDOUT and STDERR results from running the build and test scripts.
+
+These should help you diagnose what went wrong.
 
 ## <a name="coveralls-init"></a>Coveralls initial setup
-#TODO
+Setting up Coveralls to run against your repo is not very different from setting up Travis-CI, which should be set up first.
+
+1. Login to https://coveralls.io using your Github account. This will pause for a moment while it looks up which repos you have administrative access to.
+2. Click the "Repos" button on the top of the left side menu.
+3. Click the "Add Repo" button on the upper right (if present, this might just drop you in to a list of available repos on your first time)
+4. Select a repo to activate, and click the toggle switch.
+5. Clicking on the 'Details' button that appears after the switch is flipped on will take you - for now - to a page with a little help on configuring your repo to be built against Coveralls, especially with Ruby and Travis-CI pro. You probably don't need this for now.
+6. On the top of that page is a banner that includes a similar badge to Travis-CI. Click the "Badge URLs" button and copy the Markdown block to paste in your README.md.
 
 ## <a name="coveralls-config"></a>Coveralls configuration
-#TODO
+There are two phases here - setting up Coveralls to be run at all, and configuring your tests to work with Coveralls. The first is trivial. Add the following line to your `.travis.yaml` file:
+```
+after_success: coveralls
+```
+Much like it says, if the tests are successful, then the coveralls option gets run. This is built in to Travis-CI - there's nothing else you'll need to do for it to start.
+
+The configuration step can be much trickier. The short version is that your test results must create a file called `.coverage` in the root of your repo directory. The `coveralls` command sends that file to the Coveralls server for processing.
+
+Fortunately, the [Coveralls documentation](https://coveralls.zendesk.com/hc/en-us) includes instructions and examples for working with most modern languages. Unfortunately, that doesn't include Perl. However, there are community-driven methods for creating Perl code coverage reports and sending them to Coveralls. [This blog post](http://blogs.perl.org/users/nick_wellnhofer/2015/03/howto-xs-coverage-reports-on-coveralls.html) references the [Travis-perl helper](https://github.com/travis-perl/helpers) package that can help with that.
 
 ## <a name="kbase-challenges"></a>KBase challenges
 Although this document outlines the general form of how to set up Github repositories to work with Travis-CI and Coveralls, there are still numerous challenges with automatically unit-testing KBase code. Here's a few to get started:
