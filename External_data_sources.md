@@ -217,3 +217,96 @@ Download policy is given on this link: http://genome.jgi.doe.gov/pages/dynamicOr
 http://phytozome.jgi.doe.gov/pz/portal.html
 
 ---
+
+### Pfam
+
+#### How Pfam is used in KBase
+
+Pfam is used by the Gene Families service to search for domains in
+genomes.
+
+#### License for Pfam data
+Pfam is freely available under the Creative Commons Zero ("CC0") licence.
+http://pfam.xfam.org/about
+
+#### Links to where Pfam can be accessed
+
+http://pfam.xfam.org/
+
+---
+
+### TIGRFAMs
+
+#### How TIGRFAMs is used in KBase
+
+TIGRFAMs is used by the Gene Families service to search for domains in
+genomes.
+
+#### License for TIGRFAMs data
+
+Copyright 1995-2014 The J. Craig Venter Institute. All rights
+reserved.
+
+This data is provided "AS IS". The J. Craig Venter Institute
+makes no Representation or warranty, express or
+implied, including without limitation any warranties of
+merchantability or fitness for a particular purpose, associated
+with the receipt or use of this data.
+
+This database is free; you can redistribute it and/or modify it under
+the terms of the GNU Library General Public License as published by
+the Free Software Foundation; either version 2 of the License, or (at
+your option) any later version.
+
+In summary, you are free to redistribute *verbatim* copies of TIGRFAMs
+or any TIGRFAMs files in any way you like, so long as your copy
+of TIGRFAMs retains our copyright notice and the GNU license. You may also
+make *modified* copies of TIGRFAMs and distribute them, but your derivative
+database must be freely distributed under the GNU LGPL. Proprietary
+modification of the TIGRFAMs database is prohibited, except by a separate
+formal licensing agreement from the J. Craig Venter Institute.
+
+ftp://ftp.jcvi.org/pub/data/TIGRFAMs/COPYRIGHT
+
+#### Links to where TIGRFAMs can be accessed
+
+http://www.jcvi.org/cgi-bin/tigrfams/index.cgi
+
+---
+
+### CDD
+
+#### How CDD is used in KBase
+
+CDD is used by the Gene Families service to search for domains in
+genomes.  In addition to the NCBI-curated CDD domain models, we also
+search against CDD libraries for SMART (Simple Modular Architecture
+Research Tool) and for COGs (clusters of orthologous groups).
+
+#### License for CDD data
+
+Databases of molecular data on the NCBI Web site include such examples
+as nucleotide sequences (GenBank), protein sequences, macromolecular
+structures, molecular variation, gene expression, and mapping
+data. They are designed to provide and encourage access within the
+scientific community to sources of current and comprehensive
+information. Therefore, NCBI itself places no restrictions on the use
+or distribution of the data contained therein. Nor do we accept data
+when the submitter has requested restrictions on reuse or
+redistribution. However, some submitters of the original data (or the
+country of origin of such data) may claim patent, copyright, or other
+intellectual property rights in all or a portion of the data (that has
+been submitted). NCBI is not in a position to assess the validity of
+such claims and since there is no transfer or rights from submitters
+to NCBI, NCBI has no rights to transfer to a third party. Therefore,
+NCBI cannot provide comment or unrestricted permission concerning the
+use, copying, or distribution of the information contained in the
+molecular databases.
+
+http://www.ncbi.nlm.nih.gov/About/disclaimer.html
+
+#### Links to where CDD can be accessed
+
+http://www.ncbi.nlm.nih.gov/Structure/cdd/cdd.shtml
+
+---
