@@ -99,7 +99,15 @@ Setting up Coveralls to run against your repo is not very different from setting
 6. On the top of that page is a banner that includes a similar badge to Travis-CI. Click the "Badge URLs" button and copy the Markdown block to paste in your README.md.
 
 ## <a name="coveralls-config"></a>Coveralls configuration
-#TODO
+There are two phases here - setting up Coveralls to be run at all, and configuring your tests to work with Coveralls. The first is trivial. Add the following line to your `.travis.yaml` file:
+```
+after_success: coveralls
+```
+Much like it says, if the tests are successful, then the coveralls option gets run. This is built in to Travis-CI - there's nothing else you'll need to do for it to start.
+
+The configuration step can be much trickier. The short version is that your test results must create a file called `.coverage` in the root of your repo directory. The `coveralls` command sends that file to the Coveralls server for processing.
+
+Fortunately, the [Coveralls documentation](https://coveralls.zendesk.com/hc/en-us) includes instructions and examples for working with most modern languages. Unfortunately, that doesn't include Perl. However, there are community-driven methods for creating Perl code coverage reports and sending them to Coveralls. [This blog post](http://blogs.perl.org/users/nick_wellnhofer/2015/03/howto-xs-coverage-reports-on-coveralls.html) references the [Travis-perl helper](https://github.com/travis-perl/helpers) package that can help with that.
 
 ## <a name="kbase-challenges"></a>KBase challenges
 Although this document outlines the general form of how to set up Github repositories to work with Travis-CI and Coveralls, there are still numerous challenges with automatically unit-testing KBase code. Here's a few to get started:
