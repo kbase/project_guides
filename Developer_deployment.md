@@ -118,9 +118,12 @@ Getting a new service into production is beyond the scope of this Getting Starte
 
 -   The module provides documentation on the methods it uses including scientific references where appropriate.
 
+-   The module implements an algorithm or a functionality that has been published in peer-reviewed journals or widely accepted as a standard approach.
+
+
 Once a module has been vetted, it can be added to configuration for the Continuous Integration (CI) environment. This allows the service to be tested in a complete, but non-production environment. This will help ensure that the module interoperates with other parts of the system. Once the module has proven itself stable, it can be promoted to the “next” environment (next.kbase.us). This is meant as an early preview of the next major release for KBase.
 
-# Raw Notes/Remaining
+# Raw Notes/Remaining 
 
 I think the remainder of these are beyond the scope and should be in other how tos…
 
@@ -134,7 +137,7 @@ I think the remainder of these are beyond the scope and should be in other how t
 
 -   Learn about the Workspace service, versioning, numeric and alphanumeric references
 
--   Understand procedure for taking ownership of Workspace name space (also belongs in “New data” handbook
+-   Understand procedure for taking ownership of Workspace name space (also belongs in “New data” handbook)
 
 -   Learn about the directory layout and Makefile targets for a new service
 
@@ -144,6 +147,8 @@ I think the remainder of these are beyond the scope and should be in other how t
 
 -   Learn how to add new upload/download method back ends to the transform service
 
--   Learn how to send compute jobs to job queue
+-   Learn how to send compute jobs to job queue and scale the workflows using AWE
+
+-   Learn how to add appropriate authentication and authorization capability to your services
 
 
