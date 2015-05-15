@@ -2,6 +2,9 @@
 
 Many external projects have been planning to add functionality to KBase and in some cases it is in their milestones.
 Given the current status of the project wherein we are slowly bringing the framework into increased reliability and extensibility;  and given our roadmap and finite resources we have to have a communicate our policy for when and how such tools get incorporated. 
+
+The fact is these same rules should apply to ourselves as decide to incorporate new function though many of these rules should begin to dissolve as the barriers to incorporation of new function are lowered. 
+
 As the system matures we can open up the spigot a bit wider but for now we must be cicumspect:
 
 
