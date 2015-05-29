@@ -4,15 +4,10 @@
 module KBaseGenomes {
 
     /*
-    Reference to a reads file in shock
+    Reference to a data file in shock
     @id shock
     */
-    typedef string Reads_ref;
-    /*
-    Reference to a fasta file in shock
-    @id shock
-    */
-    typedef string Fasta_ref;
+    typedef string Data_ref;
 
     /*
     Class of a genome feature with possible values: coding, non-coding
@@ -90,6 +85,20 @@ module KBaseGenomes {
     } Feature;
 
     /*
+    Structure for a relationship between two features
+
+    @optional class type function is_parent
+    */
+    typedef structure {
+		Feature_id feature_1;
+		Feature_id feature_2;
+		string class;
+		string type;
+		string function;
+		int is_parent;
+    } Feature_Relationship;
+
+    /*
     Reference to a source_id
     @id external
     */
@@ -129,7 +138,7 @@ module KBaseGenomes {
 		string version;
 		list<publication> publications;
 		list<Feature> features;
-		Fasta_ref fasta_ref;
-		Reads_ref reads_ref;
+		list<Feature_Relationship> feature_relationships;
+		list<Data_ref> data_ref;
     } Genome;
 };
