@@ -194,8 +194,8 @@ Dependent KBase modules :
 
 Future Narratives around RNASeq: 
 
-Use RNAseq to identify novel transcripts. 
-  	We can easily create this app with just adding another mode to the existing RNASeq pipeline. This requires rework on the existing data models KBaseExpression.ExpressionSample to allow for new transcript ids. As this service will produce novel transcripts which will not have an equivalent Kbase CDS id.
-Use RNASeq data for identification of exon, introns, mapping of their boundaries and the identification of 5’ and 3’ UTRs. 
-Use RNASeq for identification of TSS
-Use RNASeq data for SNP discovery.
+	Use RNAseq to identify novel transcripts. 
+  		We can easily create this app with just adding another mode to the existing RNASeq pipeline. This requires rework on the existing data models KBaseExpression.ExpressionSample to allow for new transcript ids. As this service will produce novel transcripts which will not have an equivalent Kbase CDS id.
+	Use RNASeq data for identification of exon, introns, mapping of their boundaries and the identification of 5’ and 3’ UTRs. 
+	Use RNASeq for identification of TSS
+	Use RNASeq data for SNP discovery.
