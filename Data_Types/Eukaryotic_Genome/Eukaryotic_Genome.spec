@@ -157,8 +157,8 @@ module KBaseGenomes {
 		float gc_content;
 		string version;
 		list<publication> publications;
-		list<FeatureSet> features;
-		list<FeatureSet_Relationship> feature_relationships;
+		list<FeatureSet> feature_sets;
+		list<FeatureSet_Relationship> featureset_relationships;
 		list<Data_ref> data_refs;
     } Genome;
 };
