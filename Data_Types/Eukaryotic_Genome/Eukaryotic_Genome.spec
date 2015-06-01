@@ -2,6 +2,11 @@
 @author chenry,kkeller,sseaver
 */
 module KBaseGenomes {
+    /*
+    Reference to a FeatureSet object containing a set of features for this genome
+    @id ws KBaseGenomes.FeatureSet
+    */
+    typedef string FeatureSet_ref;
 
     /*
     Reference to a data file in shock
@@ -29,6 +34,21 @@ module KBaseGenomes {
 	igr (intergenic region)
     */
     typedef string Feature_type;
+
+    /* Type spec for the "FeatureSet" object
+    @optional name data_refs md5 source source_id
+    */
+    typedef structure {
+	FeatureSet_id id;
+	string name;
+	string md5;
+	source_id source_id;
+	string source;
+	Feature_type type;
+	Feature_class class;
+	list<Data_ref> data_refs;
+	list<Feature> features;
+    } FeatureSet;
 
     /* 
     A region of DNA is maintained as a tuple of four components:
@@ -90,19 +110,20 @@ module KBaseGenomes {
     @optional class type function is_parent
     */
     typedef structure {
-		Feature_id feature_1;
-		Feature_id feature_2;
+		FeatureSet_id featureset_1;
+		FeatureSet_id featureset_2;
 		string class;
 		string type;
 		string function;
 		int is_parent;
-    } Feature_Relationship;
+    } FeatureSet_Relationship;
 
     /*
     Reference to a source_id
     @id external
     */
     typedef string source_id;
+
     /*
     KBase genome ID
     @id kb
@@ -122,7 +143,6 @@ module KBaseGenomes {
 	@metadata ws source as Source
 	@metadata ws version as Version
 	@metadata ws scientific_name as Name
-	@metadata ws length(features) as Number features
     */
     typedef structure {
 		Genome_id id;
@@ -137,8 +157,8 @@ module KBaseGenomes {
 		float gc_content;
 		string version;
 		list<publication> publications;
-		list<Feature> features;
-		list<Feature_Relationship> feature_relationships;
-		list<Data_ref> data_ref;
+		list<FeatureSet> features;
+		list<FeatureSet_Relationship> feature_relationships;
+		list<Data_ref> data_refs;
     } Genome;
 };
