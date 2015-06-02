@@ -36,84 +36,49 @@ typedef structure {
 typedef structure {
 
 string genome\_id;
-
-mapping\<string assembly\_id, string assembly\_ref\> assembly\_refs\_map; \#should the key be the assembly\_id or some string like reference, representative.
-
-string external\_source;
-
-string external\_source\_id;
-
-string external\_source origination\_date;
-
-string reference\_assembly\_id; \# here to mark the default assembly that should be selected for processing unless otherwise specified
-
-string notes;
-
-string environmental\_comments; \#location and environment information (perhaps separate fields for latitude, longitude, altitude)(perhaps we need a MixS object)
-
-string taxon\_ref;
+* mapping\<string assembly\_id, string assembly\_ref\> assembly\_refs\_map; \#should the key be the assembly\_id or some string like reference, representative.
+* string external\_source;
+* string external\_source\_id;
+* string external\_source origination\_date;
+* string reference\_assembly\_id; \# here to mark the default assembly that should be selected for processing unless otherwise specified
+* string notes;
+* string environmental\_comments; \#location and environment information (perhaps separate fields for latitude, longitude, altitude)(perhaps we need a MixS object)
+* string taxon\_ref;
 
 } **Genome**; \#organism/strain name instead?
 
 typedef structure {
-
-string assembly\_id\*;
-
-string name;
-
-string md5\*;
-
-string external\_source;
-
-string external\_source\_id;
-
-string external\_source origination\_date;
-
-float gc\_content;
-
-string type;\# Example Finished, Draft.Should be controlled vocabulary
-
-reads\_handle\_ref reads\_handle\_ref; \# allow for multiple read refs?
-
-fasta\_handle\_ref fasta\_handle\_ref\*; \# allow for multiple fasta refs?
-
-mapping\<string contig\_id, Contig\> contigs\*;
-
-assembly\_stats assembly\_stats;
-
-int is\_reference; \#1 reference assembly for the genome/strain, 0 is non reference
-
-string reference\_annotation\_id; \# here to mark the default annotation that should be selected for processing unless otherwise specified
-
-int dna\_size;
-
-int num\_contigs;
-
-mapping\<string annotation\_id, string annotation\_ref\> genome\_annotations;
-
-string comments;
+* string assembly\_id\*;
+* string name;
+* string md5\*;
+* string external\_source;
+* string external\_source\_id;
+* string external\_source origination\_date;
+* float gc\_content;
+* string type;\# Example Finished, Draft.Should be controlled vocabulary
+* reads\_handle\_ref reads\_handle\_ref; \# allow for multiple read refs?
+* fasta\_handle\_ref fasta\_handle\_ref\*; \# allow for multiple fasta refs?
+* mapping\<string contig\_id, Contig\> contigs\*;
+* assembly\_stats assembly\_stats;
+* int is\_reference; \#1 reference assembly for the genome/strain, 0 is non reference
+* string reference\_annotation\_id; \# here to mark the default annotation that should be selected for processing unless otherwise specified
+* int dna\_size;
+* int num\_contigs;
+* mapping\<string annotation\_id, string annotation\_ref\> genome\_annotations;
+* string comments;
 
 } **Assembly**;
 
 typedef structure {
-
-string contig\_id\*;
-
-int length\*;
-
-string md5\*;
-
-string name;
-
-string description;
-
-int is\_complete; \# indication of complete chromosome, plasmid, etc.
-
-string is\_circular\*; \# True, False and Unknown are viable values, could make an int(bool). If field not present viewed as unknown.
-
-int start\_position;
-
-int num\_bytes;
+* string contig\_id\*;
+* int length\*;
+* string md5\*;
+* string name;
+* string description;
+* int is\_complete; \# indication of complete chromosome, plasmid, etc.
+* string is\_circular\*; \# True, False and Unknown are viable values, could make an int(bool). If field not present viewed as unknown.
+* int start\_position;
+* int num\_bytes;
 
 } contig;
 
