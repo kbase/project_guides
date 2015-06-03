@@ -56,16 +56,21 @@ Note the reference is a versioned WS object reference.
 typedef structure {
 
 * string genome\_id;
-* mapping\<string assembly\_id, string assembly\_ref\> assembly\_refs\_map; \#should the key be the assembly\_id or some string like reference, representative.
 * string external\_source;
 * string external\_source\_id;
 * string external\_source origination\_date;
-* string reference\_assembly\_id; \# here to mark the default assembly that should be selected for processing unless otherwise specified
+* string reference\_assembly\_ref; 
 * string notes;
-* string environmental\_comments; \#location and environment information (perhaps separate fields for latitude, longitude, altitude)(perhaps we need a MixS object)
+* string environmental\_comments; 
 * string taxon\_ref;
+* string assembly_set_ref;
 
-} **Genome**; \#organism/strain name instead?
+} **Genome**; 
+
+Should object be called organism or strain name instead?
+Taxon ref is a versioned WS object reference.
+reference_assembly_ref is a versioned WS object reference.
+location and environment information (perhaps separate fields for latitude, longitude, altitude)(perhaps we need a MixS object)
 
 -------------------------
 
@@ -90,6 +95,11 @@ typedef structure {
 * string comments;
 
 } **Assembly**;
+
+
+
+
+-----------------------
 
 typedef structure {
 * string contig\_id\*;
