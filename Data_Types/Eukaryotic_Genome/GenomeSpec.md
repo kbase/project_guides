@@ -49,7 +49,7 @@ typedef structure {
 
 } **GenomeSet**
 
-Note the reference is a versioned WS object reference.
+Note the reference is a unversioned WS object reference.
 
 --------------------------
 
@@ -71,7 +71,7 @@ Should object be called organism or strain name instead?
 
 Taxon ref is a versioned WS object reference.
 
-reference_assembly_ref is a versioned WS object reference.
+reference_assembly_ref is an unversioned WS object reference.
 
 location and environment information (perhaps separate fields for latitude, longitude, altitude)(perhaps we need a MixS object)
 
@@ -87,7 +87,7 @@ typedef structure {
 
 } **AssemblySet**
 
-Note the reference is a versioned WS object reference.
+Note the reference is a unversioned WS object reference.
 
 --------------------------
 
@@ -110,6 +110,7 @@ typedef structure {
 * int num\_contigs;
 * mapping\<string annotation\_id, string annotation\_ref\> genome\_annotations;
 * string comments;
+* string genome_ref;
 
 } **Assembly**;
 
@@ -119,6 +120,8 @@ is_reference - 1 is reference assembly for the genome/strain, 0 is non reference
 
 reference\_annotation\_ref is a nonversion Workspace object reference.
 
+genome_ref is a versioned workspace object reference.
+
 -----------------------
 
 typedef structure {
@@ -127,12 +130,18 @@ typedef structure {
 * string md5\*;
 * string name;
 * string description;
-* int is\_complete; \# indication of complete chromosome, plasmid, etc.
-* string is\_circular\*; \# True, False and Unknown are viable values, could make an int(bool). If field not present viewed as unknown.
+* int is\_complete; 
+* string is\_circular\*; 
 * int start\_position;
 * int num\_bytes;
 
 } contig;
+
+is_complete - is an indication of complete chromosome, plasmid, etc.
+
+is\_circular - True, False and Unknown are viable values, could make an int(bool). If field not present viewed as unknown.
+
+----------------------
 
 typedef structure {
 
@@ -140,7 +149,12 @@ typedef structure {
 
 \#include assembler, sequencing tech, etc?
 
-} assembly\_stats; \# Separate object or contained in the assembly?
+} assembly\_stats; 
+
+Separate object or contained in the assembly?
+
+-----------------------
+
 
 typdef structure {
 * string genome\_annotation\_id\*;
