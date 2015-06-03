@@ -21,7 +21,7 @@
 
 ##Spec:
 
-typedef structure {
+<p>typedef structure {
 * string taxonomy\_id\*;
 * string scientific\_name\*;
 * string scientific\_lineage\*;
@@ -33,18 +33,18 @@ typedef structure {
 
 } **Taxon**;
 
-Note both references are nonversioned WS object reference.
+Note both references are nonversioned WS object reference.</p>
 
 
-typedef structure {
+<p>typedef structure {
 
 * string id;
 * string name;
 * string description;
 * string notes
-* mapping\<string genome\_id, Genome genome\>
+* mapping\<string genome\_id, string genome_ref\>
 
-} **GenomeSet**
+} **GenomeSet**</p>
 
 
 typedef structure {
