@@ -25,18 +25,45 @@
 ###Taxon
 
 typedef structure {
-* string taxonomy\_id\*;
-* string scientific\_name\*;
-* string scientific\_lineage;
+* string taxonomy_id\*;
+* string scientific_name\*;
+* string scientific_lineage;
 * string domain\*;
 * list\<string\> aliases;
-* int genetic\_code;
-* string reference\_genome\_ref;
+* int genetic_code;
+* string reference_genome_id;
 * string genome_set_ref; 
+* string parent_taxon_ref;
+* string taxon_set_ref;
 
 } **Taxon**;
 
 Note both references are nonversioned WS object reference.
+
+genome_set_ref is a nonversioned WS object reference.
+
+taxon_set_ref is a nonversioned WS object reference.
+
+parent_taxon_ref is a versioned WS object reference.
+
+reference_genome_id is a key in the genome_set, thus it requires a genome_set_ref to exist.
+This could potentially be made to direct reference to the object instead.
+
+---------------------------
+
+###TaxonSet
+
+typedef structure {
+
+* string id;
+* string name;
+* string description;
+* string notes;
+* mapping\<string taxonomy_id, string taxon_ref\>;
+
+} **TaxonSet**
+
+Note the reference is a unversioned WS object reference.
 
 ---------------------------
 
@@ -64,7 +91,7 @@ typedef structure {
 * string external\_source;
 * string external\_source\_id;
 * string external\_source origination\_date;
-* string reference\_assembly\_ref; 
+* string reference\_assembly\_idf; 
 * string notes;
 * string environmental\_comments; 
 * string taxon\_ref;
@@ -76,7 +103,8 @@ Should object be called organism or strain name instead?
 
 Taxon ref is a versioned WS object reference.
 
-reference_assembly_ref is an unversioned WS object reference.
+reference_assembly_id is a key in the genome_set, thus it requires a assembly_set_ref to exist.
+This could potentially be made to direct reference to the object instead.
 
 location and environment information (perhaps separate fields for latitude, longitude, altitude)(perhaps we need a MixS object)
 
@@ -100,23 +128,23 @@ Note the reference is a unversioned WS object reference.
 ###Assembly
 
 typedef structure {
-* string assembly\_id\*;
+* string assembly_id\*;
 * string name;
 * string md5\*;
-* string external\_source;
-* string external\_source\_id;
-* string external\_source origination\_date;
-* float gc\_content;
+* string external_source;
+* string external_source_id;
+* string external_source origination_date;
+* float gc_content;
 * string type;
-* reads\_handle\_ref reads\_handle\_ref; 
-* fasta\_handle\_ref fasta\_handle\_ref\*; 
-* mapping\<string contig\_id, Contig\> contigs\*;
-* assembly\_stats assembly\_stats;
-* int is\_reference; 
-* string reference\_annotation\_ref; 
-* int dna\_size;
-* int num\_contigs;
-* mapping\<string annotation\_id, string annotation\_ref\> genome\_annotations;
+* reads_handle_ref reads_handle_ref; 
+* fasta_handle_ref fasta_handle_ref\*; 
+* mapping\<string contig_id, Contig\> contigs\*;
+* assembly_stats assembly_stats;
+* int is_reference; 
+* string reference_genome_annotation_id; 
+* int dna_size;
+* int num_contigs;
+* string genome_annotation_set_ref;
 * string comments;
 * string genome_ref;
 
@@ -126,32 +154,35 @@ Type is a controlled vocabulary.  Example Finished, Draft.
 
 is_reference - 1 is reference assembly for the genome/strain, 0 is non reference
 
-reference\_annotation\_ref is a nonversion Workspace object reference.
+reference_genome_annotation_id is a key in the genome_set, thus it requires a genome_annotations_set_ref to exist.
+This could potentially be made to direct reference to the object instead.
 
 genome_ref is a versioned workspace object reference.
 
 -----------------------
 
-###Contig
+####Contig
 
 typedef structure {
-* string contig\_id\*;
+* string contig_id\*;
 * int length\*;
 * string md5\*;
 * string name;
 * string description;
-* int is\_complete; 
-* string is\_circular\*; 
-* int start\_position;
-* int num\_bytes;
+* int is_complete; 
+* string is_circular\*; 
+* int start_position;
+* int num_bytes;
 
 } contig;
 
 is_complete - is an indication of complete chromosome, plasmid, etc.
 
-is\_circular - True, False and Unknown are viable values, could make an int(bool). If field not present viewed as unknown.
+is_circular - True, False and Unknown are viable values, could make an int(bool). If field not present viewed as unknown.
 
 ----------------------
+
+####assembly_stats
 
 typedef structure {
 
@@ -183,38 +214,40 @@ Note the reference is a unversioned WS object reference.
 ###GenomeAnnoation
 
 typdef structure {
-* string genome\_annotation\_id\*;
+* string genome_annotation_id\*;
 * int reference;
-* float quality\_score; 
-* string annotation\_quality\_detail\_ref; 
+* float quality_score; 
+* string annotation_quality_detail_ref; 
 * list\<publication\> publications;
-* feature\_sets\_map\* feature\_set\_references;
-* string protein_set\_ref;
-* string evidence_set\_ref;
-* string feature\_lookup\_ref\*;
+* feature_sets_map\* feature_set_references;
+* string protein_set_ref;
+* string evidence_set_ref;
+* string feature_lookup_ref\*;
 * string comments;
 * string methodology; 
 * string assembly_ref;
 
 } **GenomeAnnotation**;
 
-quality\_score could be in genome\_annotation\_quality\_detail instead
+quality_score could be in genome_annotation_quality_detail instead
 
-annotation\_quality\_detail\_ref would be a versioned workspace reference 
+annotation_quality_detail_ref would be a versioned workspace reference 
 
-evidence\_set_ref would be a unversioned workspace reference 
+evidence_set_ref would be a unversioned workspace reference 
 
-protein\_set_ref would be a unversioned workspace reference 
+protein_set_ref would be a unversioned workspace reference 
 
-feature\_lookup\_ref would be a unversioned workspace reference 
+feature_lookup_ref would be a unversioned workspace reference 
 
 methodology - Not sure if needed? example would be rast
 
 assembly_ref would be a versioned workspace reference 
 
+----------------------
 
+####feature_set_map
 
-mapping\<feature\_type, feature\_set\_ref\> feature\_set\_map;
+mapping\<feature_type, feature_set_ref\> feature_set_map;
 
 This would be an unversioned workspace reference;
 
@@ -255,7 +288,7 @@ type would be controlled vocabulary - Ex: CDS, etc.
 
 -----------------------
 
-###Feature
+####Feature
 
 typedef structure {
 * string feature\_id\*;
@@ -263,11 +296,13 @@ typedef structure {
 * string type\*;
 * string function;
 * string md5\*;
-* string dna\_sequence\*;
-* int dna\_sequence\_length\*;
+* string dna_sequence\*;
+* int dna_sequence\_length\*;
 * list\<publication\> publications;
 * list\<string\> aliases;
 * string notes;
+
+
 
 * tuple\<string protein\_ref, string protein\_id\> corresponding\_protein; \#only for mRNA and CDS feature types.
 
@@ -290,7 +325,7 @@ typedef structure {
 
 
 -------------------------------
-###Feature Properies
+####Feature Properties
 
 Below are Feature properties for specific type of features.
 
@@ -332,7 +367,18 @@ typedef structure{
 
 } operon_properties;
 
-Note order matters in the lists.  
+Note order matters in the lists.  Suggests ordinal position along operon.
+
+
+Note this pattern 
+
+\<list\<tuple\<string feature_set_ref, string feature_id\>\> component_CDS_ref;
+
+could be rewritten as below if all the CDS features are in the same feature set (which should be the case).
+
+\<tuple\<string feature_set_ref, \<list\<string feature_id\>\> component_CDS_ref;
+
+
 
 typedef structure{
 * \<list\<tuple\<string protein_set_ref, string protein_id\>\> protein_refs;
