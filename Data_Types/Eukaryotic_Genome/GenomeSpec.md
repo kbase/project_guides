@@ -78,6 +78,20 @@ location and environment information (perhaps separate fields for latitude, long
 -------------------------
 
 typedef structure {
+
+* string id;
+* string name;
+* string description;
+* string notes
+* mapping\<string assembly_id, string assembly_ref>
+
+} **AssemblySet**
+
+Note the reference is a versioned WS object reference.
+
+--------------------------
+
+typedef structure {
 * string assembly\_id\*;
 * string name;
 * string md5\*;
@@ -85,13 +99,13 @@ typedef structure {
 * string external\_source\_id;
 * string external\_source origination\_date;
 * float gc\_content;
-* string type;\# Example Finished, Draft.Should be controlled vocabulary
-* reads\_handle\_ref reads\_handle\_ref; \# allow for multiple read refs?
-* fasta\_handle\_ref fasta\_handle\_ref\*; \# allow for multiple fasta refs?
+* string type;
+* reads\_handle\_ref reads\_handle\_ref; 
+* fasta\_handle\_ref fasta\_handle\_ref\*; 
 * mapping\<string contig\_id, Contig\> contigs\*;
 * assembly\_stats assembly\_stats;
-* int is\_reference; \#1 reference assembly for the genome/strain, 0 is non reference
-* string reference\_annotation\_id; \# here to mark the default annotation that should be selected for processing unless otherwise specified
+* int is\_reference; 
+* string reference\_annotation\_ref; 
 * int dna\_size;
 * int num\_contigs;
 * mapping\<string annotation\_id, string annotation\_ref\> genome\_annotations;
@@ -99,8 +113,11 @@ typedef structure {
 
 } **Assembly**;
 
+Type is a controlled vocabulary.  Example Finished, Draft.
 
+is_reference - 1 is reference assembly for the genome/strain, 0 is non reference
 
+reference\_annotation\_ref is a nonversion Workspace object reference.
 
 -----------------------
 
