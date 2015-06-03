@@ -78,7 +78,6 @@ location and environment information (perhaps separate fields for latitude, long
 -------------------------
 
 typedef structure {
-
 * string id;
 * string name;
 * string description;
@@ -163,31 +162,29 @@ typdef structure {
 * string annotation\_quality\_detail\_ref; \#ws\_ref
 * list\<publication\> publications;
 * feature\_sets\_map\* feature\_set\_references;
-* string proteins\_ref;
-* list\<feature\_grouping\> feature\_groupings; \# see below for feature\_grouping
-* string annotation\_evidence\_ref;
+* string protein_set\_ref;
+* string evidence_set\_ref;
 * string feature\_lookup\_ref\*;
 * string comments;
 * string methodology; \#Not sure if needed? example would be rast
 
 } **GenomeAnnotation**;
 
-typedef structure{
-* string id;
-* string name;
-* string type\*; \#Examples operon, transcriptional unit, regulons, paralogs, pathway?
-* mapping\<string component\_type,list\<string feature\_id\>\> components\*;
-\#component\_type would be controlled vocabulary
-\# examples enhancer, silencer, operator, promoter(proximal, core), 5’ UTR, CDS, 3’ UTR, RBS
-\#is order in list enough, should we have ordinal information?
-\#Could be determined by structural annotation of features.
-* list\<string\> grouping\_aliases;
-* list\<tuple\<string annotation\_evidence\_ref, string evidence\_id\>\> grouping\_evidences;
-* list\<publication\> publications;
-* string comments;
-\#Do we want a non ws reference to the genome\_annotation here.
+quality\_score could be in genome\_annotation\_quality\_detail instead
 
-}feature\_grouping;
+annotation\_quality\_detail\_ref would be a versioned workspace reference 
+
+evidence\_set_ref would be a unversioned workspace reference 
+
+protein\_set_ref would be a unversioned workspace reference 
+
+feature\_lookup\_ref would be a unversioned workspace reference 
+
+methodology - Not sure if needed? example would be rast
+
+------------------------
+
+
 
 \#may want a feature groupings object for each genome\_annotation to keep number of created objects under control.
 
