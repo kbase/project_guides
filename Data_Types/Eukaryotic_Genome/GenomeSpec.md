@@ -20,8 +20,9 @@
 **Structures name in bold would be WS Typed Objects**
 
 ##Spec:
+--------------------------
 
-<p>typedef structure {
+typedef structure {
 * string taxonomy\_id\*;
 * string scientific\_name\*;
 * string scientific\_lineage\*;
@@ -33,10 +34,12 @@
 
 } **Taxon**;
 
-Note both references are nonversioned WS object reference.</p>
+Note both references are nonversioned WS object reference.
+
+---------------------------
 
 
-<p>typedef structure {
+typedef structure {
 
 * string id;
 * string name;
@@ -44,8 +47,11 @@ Note both references are nonversioned WS object reference.</p>
 * string notes
 * mapping\<string genome\_id, string genome_ref\>
 
-} **GenomeSet**</p>
+} **GenomeSet**
 
+Note the reference is a versioned WS object reference.
+
+--------------------------
 
 typedef structure {
 
@@ -60,6 +66,8 @@ typedef structure {
 * string taxon\_ref;
 
 } **Genome**; \#organism/strain name instead?
+
+-------------------------
 
 typedef structure {
 * string assembly\_id\*;
