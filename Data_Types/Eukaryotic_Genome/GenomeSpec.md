@@ -301,28 +301,21 @@ typedef structure {
 * list\<publication\> publications;
 * list\<string\> aliases;
 * string notes;
-
-
-
-* tuple\<string protein\_ref, string protein\_id\> corresponding\_protein; \#only for mRNA and CDS feature types.
-
-* list\<annotation\> annotations; \#does this include ontologies? Ontologies;probably a list to ontology terms or even WS objects. Details can be worked out later
-* list\<subsystem\_data\> subsystem\_data;\#Blue is existing but not sure about
-* list\<string\> subsystems;
-* list\<ProteinFamily\> protein\_families;
-* list\<tuple\<string, float\>\> orthologs; \# probably belongs on its own
-* list\<regulon\_data\> regulon\_data;
-* list\<atomic\_regulon\> atomic\_regulons;
-* list\<coexpressed\_fid\> coexpressed\_fids;
-* list\<co\_occurring\_fid\> co\_occurring\_fids;
-* float feature\_quality; \# probably should be a structure
-* string inference; \#Genbank has an inference tag within a feature.
-* list\<string quality\_warnings\>; \# do we want severity (warnings, errors)?
-* list\<tuple\<string annotation\_evidences\_ref, string evidence\_id\>\> evidences ;
 * string comments;
-
+* string inference; 
+* float feature\_quality; 
+* list\<string quality_warnings\>; 
+* \<tuple\<string annotation_evidences\_ref, list\< string evidence_id\>\>\> evidences ;
+* CDS_properties CDS_properties;
+* mRNA_properties mRNA_properties;
+* gene_properties gene_properties;
+* operon_properties operon_properties;
+* pathway_properties pathway_properties;
 } Feature;
 
+inference - Genbank has an inference tag within a feature.
+
+For quality_warnings do we want severity (warnings, errors)?
 
 -------------------------------
 ####Feature Properties
@@ -330,6 +323,8 @@ typedef structure {
 Below are Feature properties for specific type of features.
 
 The references for the feature properties would all be nonversioned Workspace references.
+
+This is the initial thinking of specific types that might need special properties, but more could be easily added in the future.
 
 typedef structure{
 * \<tuple\<string protein_set_ref, string protein_id\>\> codes_for_protein_ref;
