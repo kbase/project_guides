@@ -22,10 +22,12 @@
 ##Spec:
 --------------------------
 
+###Taxon
+
 typedef structure {
 * string taxonomy\_id\*;
 * string scientific\_name\*;
-* string scientific\_lineage\*;
+* string scientific\_lineage;
 * string domain\*;
 * list\<string\> aliases;
 * int genetic\_code;
@@ -38,20 +40,23 @@ Note both references are nonversioned WS object reference.
 
 ---------------------------
 
+###GenomeSet
 
 typedef structure {
 
 * string id;
 * string name;
 * string description;
-* string notes
-* mapping\<string genome\_id, string genome_ref\>
+* string notes;
+* mapping\<string genome\_id, string genome_ref\>;
 
 } **GenomeSet**
 
 Note the reference is a unversioned WS object reference.
 
 --------------------------
+
+###Genome
 
 typedef structure {
 
@@ -77,18 +82,22 @@ location and environment information (perhaps separate fields for latitude, long
 
 -------------------------
 
+###AssemblySet
+
 typedef structure {
 * string id;
 * string name;
 * string description;
-* string notes
-* mapping\<string assembly_id, string assembly_ref>
+* string notes;
+* mapping\<string assembly_id, string assembly_ref>;
 
 } **AssemblySet**
 
 Note the reference is a unversioned WS object reference.
 
 --------------------------
+
+###Assembly
 
 typedef structure {
 * string assembly\_id\*;
@@ -123,6 +132,8 @@ genome_ref is a versioned workspace object reference.
 
 -----------------------
 
+###Contig
+
 typedef structure {
 * string contig\_id\*;
 * int length\*;
@@ -152,21 +163,38 @@ typedef structure {
 
 Separate object or contained in the assembly?
 
------------------------
+-------------------------
 
+###GenomeAnnotationSet
+
+typedef structure {
+* string id;
+* string name;
+* string description;
+* string notes;
+* mapping\<string genome_annotation_id, string genome_annotation_ref>;
+
+} **GenomeAnnotationSet**
+
+Note the reference is a unversioned WS object reference.
+
+
+-----------------------
+###GenomeAnnoation
 
 typdef structure {
 * string genome\_annotation\_id\*;
 * int reference;
-* float quality\_score; \#could be in genome\_annotation\_quality\_detail
-* string annotation\_quality\_detail\_ref; \#ws\_ref
+* float quality\_score; 
+* string annotation\_quality\_detail\_ref; 
 * list\<publication\> publications;
 * feature\_sets\_map\* feature\_set\_references;
 * string protein_set\_ref;
 * string evidence_set\_ref;
 * string feature\_lookup\_ref\*;
 * string comments;
-* string methodology; \#Not sure if needed? example would be rast
+* string methodology; 
+* string assembly_ref;
 
 } **GenomeAnnotation**;
 
@@ -182,32 +210,52 @@ feature\_lookup\_ref would be a unversioned workspace reference
 
 methodology - Not sure if needed? example would be rast
 
+assembly_ref would be a versioned workspace reference 
+
+
+
+mapping\<feature\_type, feature\_set\_ref\> feature\_set\_map;
+
+This would be an unversioned workspace reference;
+
+The feature type is a controlled vocabulary perhaps derived from [*http://www.insdc.org/files/feature_table.html#7.2*](http://www.insdc.org/files/feature_table.html#7.2)
+
 ------------------------
 
-
-
-\#may want a feature groupings object for each genome\_annotation to keep number of created objects under control.
+###AnnotationQuality
 
 typedef structure {
-* float metadata\_completeness\*; \#value
-* list\<string\> metadata\_completeness\_warnings\*;\#list of issues
-* float data\_quality; \#value
-* list\<string\> data\_quality\_warnings; \#list of issues
-* int feature\_types\_present\*; \#number of distinct feature types annotated.
-* int evidence\_supported\*; \#evidence present to support annotations
-\#Do we want a non ws reference to the genome\_annotation here.
+* float metadata\_completeness\*; 
+* list\<string\> metadata\_completeness\_warnings\*;
+* float data\_quality; 
+* list\<string\> data\_quality\_warnings; 
+* int feature\_types\_present\*; 
+* int evidence\_supported\*; 
+* string genome_annotation_ref;
 
 } **AnnotationQuality**;
 
-mapping\<feature\_type, feature\_set\_ref\> **feature\_set\_map**;
+genome_annotation_ref would be an unversioned workspace reference - Maybe reference not needed.
 
-\#feature type is a controlled vocabulary perhaps derived from [*http://www.insdc.org/files/feature\_table.html\#7.2*](http://www.insdc.org/files/feature_table.html#7.2)
+-----------------------------
+
+###FeatureTypeSet
 
 typedef structure {
-* string type; \#Ex: CDS, etc.
-* mapping \<string FeatureID,Feature\> features;
+* string id;
+* string type; 
+* string name;
+* string description;
+* string notes;
+* mapping\<string feature_id, feature feature>;
 
-}**FeatureTypeSet**;
+} **FeatureTypeSet**
+
+type would be controlled vocabulary - Ex: CDS, etc.
+
+-----------------------
+
+###Feature
 
 typedef structure {
 * string feature\_id\*;
@@ -215,11 +263,14 @@ typedef structure {
 * string type\*;
 * string function;
 * string md5\*;
-* tuple\<string protein\_ref, string protein\_id\> corresponding\_protein; \#only for mRNA and CDS feature types.
 * string dna\_sequence\*;
 * int dna\_sequence\_length\*;
 * list\<publication\> publications;
 * list\<string\> aliases;
+* string notes;
+
+* tuple\<string protein\_ref, string protein\_id\> corresponding\_protein; \#only for mRNA and CDS feature types.
+
 * list\<annotation\> annotations; \#does this include ontologies? Ontologies;probably a list to ontology terms or even WS objects. Details can be worked out later
 * list\<subsystem\_data\> subsystem\_data;\#Blue is existing but not sure about
 * list\<string\> subsystems;
@@ -236,6 +287,63 @@ typedef structure {
 * string comments;
 
 } Feature;
+
+
+-------------------------------
+###Feature Properies
+
+Below are Feature properties for specific type of features.
+
+The references for the feature properties would all be nonversioned Workspace references.
+
+typedef structure{
+* \<tuple\<string protein_set_ref, string protein_id\>\> codes_for_protein_ref;
+* string EC_Number;
+* \<tuple\<string feature_set_ref, string feature_id\>\> associated_mRNA_ref;
+* \<tuple\<string feature_set_ref, string feature_id\>\> parent_gene_ref;
+* \<tuple\<string feature_set_ref, string feature_id\>\> operon_ref;
+* \<tuple\<string feature_set_ref, string feature_id\>\> pathway_ref;
+
+} CDS_properties;
+
+typedef structure{
+* \<tuple\<string protein_set_ref, string protein_id\>\> codes_for_protein_ref;
+* \<tuple\<string feature_set_ref, string feature_id\>\> associated_CDS_ref;
+* \<tuple\<string feature_set_ref, string feature_id\>\> parent_gene_ref;
+* \<tuple\<string feature_set_ref, string feature_id\>\> operon_ref;
+* \<tuple\<string feature_set_ref, string feature_id\>\> pathway_ref;
+
+} mRNA_properties;
+
+typedef structure{
+* \<tuple\<string protein_set_ref, string protein_id\> codes_for_protein_ref;
+* \<list\<tuple\<string feature_set_ref, string feature_id\>\> children_CDS_ref;
+* \<list\tuple\<string feature_set_ref, string feature_id\>\> children_mRNA_ref;
+* \<tuple\<string feature_set_ref, string feature_id\> operon_ref;
+* \<tuple\<string feature_set_ref, string feature_id\> pathway_ref;
+
+} gene_properties;
+
+typedef structure{
+* \<list\<tuple\<string protein_set_ref, string protein_id\>\> protein_refs;
+* \<list\<tuple\<string feature_set_ref, string feature_id\>\> component_CDS_ref;
+* \<list\tuple\<string feature_set_ref, string feature_id\>\> component_mRNA_ref;
+* \<tuple\<string feature_set_ref, string feature_id\>\> pathway_ref;
+
+} operon_properties;
+
+Note order matters in the lists.  
+
+typedef structure{
+* \<list\<tuple\<string protein_set_ref, string protein_id\>\> protein_refs;
+* \<list\<tuple\<string feature_set_ref, string feature_id\>\> component_CDS_ref;
+* \<list\tuple\<string feature_set_ref, string feature_id\>\> component_mRNA_ref;
+
+} pathway_properties;
+
+Note order matters in the lists. 
+
+------------------------------------------
 
 Feature Questions.
 
