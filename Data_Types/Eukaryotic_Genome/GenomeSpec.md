@@ -68,8 +68,11 @@ typedef structure {
 } **Genome**; 
 
 Should object be called organism or strain name instead?
+
 Taxon ref is a versioned WS object reference.
+
 reference_assembly_ref is a versioned WS object reference.
+
 location and environment information (perhaps separate fields for latitude, longitude, altitude)(perhaps we need a MixS object)
 
 -------------------------
