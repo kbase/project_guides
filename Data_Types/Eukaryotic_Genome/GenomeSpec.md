@@ -29,9 +29,23 @@ typedef structure {
 * list\<string\> aliases;
 * int genetic\_code;
 * string reference\_genome\_ref;
-* string genome_set_ref; #Note this is a nonversioned WS object reference.
+* string genome_set_ref; 
 
 } **Taxon**;
+
+Note both references are nonversioned WS object reference.
+
+
+typedef structure {
+
+* string id;
+* string name;
+* string description;
+* string notes
+* mapping\<string genome\_id, Genome genome\>
+
+} **GenomeSet**
+
 
 typedef structure {
 
