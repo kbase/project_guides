@@ -16,7 +16,6 @@
 
 
 
-
 -------------------
 
 ##ER Diagram:
@@ -498,14 +497,18 @@ typedef structure {
 
 } evidence;
 
-
-
-
-High level ER Diagram.
-
-![](media/image01.jpg)
-
 ------------------------
+
+####Publication
+/*
+Structure for a publication (from ER API)
+also want to capture authors, journal name (not in ER)
+*/
+typedef tuple<int, string, string, string, string, string, string> publication;
+
+This may need to get reworked.  This is directly from existing specs.  Unfortunately it currently is poorly documentated.
+
+--------------------------------
 
 Other questions to explore.
 
