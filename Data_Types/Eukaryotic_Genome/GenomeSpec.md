@@ -27,11 +27,11 @@
 
 **Structures name in bold would be WS Typed Objects**
 
-We are introducing a new concept of an unversioned Workspace reference.
+We are introducing a new concept of an nonversioned Workspace reference.
 So currently a Workspace reference contains 3 numbers spearated by a slash.
 The first number is the Workspace ID.  The second number is the Workspace Object ID.  The last number is Workspace Object Version number.
 
-An unversioned workspace reference would only contain Workspace ID and Workspace Object ID.
+An nonversioned workspace reference would only contain Workspace ID and Workspace Object ID.
 
 This prevents version creep from cascading up when descendent objects get updated.
 
@@ -81,7 +81,7 @@ typedef structure {
 
 } **TaxonSet**
 
-Note the reference is a unversioned WS object reference.
+Note the reference is a nonversioned WS object reference.
 
 ---------------------------
 
@@ -97,7 +97,7 @@ typedef structure {
 
 } **GenomeSet**
 
-Note the reference is a unversioned WS object reference.
+Note the reference is a nonversioned WS object reference.
 
 --------------------------
 
@@ -139,7 +139,7 @@ typedef structure {
 
 } **AssemblySet**
 
-Note the reference is a unversioned WS object reference.
+Note the reference is a nonversioned WS object reference.
 
 --------------------------
 
@@ -225,7 +225,7 @@ typedef structure {
 
 } **GenomeAnnotationSet**
 
-Note the reference is a unversioned WS object reference.
+Note the reference is a nonversioned WS object reference.
 
 
 -----------------------
@@ -251,11 +251,11 @@ quality_score could be in genome_annotation_quality_detail instead
 
 annotation_quality_detail_ref would be a versioned workspace reference 
 
-evidence_set_ref would be a unversioned workspace reference 
+evidence_set_ref would be a nonversioned workspace reference 
 
-protein_set_ref would be a unversioned workspace reference 
+protein_set_ref would be a nonversioned workspace reference 
 
-feature_lookup_ref would be a unversioned workspace reference 
+feature_lookup_ref would be a nonversioned workspace reference 
 
 methodology - Not sure if needed? example would be rast
 
@@ -267,7 +267,7 @@ assembly_ref would be a versioned workspace reference
 
 mapping\<feature_type\*, feature_set_ref\*\> feature_set_map;
 
-This would be an unversioned workspace reference;
+This would be an nonversioned workspace reference;
 
 The feature type is a controlled vocabulary perhaps derived from [*http://www.insdc.org/files/feature_table.html#7.2*](http://www.insdc.org/files/feature_table.html#7.2)
 
@@ -286,7 +286,7 @@ typedef structure {
 
 } **AnnotationQuality**;
 
-genome_annotation_ref would be an unversioned workspace reference - Maybe reference not needed.
+genome_annotation_ref would be an nonversioned workspace reference - Maybe reference not needed.
 
 -----------------------------
 
