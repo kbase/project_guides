@@ -348,9 +348,11 @@ Do we want to try and capture motifs. Orthologs? Orthologs get a little tricky i
 These were part of the old feature object.  I have not included them in this incarnation.
 We would need to have discussions about them.
 
-list\<annotation\> annotations; \#does this include ontologies? Ontologies;probably a list to ontology terms or even WS objects. Details can be worked out later
+/*
+list\<annotation\> annotations; 
+does this include ontologies? Ontologies;probably a list to ontology terms or even WS objects. Details can be worked out later
 
-list\<subsystem\_data\> subsystem\_data;\#Blue is existing but not sure about
+list\<subsystem\_data\> subsystem\_data;
 
 list\<string\> subsystems;
 
@@ -363,6 +365,7 @@ list\<regulon\_data\> regulon\_data;
 list\<atomic\_regulon\> atomic\_regulons;
 
 list\<coexpressed\_fid\> coexpressed\_fids;
+*/
 
 
 -------------------------------
@@ -513,6 +516,7 @@ typedef structure {
 ------------------------
 
 ####Publication
+
 /*
 Structure for a publication (from ER API)
 also want to capture authors, journal name (not in ER)
