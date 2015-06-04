@@ -28,6 +28,19 @@
 
 **Structures name in bold would be WS Typed Objects**
 
+We are introducing a new concept of an unversioned Workspace reference.
+So currently a Workspace reference contains 3 numbers spearated by a slash.
+The first number is the Workspace ID.  The second number is the Workspace Object ID.  The last number is Workspace Object Version number.
+
+An unversioned workspace reference would only contain Workspace ID and Workspace Object ID.
+
+This prevents version creep from cascading up when descendent objects get updated.
+
+However this would require the workspace enforce that an workspace object can not change workspace typed objects.
+Currently a I could create an object of type "A" named foo.  If I save an object of type "B" named foo it increments the version number of the object and the object has completely changed types.
+It should however allow for a new version of the typed object (ex: Genome1.0 to Genome2.0)
+
+
 ###Taxon
 
 typedef structure {
@@ -441,8 +454,8 @@ typedef structure {
 
 typedef structure {
 * string protein_id\*;
-* mapping\<string domain, \<list\<list\<tuple\<int coordinate\_start, int coordinate\_stop\>\>\>\>\>; \# can accommodate multiple of the same domain
-* string peptide\_sequence\*;
+* mapping\<string domain, \<list\<list\<tuple\<int coordinate_start, int coordinate_stop\>\>\>\>\>; 
+* string amino_acid_sequence\*;
 * string function;
 * list\<string alias\> aliases;
 
