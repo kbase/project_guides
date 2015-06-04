@@ -15,7 +15,6 @@
 **NOTE: This is for the multilayered approach to Genome. This is a more accurate representation of the entities involved, although it has some overhead in terms of versioning of the objects and search issues on the levels people are actually searching. The search genome blows up as it can be many annotations.**
 
 
-
 -------------------
 
 ##ER Diagram:
