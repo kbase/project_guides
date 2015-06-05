@@ -535,12 +535,12 @@ What about reannotation, annotation corrections. How do we want to capture. Is v
 How to deal with ontologies.
 
 ##Assessment:
-* Cons to approach
+###Cons to approach
 * Some redundancies of data to allow for different cross sectioning of the data.
 * Many objects. Although some could be hidden.
 * The introduction of the nonversioned WS refernce avoids the versioning cascade problem.  However you do not have a clear snapshot of an object if it has nonversioned WS references. Potentially this could be overcome by using the provenance to piece together a snapshot.
 
-##Pros
+###Pros to approach
 * Can cross section data.
 * Better access
 * Faster access
