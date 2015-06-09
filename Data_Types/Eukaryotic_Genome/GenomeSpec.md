@@ -240,7 +240,7 @@ typdef structure {
 * feature_sets_map feature_set_references\*;
 * string protein_set_ref;
 * string evidence_set_ref;
-* string feature_lookup_ref\*;
+* feature_lookup feature_lookup\*;
 * string comments;
 * string methodology; 
 * string assembly_ref;
@@ -255,11 +255,20 @@ evidence_set_ref would be a nonversioned workspace reference
 
 protein_set_ref would be a nonversioned workspace reference 
 
-feature_lookup_ref would be a nonversioned workspace reference 
-
 methodology - Not sure if needed? example would be rast
 
 assembly_ref would be a versioned workspace reference 
+
+----
+
+####FeatureLookup
+
+typedef structure{
+* mapping\<string feature_key\*, list\<tuple\<string feature_set_ref, string feature_id\>\> lookups\*\> feature_lookups;
+
+} FeatureLookup;
+
+note feature key could be id or alias. Allows for fast lookup of any feature by id or alias.
 
 ----------------------
 
@@ -473,19 +482,6 @@ The inner list is to accomodate domains that are noncontinuous sequence.
 
 What about the following?
 INTERACTIONS? ACTIVE SITE? ALLOSTERIC SITE? Folding pattern?
-
-------------------------
-
-###FeatureLookup
-
-typedef structure{
-* mapping\<string feature_key\*, list\<tuple\<string feature_set_ref, string feature_id\>\> lookups\*\> feature_lookups;
-* string genome_annotation_ref*;
-} **FeatureLookup**;
-
-
-note feature key could be id or alias. Allows for fast lookup of any feature by id or alias.
-genome_annotation_ref is nonversion workspace reference.
 
 ------------------------
 
