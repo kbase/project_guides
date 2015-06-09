@@ -15,12 +15,30 @@
 **NOTE: This is for the multilayered approach to Genome. This is a more accurate representation of the entities involved, although it has some overhead in terms of versioning of the objects and search issues on the levels people are actually searching. The search genome blows up as it can be many annotations.**
 
 
+-------------------
+
+##ER Diagram:
+![Genome ER Diagram](Euk_Genome_ER.png)
+
+
+##Spec:
+--------------------------
 **“\*” fields are required.**
 
 **Structures name in bold would be WS Typed Objects**
 
-##Spec:
---------------------------
+We are introducing a new concept of an nonversioned Workspace reference.
+So currently a Workspace reference contains 3 numbers spearated by a slash.
+The first number is the Workspace ID.  The second number is the Workspace Object ID.  The last number is Workspace Object Version number.
+
+An nonversioned workspace reference would only contain Workspace ID and Workspace Object ID.
+
+This prevents version creep from cascading up when descendent objects get updated.
+
+However this would require the workspace enforce that an workspace object can not change workspace typed objects.
+Currently a I could create an object of type "A" named foo.  If I save an object of type "B" named foo it increments the version number of the object and the object has completely changed types.
+It should however allow for a new version of the typed object (ex: Genome1.0 to Genome2.0)
+
 
 ###Taxon
 
@@ -55,7 +73,7 @@ This could potentially be made to direct reference to the object instead.
 
 typedef structure {
 
-* string id;
+* string taxon_set_id\*;
 * string name;
 * string description;
 * string notes;
@@ -63,7 +81,7 @@ typedef structure {
 
 } **TaxonSet**
 
-Note the reference is a unversioned WS object reference.
+Note the reference is a nonversioned WS object reference.
 
 ---------------------------
 
@@ -71,7 +89,7 @@ Note the reference is a unversioned WS object reference.
 
 typedef structure {
 
-* string id;
+* string genome_set_id\*;
 * string name;
 * string description;
 * string notes;
@@ -79,7 +97,7 @@ typedef structure {
 
 } **GenomeSet**
 
-Note the reference is a unversioned WS object reference.
+Note the reference is a nonversioned WS object reference.
 
 --------------------------
 
@@ -87,7 +105,7 @@ Note the reference is a unversioned WS object reference.
 
 typedef structure {
 
-* string genome\_id;
+* string genome\_id\*;
 * string external\_source;
 * string external\_source\_id;
 * string external\_source origination\_date;
@@ -113,7 +131,7 @@ location and environment information (perhaps separate fields for latitude, long
 ###AssemblySet
 
 typedef structure {
-* string id;
+* string assembly_set_id\*;
 * string name;
 * string description;
 * string notes;
@@ -121,7 +139,7 @@ typedef structure {
 
 } **AssemblySet**
 
-Note the reference is a unversioned WS object reference.
+Note the reference is a nonversioned WS object reference.
 
 --------------------------
 
@@ -199,7 +217,7 @@ Separate object or contained in the assembly?
 ###GenomeAnnotationSet
 
 typedef structure {
-* string id;
+* string genome_annotation_set_id\*;
 * string name;
 * string description;
 * string notes;
@@ -207,7 +225,7 @@ typedef structure {
 
 } **GenomeAnnotationSet**
 
-Note the reference is a unversioned WS object reference.
+Note the reference is a nonversioned WS object reference.
 
 
 -----------------------
@@ -219,7 +237,7 @@ typdef structure {
 * float quality_score; 
 * string annotation_quality_detail_ref; 
 * list\<publication\> publications;
-* feature_sets_map\* feature_set_references;
+* feature_sets_map feature_set_references\*;
 * string protein_set_ref;
 * string evidence_set_ref;
 * string feature_lookup_ref\*;
@@ -233,11 +251,11 @@ quality_score could be in genome_annotation_quality_detail instead
 
 annotation_quality_detail_ref would be a versioned workspace reference 
 
-evidence_set_ref would be a unversioned workspace reference 
+evidence_set_ref would be a nonversioned workspace reference 
 
-protein_set_ref would be a unversioned workspace reference 
+protein_set_ref would be a nonversioned workspace reference 
 
-feature_lookup_ref would be a unversioned workspace reference 
+feature_lookup_ref would be a nonversioned workspace reference 
 
 methodology - Not sure if needed? example would be rast
 
@@ -247,9 +265,9 @@ assembly_ref would be a versioned workspace reference
 
 ####feature_set_map
 
-mapping\<feature_type, feature_set_ref\> feature_set_map;
+mapping\<feature_type\*, feature_set_ref\*\> feature_set_map;
 
-This would be an unversioned workspace reference;
+This would be an nonversioned workspace reference;
 
 The feature type is a controlled vocabulary perhaps derived from [*http://www.insdc.org/files/feature_table.html#7.2*](http://www.insdc.org/files/feature_table.html#7.2)
 
@@ -268,23 +286,25 @@ typedef structure {
 
 } **AnnotationQuality**;
 
-genome_annotation_ref would be an unversioned workspace reference - Maybe reference not needed.
+genome_annotation_ref would be an nonversioned workspace reference - Maybe reference not needed.
 
 -----------------------------
 
-###FeatureTypeSet
+###FeatureSet
 
 typedef structure {
-* string id;
-* string type; 
+* string feature_set_id\*;
+* string type\*; 
 * string name;
 * string description;
 * string notes;
 * mapping\<string feature_id, feature feature>;
 
-} **FeatureTypeSet**
+} **FeatureSet**
 
 type would be controlled vocabulary - Ex: CDS, etc.
+
+Note this structure allows for flexible sets.  So type may not be required or a "mixed" type may need to be introduced into the controlled vocabulary.
 
 -----------------------
 
@@ -311,11 +331,41 @@ typedef structure {
 * gene_properties gene_properties;
 * operon_properties operon_properties;
 * pathway_properties pathway_properties;
+
 } Feature;
 
 inference - Genbank has an inference tag within a feature.
 
+
+#####Feature Questions.
+
 For quality_warnings do we want severity (warnings, errors)?
+
+Do all features have coordinates? Shuffleons do and do not Genbank has a mobile\_element\_type feature type.
+Do we want to try and capture motifs. Orthologs? Orthologs get a little tricky in terms of multiple annotations for the same genome/taxonomy.
+
+These were part of the old feature object.  I have not included them in this incarnation.
+We would need to have discussions about them.
+
+/*
+list\<annotation\> annotations; 
+does this include ontologies? Ontologies;probably a list to ontology terms or even WS objects. Details can be worked out later
+
+list\<subsystem\_data\> subsystem\_data;
+
+list\<string\> subsystems;
+
+list\<ProteinFamily\> protein\_families;
+
+list\<tuple\<string, float\>\> orthologs; \# probably belongs on its own
+
+list\<regulon\_data\> regulon\_data;
+
+list\<atomic\_regulon\> atomic\_regulons;
+
+list\<coexpressed\_fid\> coexpressed\_fids;
+*/
+
 
 -------------------------------
 ####Feature Properties
@@ -348,16 +398,19 @@ typedef structure{
 typedef structure{
 * \<tuple\<string protein_set_ref, string protein_id\> codes_for_protein_ref;
 * \<list\<tuple\<string feature_set_ref, string feature_id\>\> children_CDS_ref;
-* \<list\tuple\<string feature_set_ref, string feature_id\>\> children_mRNA_ref;
+* \<list\<tuple\<string feature_set_ref, string feature_id\>\> children_mRNA_ref;
 * \<tuple\<string feature_set_ref, string feature_id\> operon_ref;
 * \<tuple\<string feature_set_ref, string feature_id\> pathway_ref;
 
 } gene_properties;
 
+Gene, CDS mRNA could be part of more than one pathway?  Make it a list?
+
+
 typedef structure{
 * \<list\<tuple\<string protein_set_ref, string protein_id\>\> protein_refs;
 * \<list\<tuple\<string feature_set_ref, string feature_id\>\> component_CDS_ref;
-* \<list\tuple\<string feature_set_ref, string feature_id\>\> component_mRNA_ref;
+* \<list\<tuple\<string feature_set_ref, string feature_id\>\> component_mRNA_ref;
 * \<tuple\<string feature_set_ref, string feature_id\>\> pathway_ref;
 
 } operon_properties;
@@ -386,43 +439,70 @@ Note order matters in the lists.
 
 ------------------------------------------
 
-Feature Questions.
-
-Do all features have coordinates? Shuffleons do and do not Genbank has a mobile\_element\_type feature type.
-Do we want to try and capture motifs. Orthologs? Orthologs get a little tricky in terms of multiple annotations for the same genome/taxonomy.
-
-**Currently this does not explicitly cover Locus from CS (really Gene in Genbank) to CDS to mRNA relationships (note the relationship to Protein is).**
-
-**Therefore splice variants would have to be determined on the fly based on sequence position.**
-
-**We may want to have data structures for these. Ideally with the ability to find corresponding by features with any of the elements being searched (gene, CDS, mRNA).**
+###ProteinSet
 
 typedef structure {
-*mapping\<string protein\_id, protein\> proteins\*;
+* string protein_set_id\*;
+* string name;
+* string description;
+* string notes;
+* mapping\<string protein_id, protein protein>;
 
-\#Do we want a non ws reference to the genome\_annotation here.
+} **ProteinSet**
 
-}**Proteins**;
+---------------
+
+####Protein
 
 typedef structure {
-* string protein\_id\*;
-* mapping\<string domain, \<list\<tuple\<int coordinate\_start, int coordinate\_stop\>\>\>\>; \# can accommodate multiple of the same domain
-* string peptide\_sequence\*;
+* string protein_id\*;
+* mapping\<string domain, \<list\<list\<tuple\<int coordinate_start, int coordinate_stop\>\>\>\>\>; 
+* string amino_acid_sequence\*;
 * string function;
 * list\<string alias\> aliases;
 
-\#INTERACTIONS? ACTIVE SITE? ALLOSTERIC SITE? Folding pattern?
-
 }protein;
 
+Note the following:
+
+mapping\<string domain, \<list\<list\<tuple\<int coordinate\_start, int coordinate\_stop\>\>\>\>\>; 
+
+The outer list is for multiple of the same domain in the same protein.
+
+The inner list is to accomodate domains that are noncontinuous sequence.
+
+What about the following?
+INTERACTIONS? ACTIVE SITE? ALLOSTERIC SITE? Folding pattern?
+
+------------------------
+
+###FeatureLookup
+
 typedef structure{
-* mapping\<string feature\_key\*, list\<tuple\<string feature\_set\_ref, string feature\_id\>\> lookups\*\> feature\_lookups\*;
+* mapping\<string feature_key\*, list\<tuple\<string feature_set_ref, string feature_id\>\> lookups\*\> feature_lookups;
+* string genome_annotation_ref*;
+} **FeatureLookup**;
 
-\#note feature key could be id or alias. Allows for fast lookup of any feature by id or alias.
 
-\#Do we want a non ws reference to the genome\_annotation here.
+note feature key could be id or alias. Allows for fast lookup of any feature by id or alias.
+genome_annotation_ref is nonversion workspace reference.
 
-} **feature\_lookup**;
+------------------------
+
+###EvidenceSet
+
+typedef structure {
+* string evidence_set_id\*;
+* string name;
+* string description;
+* string notes;
+* mapping\<string evidence_id, evidence evidence>;
+
+} **EvidenceSet**
+
+----------------------
+
+####Evidence
 
 typedef structure {
 * string evidence\_id\*;
@@ -432,21 +512,19 @@ typedef structure {
 
 } evidence;
 
-typedef structure {
+------------------------
 
-mapping\<string evidence\_id, evidence\> evidences\*;
+####Publication
 
-\#Do we want a non ws reference to the genome\_annotation here.
+/*
+Structure for a publication (from ER API)
+also want to capture authors, journal name (not in ER)
+*/
+typedef tuple<int, string, string, string, string, string, string> publication;
 
-} **Evidences;**
+This may need to get reworked.  This is directly from existing specs.  Unfortunately it currently is poorly documentated.
 
-typedef tuple\<int, string, string, string, string, string, string\> publication;
-
-\#carry over old publication. Should we change it? No author.
-
-High level ER Diagram.
-
-![](media/image01.jpg)
+--------------------------------
 
 Other questions to explore.
 
@@ -454,20 +532,18 @@ Look up features by contig chunk (get all features in that contig chunk?)
 
 What about reannotation, annotation corrections. How do we want to capture. Is versioning enough or do we show active and inactive, corrected?
 
-Solution for splice variants.
-Blue section of feature with carry over data.
-
 How to deal with ontologies.
 
 ##Assessment:
-* Cons to approach
+###Cons to approach
 * Some redundancies of data to allow for different cross sectioning of the data.
 * Many objects. Although some could be hidden.
-* With many object levels you get the resulting versioning cascade problem. Could make another type of reference to the object, devoid of version number. If we do this we can not have objects be able to change core type, just versions of the same WS typed object.
+* The introduction of the nonversioned WS refernce avoids the versioning cascade problem.  However you do not have a clear snapshot of an object if it has nonversioned WS references. Potentially this could be overcome by using the provenance to piece together a snapshot.
 
-##Pros
+###Pros to approach
 * Can cross section data.
 * Better access
 * Faster access
-* More modular
+* More modular (thus allowing for smaller chunks of data to be moved around the system and passed into services)
 * Reasonably sized objects.
+* Workaround to the DAG limitation.
