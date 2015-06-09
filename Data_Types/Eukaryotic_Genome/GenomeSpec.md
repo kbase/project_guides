@@ -261,12 +261,12 @@ assembly_ref would be a versioned workspace reference
 
 ----
 
-####FeatureLookup
+####feature_lookup
 
 typedef structure{
 * mapping\<string feature_key\*, list\<tuple\<string feature_set_ref, string feature_id\>\> lookups\*\> feature_lookups;
 
-} FeatureLookup;
+} feature_lookup;
 
 note feature key could be id or alias. Allows for fast lookup of any feature by id or alias.
 
