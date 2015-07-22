@@ -20,3 +20,16 @@ contents are:
    proposed changes. Note that since this repository doesn't contain any code,
    only markdown files, it's very easy to do the editing and PR process
    directly inside the browser, by using the "edit this file" button.  This can include either changes to existing docs, or proposing new documents that should be in this repo.
+
+Index of documents:
+
+* [Process guide](Process_guide.md)
+* [Acknowledgment guidelines](Acknowledgment_guidelines.md)
+* [External data sources](External_data_sources.md)
+* [How to add a method](How_to_add_a_method.md)
+* [How to add a new data type.md](How_to_add_a_new_data_type.md)
+* [Developer deployment](Developer_deployment.md)
+* [Setting up Travis CI and Coveralls](Setting_up_Travis_CI_and_Coveralls.md)
+* [ThirdPartyDevelopmentProtocol](ThirdPartyDevelopmentProtocol.md)
+* [Towards a Social Platform](Towards A Social Platform.md)
+* [Feature requests](feature_requests.md)
