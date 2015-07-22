@@ -27,7 +27,7 @@ Index of documents:
 * [Acknowledgment guidelines](Acknowledgment_guidelines.md)
 * [External data sources](External_data_sources.md)
 * [How to add a method](How_to_add_a_method.md)
-* [How to add a new data type.md](How_to_add_a_new_data_type.md)
+* [How to add a new data type](How_to_add_a_new_data_type.md)
 * [Developer deployment](Developer_deployment.md)
 * [Setting up Travis CI and Coveralls](Setting_up_Travis_CI_and_Coveralls.md)
 * [ThirdPartyDevelopmentProtocol](ThirdPartyDevelopmentProtocol.md)
