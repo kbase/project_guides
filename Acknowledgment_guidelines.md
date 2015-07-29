@@ -1,3 +1,19 @@
+*** We need to merge in info. from this email From Adam 12/3/2013 ***
+
+When writing a paper that cites KBase in any way, you should:
+
+Acknowledge KBase funding as follows: “This work supported by the Office of Science, Office of Biological and Environmental Research, of the US Department of Energy under Contract No. XXX, as part of the DOE Systems Biology Knowledgebase.” (Contract numbers depend on National Laboratory of authors)
+Cite KBase as: DOE Systems Biology Knowledgebase (KBase), http://kbase.us
+Email your publication to pr-approval@kbase.us for review prior to submitting for publication. 
+
+We will get back to you within two days. If you need quicker turnaround, let us know and we’ll try to accommodate.
+
+Papers that acknowledge KBase support (among other funding sources) should ensure proper and generous acknowledgement and/or authorship of the contributions of KBase team members.
+
+Papers that list KBase as the sole funding source should be about deployed functions in KBase, science performed directly to support the creation or testing of KBase functionality, or may be a review. Proper acknowledgement and authorship rules apply.
+
+*** End of Email ***
+
 # Acknowledging KBase support
 
 The following guidelines should be considered when producing materials about other work that may have used KBase resources.  This includes peer-reviewed publications submitted to journals, conference presentations (peer-reviewed or not), websites, etc. When in doubt, please contact [FIXME: who?] for further guidance.
