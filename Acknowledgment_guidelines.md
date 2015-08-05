@@ -2,7 +2,7 @@
 
 ## Formal statements for acknowledgment and process
 
-When writing a paper that cites KBase in any way, you should acknowledge KBase funding as follows: “This work supported by the Office of Science, Office of Biological and Environmental Research, of the US Department of Energy under Contract DE-AC02-06CH1135, as part of the DOE Systems Biology Knowledgebase.”
+When writing a paper that cites KBase in any way, you should acknowledge KBase funding as follows: “This work supported by the Office of Science, Office of Biological and Environmental Research, of the US Department of Energy under Award Numbers DE-AC02-05CH11231, DE-AC02-06CH11357, DE-AC05-00OR22725, and DE-AC02-98CH10886, as part of the DOE Systems Biology Knowledgebase.”
 
 Cite KBase as: DOE Systems Biology Knowledgebase (KBase), http://kbase.us
 
