@@ -33,3 +33,4 @@ Index of documents:
 * [ThirdPartyDevelopmentProtocol](ThirdPartyDevelopmentProtocol.md)
 * [Towards a Social Platform](Towards A Social Platform.md)
 * [Feature requests](feature_requests.md)
+* [Help Desk Process](Help_Desk_process.md)
