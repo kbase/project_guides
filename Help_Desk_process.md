@@ -1,5 +1,7 @@
 # Process for Help Desk Requests from External Users
 
+> **SUMMARY**: If a Help Desk issue is assigned to you, then within two business days you are expected to add a comment to the issue that answers the questions, "Is this something that I can address? If so, when?"
+
 When a new issue is received from an external user, it automatically creates a JIRA ticket.
 Help Desk managers send a generic response (within one day) to the user notifying them that we will get them an answer soon.
 Unless the Help Desk managers can answer the question themselves, they assign the issue to the person they think is most likely to be able to address it.
@@ -13,8 +15,6 @@ Your answer to the user can be something like, "We know about this issue and a f
 When you respond to a ticket that you are assigned, it's important to add some indication of how hard you think the issue is likely to be to fix, and when you will have time to work on it. Please also let us know if this is blocked by another issue--another task must be completed (by you or by someone else) before this can be fixed. (If possible, include link(s) to other JIRA tickets.)
 
 It's ok if you don't have time to work on the issue right away--the important thing is to let the EC know your time frame so that if the issue is important, we can reassign resources appropriately.
-
-**The simple workflow for responding to an assigned JIRA ticket is therefore to add a comment that answers the questions, "Is this something I can address? If so, when?"**
 
 If an issue is appropriately assigned, the assignee can provide valuable information to the person who reported the issue and to the EC by classifying it as follows:
 
