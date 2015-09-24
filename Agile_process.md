@@ -238,11 +238,25 @@ We can also allocate fixed number of sprints per cycle for specific
 areas. For instance, management may determine that there should always
 be a UI campaign.
 
+## Process for proposing new sprints or campaigns
+
+To propose a new sprint, the process to follow is:
+
+1. Open a new issue on JIRA, and assign to it the issue type "Proposed Sprint" (we don't have a separate type for sprints and campaigns):
+
+![Proposed sprint screenshot](images/jira-proposed-sprint.png)
+
+1. Provide in the *Summary* field a one sentece description of the sprint.
+
+1. Fill out the *Description* field with a body of text according to the template in the section immediately below.  It should be relatively concise, but try to answer each of these questions clearly, so that the group leads and KBase executive committee can use this information to decide whether to accept your proposal and put it into the sprint pipeline.
+
+1. Assign it to Shane Canon, the production lead.
+
+1. List any components you may think it impacts, if you know in advance. 
+
+1. At this time, don't bother adding Epic/Theme or Sprint labels yet, as those will be added if the sprint is actually accepted for execution later on.
+
 ### Template
-
-**Title:** Short Title
-
-**What it does:** One sentence description.
 
 **Why it’s important:** Explain why KBase should do this.  How will it
 help make KBase unique, bring in users, improve the system, etc.  Why is
@@ -254,12 +268,20 @@ complete but avoid going into implementation details.  This is more
 about understanding the scope of the activity versus exactly how it will
 be done.
 
-**Which components are affected:** Data, UI, Services, etc
-
 **Estimated Number of Sprints:** X sprints
 
 **Key Staff:** List important staff needed for the Sprint and what
 specific skills and knowledge they provide.
 
-**Dependencies:**  List any external campaigns, sprints, or activities
-that impact this campaign
+**Dependencies:**  List any other campaigns, sprints, or activities
+that impact your proposed sprint or campaign.
+
+### Evaluation of sprint proposals
+
+Once a sprint/campaign proposal is in, there may be discussion and questions about it directly on the JIRA ticket.  The members of the KBase Executive Committee, who ultimately will make the decisions on which sprints to put into the implementation pipeline, will be added as watchers to the ticket so they have a chance to comment.
+
+Then, during the next maintenance week, the EC will include in its evaluation and re-prioritization decisions (that normally consider the outcome of the just-finished sprint cycle) any new proposals that have arrived.  This will allow the EC to weigh these proposals in the context of the outcomes and feedback of the recently concluded sprint cycle.
+
+The EC can decide to assign the proposals either to immediate execution in the next cycle, to be put in the queue for a later cycle, or it can decline the proposal.
+
+If a proposal is accepted, it will be given a sprint label and an epic/theme in JIRA so it can be sorted accordingly, and it will be re-assigned to its ultimate product owner.
