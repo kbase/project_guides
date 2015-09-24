@@ -246,15 +246,15 @@ To propose a new sprint, the process to follow is:
 
 ![Proposed sprint screenshot](images/jira-proposed-sprint.png)
 
-1. Provide in the *Summary* field a one sentece description of the sprint.
+2. Provide in the *Summary* field a one sentece description of the sprint.
 
-1. Fill out the *Description* field with a body of text according to the template in the section immediately below.  It should be relatively concise, but try to answer each of these questions clearly, so that the group leads and KBase executive committee can use this information to decide whether to accept your proposal and put it into the sprint pipeline.
+2. Fill out the *Description* field with a body of text according to the template in the section immediately below.  It should be relatively concise, but try to answer each of these questions clearly, so that the group leads and KBase executive committee can use this information to decide whether to accept your proposal and put it into the sprint pipeline.
 
-1. Assign it to Shane Canon, the production lead.
+2. Assign it to Shane Canon, the production lead.
 
-1. List any components you may think it impacts, if you know in advance. 
+2. List any components you may think it impacts, if you know in advance. 
 
-1. At this time, don't bother adding Epic/Theme or Sprint labels yet, as those will be added if the sprint is actually accepted for execution later on.
+2. At this time, don't bother adding Epic/Theme or Sprint labels yet, as those will be added if the sprint is actually accepted for execution later on.
 
 ### Template
 
