@@ -214,9 +214,9 @@ goals.
 
 ## Reporting and Tracking
 
-The priority list will be maintained and publicly visible. As Campaigns
+The priority list is [maintained and publicly visible here](https://docs.google.com/spreadsheets/d/1RYqniwN816QkaJqRJgsHXqkuIkFZ3S90dVD0RjR4jxk/edit?usp=sharing). As Campaigns
 are selected for a Sprint Cycle and the planning is completed, the team
-will create and assign JIRA tickets to track tasks.
+will create and assign JIRA tickets to track tasks, and below we describe the process for proposing new sprints and campaigns.
 
 At the end of each Sprint, the teams will create a formal summary and
 present the results of their Retrospective on the Monday Report Out
