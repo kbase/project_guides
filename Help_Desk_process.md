@@ -6,7 +6,9 @@ When a new issue is received from an external user, it automatically creates a J
 Help Desk managers send a generic response (within one day) to the user notifying them that we will get them an answer soon.
 Unless the Help Desk managers can answer the question themselves, they assign the issue to the person they think is most likely to be able to address it.
 
-**Within two business days, the assignee needs to look at the assigned issue and enter a comment in the ticket to indicate whether they are the right assignee**. If they are not, then they should indicate in a comment that they can't address it, and they should reassign to the right person if they know who that is, or say that they don't know who it should be assigned to.
+Within two business days, the assignee needs to add a comment to the ticket to either:
+- Acknowledge that they will handle the issue (even if not immediately), or
+- Indicate that they are not the right person to do so. In this case, they should reassign to the right person if they know who that is, or request that it be reassigned.
 
 If you are assigned a ticket and you are the correct assignee, then you should provide a short answer that the Help Desk managers can send to the user. Please alert the Help Desk manager, Meghan, by referring to her in your comment (as @drakemn) so that she knows to forward your response to the user.
 
@@ -14,7 +16,7 @@ Your answer to the user can be something like, "We know about this issue and a f
 
 When you respond to a ticket that you are assigned, it's important to add some indication of how hard you think the issue is likely to be to fix, and when you will have time to work on it. Please also let us know if this is blocked by another issue--another task must be completed (by you or by someone else) before this can be fixed. (If possible, include link(s) to other JIRA tickets.)
 
-It's ok if you don't have time to work on the issue right away--the important thing is to let the EC know your time frame so that if the issue is important, we can reassign resources appropriately.
+It's ok if you don't have time to work on the issue right away--the important thing is to let the Executive Committee (EC) know your time frame so that if the issue is important, we can reassign resources appropriately.
 
 If an issue is appropriately assigned, the assignee can provide valuable information to the person who reported the issue and to the EC by classifying it as follows:
 
