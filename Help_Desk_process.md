@@ -40,7 +40,7 @@ If an issue is appropriately assigned, the assignee can provide valuable informa
   c. It's not on our roadmap, but it's a good idea, so EC should consider adding it to our list.<br/>
   d. It's not on our roadmap and shouldn't be.
 
-An important part of the JIRA workflow is to return to the ticket when the issue is fixed, add an appropriate comment, and (if you think the issue is completely fixed and deployed, and the reporter should be able to see the new behavior) close the ticket.
+**Don't forget to close your tickets when they're done.**
 
-The UE will send the EC a monthly report about JIRA performance, including the identification of top issues and bottlenecks.
+The User Engagement team will send the EC a monthly report about JIRA performance, including the identification of top issues and bottlenecks.
 https://atlassian.kbase.us/issues/?filter=10909 gives a good snapshot.
