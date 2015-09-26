@@ -214,16 +214,19 @@ goals.
 
 ## Reporting and Tracking
 
-The priority list is [maintained and publicly visible here](https://docs.google.com/spreadsheets/d/1RYqniwN816QkaJqRJgsHXqkuIkFZ3S90dVD0RjR4jxk/edit?usp=sharing). As Campaigns
-are selected for a Sprint Cycle and the planning is completed, the team
-will create and assign JIRA tickets to track tasks, and below we describe the process for proposing new sprints and campaigns.
+The priority list is
+[maintained and publicly visible here](https://docs.google.com/spreadsheets/d/1RYqniwN816QkaJqRJgsHXqkuIkFZ3S90dVD0RjR4jxk/edit?usp=sharing). As
+Campaigns are selected for a Sprint Cycle and the planning is completed, the
+team will create and assign JIRA tickets to track tasks, and below we describe
+the process for proposing new sprints and campaigns.
 
-At the end of each Sprint, the teams will create a formal summary and
-present the results of their Retrospective on the Monday Report Out
-Meeting. These results may also include lessons learned for improving
-future Sprints. Each Sprint team will have a half an hour for
-presentation and discussion. All KBase personnel are invited to attend.
-These reports can then be used for creating progress reports to DOE.
+At the end of each Sprint, the teams will create a formal summary and present
+the results of their Retrospective on the Monday Report Out Meeting (this
+summary should be linked into the original Sprint issue that was created when
+the Sprint was approved). These results may also include lessons learned for
+improving future Sprints. Each Sprint team will have a half an hour for
+presentation and discussion. All KBase personnel are invited to attend.  These
+reports can then be used for creating progress reports to DOE.
 
 ## Management
 
@@ -242,19 +245,25 @@ be a UI campaign.
 
 To propose a new sprint, the process to follow is:
 
-1. Open a new issue on JIRA, and assign to it the issue type "Proposed Sprint" (we don't have a separate type for sprints and campaigns):
+1. Open a new issue on JIRA, and assign to it the issue type "Proposed Sprint"
+   (we don't have a separate type for sprints and campaigns):
 
 ![Proposed sprint screenshot](images/jira-proposed-sprint.png)
 
 2. Provide in the *Summary* field a one sentece description of the sprint.
 
-2. Fill out the *Description* field with a body of text according to the template in the section immediately below.  It should be relatively concise, but try to answer each of these questions clearly, so that the group leads and KBase executive committee can use this information to decide whether to accept your proposal and put it into the sprint pipeline.
+2. Fill out the *Description* field with a body of text according to the
+   template in the section immediately below.  It should be relatively concise,
+   but try to answer each of these questions clearly, so that the group leads
+   and KBase executive committee can use this information to decide whether to
+   accept your proposal and put it into the sprint pipeline.
 
 2. Assign it to Shane Canon, the production lead.
 
 2. List any components you may think it impacts, if you know in advance. 
 
-2. At this time, don't bother adding Epic/Theme or Sprint labels yet, as those will be added if the sprint is actually accepted for execution later on.
+2. At this time, don't bother adding Epic/Theme or Sprint labels yet, as those
+   will be added if the sprint is actually accepted for execution later on.
 
 ### Template
 
@@ -278,10 +287,22 @@ that impact your proposed sprint or campaign.
 
 ### Evaluation of sprint proposals
 
-Once a sprint/campaign proposal is in, there may be discussion and questions about it directly on the JIRA ticket.  The members of the KBase Executive Committee, who ultimately will make the decisions on which sprints to put into the implementation pipeline, will be added as watchers to the ticket so they have a chance to comment.
+Once a sprint/campaign proposal is submitted, there may be discussion and
+questions about it directly on the JIRA ticket.  The members of the KBase
+Executive Committee, who ultimately will make the decisions on which sprints to
+put into the implementation pipeline, will be added as watchers to the ticket
+so they have a chance to comment.
 
-Then, during the next maintenance week, the EC will include in its evaluation and re-prioritization decisions (that normally consider the outcome of the just-finished sprint cycle) any new proposals that have arrived.  This will allow the EC to weigh these proposals in the context of the outcomes and feedback of the recently concluded sprint cycle.
+Then, during the next maintenance week, the EC will include in its evaluation
+and re-prioritization decisions (that normally consider the outcome of the
+just-finished sprint cycle) any new proposals that have arrived.  This will
+allow the EC to weigh these proposals in the context of the outcomes and
+feedback of the recently concluded sprint cycle.
 
-The EC can decide to assign the proposals either to immediate execution in the next cycle, to be put in the queue for a later cycle, or it can decline the proposal.
+The EC can decide to assign the proposals either to immediate execution in the
+next cycle, to be put in the queue for a later cycle, or it can decline the
+proposal.
 
-If a proposal is accepted, it will be given a sprint label and an epic/theme in JIRA so it can be sorted accordingly, and it will be re-assigned to its ultimate product owner.
+If a proposal is accepted, it will be given a sprint label and an epic/theme in
+JIRA so it can be sorted accordingly, and it will be re-assigned to its
+ultimate product owner.
