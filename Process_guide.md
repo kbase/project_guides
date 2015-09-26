@@ -187,21 +187,17 @@ Therefore, use the "golden rule": treat others as you would like to be treated. 
 
 ### Note about Github issues and JIRA
 
-<span id="h.td3jik4m36hp" class="anchor"></span>
+Github issues provide excellent repository-level bug tracking, but nothing that
+helps us manage the project as a whole, which is where JIRA excels.  Since
+elsewhere KBase manages all other project activities via JIRA, we will also
+use JIRA for issue tracking, and in general **we will disable issues on
+our Github repositories**.  This will allow us to focus on a single system,
+simplifying our workflows for management and reporting.
 
-<span id="h.mi94tu8okca1" class="anchor"></span>Github issues provide excellent repository-level bug tracking, but nothing that helps us manage the project as a whole, which is where JIRA excels. We are still pondering what the best way to integrate the two as smoothly as possible is. We will update this guide as our thoughts on this question clarify.
+So that users can file bugs for our repositories, we will include a link to our
+public JIRA entry point in the `README.md` file of each of our public
+repositories.
 
-<span id="h.qdtg26km9svm" class="anchor"></span>
-
-<span id="h.of49szsvxiyt" class="anchor"></span>As a starting point, we will take as our solution to use JIRA almost exclusively, unless there’s a very good reason to stick to Github issues for a specific repo. For example, the repo that contains this very document will require lots of early discussion that may be much easier to do directly on github as a combination of issues and PRs than by going all the way over to JIRA. So this repo may be one that uses issues, at least for the early discussion period. But in general, we’ll keep issues disabled on most repos and track all issues on JIRA. If this proves to not work well, we will reconsider and look for better solutions.
-
-<span id="h.oa9xym2zci9m" class="anchor"></span>
-
-<span id="h.mw5camk5ybxw" class="anchor"></span>[FIXME: on this topic, input and ideas are especially welcome and encouraged].
-
-<span id="h.fz6no2v2n429" class="anchor"></span>
-
-<span id="h.gjdgxs" class="anchor"></span>
 
 ## Process
 
@@ -265,6 +261,3 @@ They will be given guidance, instructions and support during the testing process
 During and immediately after each test cycle, tester feedback and comments would be read, analyzed and formulated into actionable JIRA tickets and shared with developers. Tickets are initially assigned into high-level categories and then further reviewed by leads responsible in those areas. At each step, the issue tickets are categorized by priority, impact, level of effort and feasibility to assign and determine how they will be resolved. Tickets include requests for improved usability and desires for functionality. The issues that are not immediately actionable will be captured in JIRA for future development. 
 
 Finally, a summary report will be generated after each test cycle for KBase management that includes analysis of the testing and feedback, including statistics on usability and performance of specific apps, the Narrative Interface, and KBase overall. The reports will also include a summary of the JIRA tickets and how they are being processed.
-
-
-
