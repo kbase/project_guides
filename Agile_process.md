@@ -139,6 +139,12 @@ However, Campaigns shouldn’t exceed four Sprints. This is to avoid
 having deliverables that take too long to provide a finished product
 which delays feedback.
 
+Problems that require long-term thinking and effort, such as the repayment of
+technical debt, architectural evolution or the replacement of a major
+component, should still be able to break down the long-term problem into
+campaigns and then further into sprints.  This encourages a focus of these
+efforts into cycles where concrete feedback and outcomes can be attained.
+
 ## Priority List (Product Backlog)
 
 The project will maintain a global publicly visible priority list of
@@ -306,3 +312,17 @@ proposal.
 If a proposal is accepted, it will be given a sprint label and an epic/theme in
 JIRA so it can be sorted accordingly, and it will be re-assigned to its
 ultimate product owner.
+
+If a proposal is rejected, the rejection type will be one of:
+
+* *Reject*: As written, this proposal is not going to happen, and the reasons
+  why will be communicated.
+* *Reconsider*: We foresee doing this, but it needs to wait for N sprint cycles
+  to be re-evaluated.  The resolution should specify what is blocking and how
+  many cycles to wait before resubmission (point at which, there may be new
+  information to consider).
+* *Not discussed*: We didn't get around to talking about it; we will get to it
+  next time.  This is not ideal, but realistically it will happen sometimes.
+
+This information will be recorded in the proposal ticket, so the submitter will
+have a record of the decision.
