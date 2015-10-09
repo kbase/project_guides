@@ -16,10 +16,13 @@ contents are:
    file/line number in question. This can be used to discuss a topic until a
    solution is found.
 
-1. To make a concrete proposal for change, [open a pull request (PR)](https://help.github.com/articles/using-pull-requests/) with the
-   proposed changes. Note that since this repository doesn't contain any code,
-   only markdown files, it's very easy to do the editing and PR process
-   directly inside the browser, by using the "edit this file" button.  This can include either changes to existing docs, or proposing new documents that should be in this repo.
+1. To make a concrete proposal for change,
+   [open a pull request (PR)](https://help.github.com/articles/using-pull-requests/)
+   with the proposed changes. Note that since this repository doesn't contain
+   any code, only markdown files, it's very easy to do the editing and PR
+   process directly inside the browser, by using the "edit this file" button.
+   This can include either changes to existing docs, or proposing new documents
+   that should be in this repo.
 
 Index of documents:
 
@@ -34,3 +37,4 @@ Index of documents:
 * [Towards a Social Platform](Towards A Social Platform.md)
 * [Feature requests](feature_requests.md)
 * [Help Desk Process](Help_Desk_process.md)
+* [Agile Process](Agile_process.md)
