@@ -5,4 +5,4 @@
 3.  Within two days, the PR-approval team will either suggest edits or approve it. 
 4.  If edits are suggested, the original author will review the suggested edits, incorporate them as appropriate, reply back to PR-approval with the edited document attached, and comment on what was changed.
 5.  2 or more people from the PR-approval list are then needed to indicate their approval before the content can be released publicly.
-6.  If only one approval is received in 48 hours following submission to PR-approval, the single approval is fine and author can release their content.  The author will reply to the approval email and to the PR-approval list, and indicate they are now releasing the content.
+6.  If only one approval is received in 48 hours following submission to PR-approval, and the content is not anything controversial or sensitive, the single approval is fine and author can release their content. The author will reply to the approval email and to the PR-approval list, and indicate they are now releasing the content.
