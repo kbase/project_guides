@@ -25,11 +25,9 @@ External communications, in this context, refers to any paper, talk, etc. that w
 *Notes:*
 - Narratives written for public use should be reviewed and edited by the UE team before they are published. When appropriate, the UE team will send scientific Narratives to KBase scientists for review. Scientific Narratives should meet similar criteria to a peer-reviewed paper, including a rationale, methods, results and conclusions. We suggest following the Template for KBase Science Narratives (see draft at https://docs.google.com/document/d/12oASTrvoo_Gh6bN-uyAoJRY6ciCymlGVrcsVdglGGFY/edit).
 - Some external communications (such as blog posts and tweets) are typically written by the UE team, but we welcome your input! This can range from a one-liner (e.g., "Review article X cited my KBase paper") to complete news items that you would like us to post on our blog at kbase.us. The UE team will review and write/edit these as needed and show the revised version to the author before posting publicly.
-- Author list for KBase publications, posters, etc.:
-
+- Suggested author list for KBase publications, posters, etc.:
 1.  First author (person who did the most work or person who is presenting the conference talk--some conferences require that to be the first author)
 2.  Other people who contributed significantly to the work
 3.  Anyone else from KBase who will be attending the conference.
-4.  Nomi Harris [Communications lead]
+4.  Other people who contributed significantly to the work, including appropriate team leads who coordinated development, core developers, and Communication team lead and personnel who contributed significant editing or content to the product.
 5.  Adam, Rick, Bob, Sergei [PIs], "and the KBase Team" to recognize others on the project who are not listed as authors.
-
