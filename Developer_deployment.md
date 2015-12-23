@@ -12,7 +12,7 @@
 >
 > [*Get Connected*](#get-connected)
 >
-> [*Decide where to Develop*](#decide-where-to-develop)
+> [*Decide Where to Develop*](#decide-where-to-develop)
 >
 > [*Magellan*](#magellan)
 >
@@ -38,21 +38,19 @@ This table summarizes the primary accounts you need to obtain.
 
 | Account Type      | URL                                                                                            | Notes                                                                                         |
 |-------------------|------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| KBase Dev Account | [*https://accounts.kbase.us/*](https://accounts.kbase.us/)                                       |                                                                                               |
-| User Account      | [*http://kbase.us/sign-up-for-a-kbase-account/*](http://kbase.us/sign-up-for-a-kbase-account/) |                                                                                               |
-| Jira              | [*https://jira.kbase.us/*](https://jira.kbase.us/)                                             | Same as Developer Account                                                                     |
+| KBase Developer Account | [*https://accounts.kbase.us/*](https://accounts.kbase.us/)                                       | Your request will need to be approved by a person (email help@kbase.us if you have problems.  Please note that for non-US citizens, additional verification steps are currently required that will take longer.)                                                                                              |
+| User Account      | [*http://kbase.us/sign-up-for-a-kbase-account/*](http://kbase.us/sign-up-for-a-kbase-account/) | Your KBase user account lets you sign in to the Narrative Interface.                                                                                               |
+| JIRA              | [*https://jira.kbase.us/*](https://jira.kbase.us/)                                             | Same as Developer Account (account information is maintained at [*https://accounts.kbase.us/*](https://accounts.kbase.us/), not within JIRA)                                                                    |
 | GitHub            | [*https://github.com/*](https://github.com/)                                                   | Create a regular github account then request to be added to the KBase Groups via India Gordon |
-| Magellan Access   | [*https://havana.cloud.mcs.anl.gov/horizon/*](https://havana.cloud.mcs.anl.gov/horizon/)       | Provided by Dev Account, but may need to request an account from Magellan support.            |
+| Magellan Access   | [*https://havana.cloud.mcs.anl.gov/horizon/*](https://havana.cloud.mcs.anl.gov/horizon/)       | Provided by Dev Account, but may need to request an account from Magellan support via [*https://accounts.kbase.us/*](https://accounts.kbase.us/)          |
 
 ## Get Connected
 
-The KBase team uses a variety of methods to communicate. First and foremost is the kbase-developer mailing list. You can request access to various mailing lists here,
+The KBase team uses a variety of methods to communicate. First and foremost is the kbase-developer mailing list. You can request access to various mailing lists at [*http://lists.kbase.us/mailman/listinfo/*](http://lists.kbase.us/mailman/listinfo/). Some groups also make use of Slack. Slack is a team communication tool that provides chat rooms with archives. You can request a free account at [*https://kbase.slack.com*](https://kbase.slack.com). Your email address will need to be from a domain currently associated with KBase (i.e., lbl.gov, anl.gov, bnl.gov, etc), or request an invitation from an owner (currently Jim Thomason and Keith Keller).
 
-[*http://lists.kbase.us/mailman/listinfo/*](http://lists.kbase.us/mailman/listinfo/). Some groups also make use of Slack. Slack is a team communication tool (i.e. chat rooms). You can request a free account at [*https://kbase.slack.com*](https://kbase.slack.com). Your email address will need to be from a domain currently associated with KBase (i.e. lbl.gov, anl.gov, bnl.gov, etc).
+Another mechanism for communication and coordination is the JIRA issue tracking system. You should be able to access JIRA using your KBase developer account username and password. You can confirm this by logging into [*https://jira.kbase.us/*](https://jira.kbase.us/). Please note that you can't change your JIRA username or password from within JIRA. If you've forgotten your developer account password, go to [*https://accounts.kbase.us/*](https://accounts.kbase.us/) to reset it.
 
-Another mechanism for communication and coordination is Jira. You should be able to access Jira using your KBase developer account username and password. You can confirm this by logging into [*https://jira.kbase.us/*](https://jira.kbase.us/).
-
-## Decide where to Develop
+## Decide Where to Develop
 
 There are a number of ways and places to develop for KBase. The choice will typically be driven by a combination of convenience and resource requirements. While development can be done from almost any modern environment, many KBase services make use of a special runtime and have dependencies on other services. These requirements should be considered as you decide where to develope.
 
@@ -66,7 +64,7 @@ Consult the Magellan website for more information on using OpenStack ([*http://c
 
 ### Laptop
 
-Many developers use their laptops for development. This offers the most convenience but a laptop may not be powerful for developing and testing some analysis methods. The easiest way to get started is to use an existing virtual machine image.
+Many developers use their laptops for development. This offers the most convenience but a laptop may not be powerful enough for developing and testing some analysis methods. The easiest way to get started is to use an existing virtual machine image.
 
 (link)
 
@@ -90,10 +88,9 @@ Before developing any code or modifying a service, familiarize yourself with som
 
 ## Start Contributing
 
-KBase has adopted Github as its main source code repository and follows some of the typical development patterns followed when using Github. For example, all repos should be forked into a personal account and changes should be submitted through Pull Requests. If you are not familiar with Git or Github, then you should consult some of the excellent Getting Started guides on using Git and Github. You can start with this link, [*https://help.github.com/articles/set-up-git/.
-*](https://help.github.com/articles/set-up-git/)
+KBase has adopted Github as its main source code repository and follows some of the typical development patterns followed when using GitHub. For example, all repos should be forked into a personal account and changes should be submitted through Pull Requests (PRs). If you are not familiar with Git or GitHub, then you should consult some of the excellent Getting Started guides on using Git and GitHub. You can start with [*https://help.github.com/articles/set-up-git/*] (https://help.github.com/articles/set-up-git/). [*https://www.atlassian.com/git/tutorials/*](https://www.atlassian.com/git/tutorials/) is another good resource for learning about Git.
 
-In order to contribute to KBase repos and access any private repos, you need to be in the KBase group. Email India Gordon for access.
+In order to contribute to KBase repos and access any private repos, you need to be in the KBase group on GitHub. Email India Gordon for access.
 
 KBase is a complex platform and describing all of the facets of KBase is beyond the scope of a Getting Started document. Please consult these references for more details about developing for KBase.
 
@@ -105,13 +102,13 @@ Developers should start by creating any new repo in the KBaseIncubator Project s
 
 ## Getting Something into Production
 
-Getting a new service into production is beyond the scope of this Getting started guide. However, we will briefly describe the process. Prior to a service being considered for production, it needs to be reviewed to ensure that the developer is following best practices and that it will integrate into KBase. This would include:
+Getting a new service into production is beyond the scope of this Getting Started guide. However, we will briefly describe the process. Prior to a service being considered for production, it needs to be reviewed to ensure that the developer is following best practices and that it will integrate into KBase. This would include:
 
 -   The module doesn’t unnecessarily duplicate existing functionality in the system.
 
 -   The module adopts existing KBase standards for data storage and job execution.
 
--   The module is well documented and generates documentation using the appropriate method for the language (i.e. perldoc for Perl, pydoc for python, etc)
+-   The module is well documented and generates documentation using the appropriate method for the language (i.e., perldoc for Perl, pydoc for python, etc)
 
 -   The module provides unit tests and makes efforts to have good coverage.
 
@@ -121,9 +118,12 @@ Getting a new service into production is beyond the scope of this Getting starte
 
 -   The module provides documentation on the methods it uses including scientific references where appropriate.
 
-Once a module has been vetted, it can be added to configuration for the CI environment. This allows the service to be tested in a complete, but non-production environment. This will help ensure that the module interoperates with other parts of the system. Once the module has proven itself stable, it can be promoted to the “next” environment (next.kbase.us). This is meant as an early-preview of the next major release for KBase.
+-   The module implements an algorithm or a functionality that has been published in peer-reviewed journals or widely accepted as a standard approach.
 
-# Raw Notes/Remaining
+
+Once a module has been vetted, it can be added to configuration for the Continuous Integration (CI) environment. This allows the service to be tested in a complete, but non-production environment. This will help ensure that the module interoperates with other parts of the system. Once the module has proven itself stable, it can be promoted to the “next” environment (next.kbase.us). This is meant as an early preview of the next major release for KBase.
+
+# Raw Notes/Remaining 
 
 I think the remainder of these are beyond the scope and should be in other how tos…
 
@@ -137,7 +137,7 @@ I think the remainder of these are beyond the scope and should be in other how t
 
 -   Learn about the Workspace service, versioning, numeric and alphanumeric references
 
--   Understand procedure for taking ownership of Workspace name space (also belongs in “New data” handbook
+-   Understand procedure for taking ownership of Workspace name space (also belongs in “New data” handbook)
 
 -   Learn about the directory layout and Makefile targets for a new service
 
@@ -147,6 +147,8 @@ I think the remainder of these are beyond the scope and should be in other how t
 
 -   Learn how to add new upload/download method back ends to the transform service
 
--   Learn how to send compute jobs to job queue
+-   Learn how to send compute jobs to job queue and scale the workflows using AWE
+
+-   Learn how to add appropriate authentication and authorization capability to your services
 
 
