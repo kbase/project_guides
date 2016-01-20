@@ -1,0 +1,47 @@
+## Template for KBase Science Narratives 
+
+Narratives can serve different purposes. This template is for **public Narratives that are like reproducible research papers.** The general structure, images, and content of a science Narrative should resemble those of a peer-reviewed publication. 
+
+>**NOTE**: A template for Narrative tutorials (which may have different elements than science Narratives) is being developed. Stay tuned!
+
+### Author/contributor list
+(i.e., those who wrote the Narrative, not the app and method developers) 
+
+### Introduction ### (includes scientific rationale and problem statement)                    	
+- State the purpose of the research and describe its importance—that is, how will the results fit into a larger scientific problem?
+  - **NOTE: Be sure to describe WHY you performed this computational experiment in addition to describing HOW you did it.**
+- What are the specific questions or problems that are going to be addressed or answered with this analysis?
+- State the hypothesis.
+- What publications support your rationale? (Include citations and/or DOIs.)
+
+### Research Strategy/Approach
+- Describe your data collection methods. If your data is external to KBase, where did it come from, and how was it acquired?
+- Briefly describe the plan to analyze your data and evaluate the results (e.g., what steps need to be done and why?).
+- If your Narrative is long, include a numbered list of steps, linking each step to its place in the Narrative. (See Chris and team’s Narrative [here](https://narrative.kbase.us/narrative/ws.10779.obj.1 for instructions/code for doing this.)
+
+### Workflow and Results
+- At each step in the workflow, state what you’re doing and why.
+- Extensively explain the table, visualization, data object, etc., resulting from each step.
+- Point out the key outcome and explain how it feeds into the downstream step(s).
+
+### Conclusions
+- What did you learn? What message grew out of your results? Consider including tables that summarize results, as is done [here](https://narrative.kbase.us/narrative/ws.10779.obj.1).
+- How did the results relate to the hypotheses, and how has this research impacted the stated problem?
+
+### Next Steps
+- What are the next steps (i.e., what new questions emerged from your analyses and what new experiments are needed)?
+- Link to follow-on Narratives if appropriate.
+
+### References ### (hyperlink if possible)
+---
+### Notes about Images and Pre-Publication Approval 
+#### Images
+- Images are included in a Narrative by inserting a URL.
+- The images you create for a Narrative should be hosted at ??????.
+- If you want to include in your Narrative images that you didn’t create, be sure to include an attribution and ensure that you are using the image legitimately (either it’s licensed for reuse or you got permission from the image owner to use it in your publication).
+
+#### Pre-publication approval
+- Before publishing a Narrative, please share it with (communications-approval@kbase.us) for review and approval. See the [External Communications Process guide](https://github.com/kbase/project_guides/blob/master/External%20Communications%20Process.md) for more information about the pre-publication approval process.
+
+---
+For more information, see "Writing Science: How to write papers that get cited and proposals that get funded" by Joshua Schimel 221 pp. (Schimel is Chair of the Environmental Studies Program and Professor of Soil and Ecosystem Ecology, University of California, Santa Barbara)
