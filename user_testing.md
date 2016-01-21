@@ -30,16 +30,25 @@ The best way to communicate what really happened in the user test is to make a v
 
 Whether or not video is recorded, after every test each observer and facilitator should type up a brief list of the problems that they saw and any thoughts they have on how to fix them. Each of these reports should be roughly a page long, so there isn't too much reading material for people who come after. These reports can be saved along with the test plan (what was shown and asked) and video, if there is any, in a folder for dissemination to appropriate people in the project. 
  
-## When to do user testing
+## Usability Studies
 
-Early and often, but better late than never. Some good times to do user testing include:
+This section is about when to do usability *studies* (running a usability test with a set of users) and how many resources to put into each.
 
-* When you have a design of a change, but you haven't implemented anything
-* When you have started implementing a design, and have some "farmer and the cowman" (i.e. unresolvable) disagreements
-* You have an implementation but you haven't yet released it to production, and want to see if you "got it right"
+The core principle is that usability testing is *iterative*: you make something, you fix it, you test it again. This means that an essential part of the process is taking the output -- i.e., the reports mentioned in the previous section -- and transforming them into to-do items for the development team. This process is still subjective, not something that arises as an objective truth; from [1], "The point of testing is not to prove or disprove something. It's to inform your judgement". Therefore, usability studies should not be seen as a gateway, proving or disproving the usability of some product, but rather as a way of gaining a better perspective on the current usability problems, while there is still plenty of time and resources to fix it.
+
+The principle that testing informs what to fix, particularly in an agile development model, means that the most bang for the buck comes from more frequent, smaller, focused, usability studies. Each of these studies must have low overhead (otherwise you spend too much time doing usability tests), so as few as 2 users can actually be optimal -- even just 1 user could give a good "sanity check". No matter how big or complicated the product, no more than 5 users should be needed for a given usability study. As described in [2], 5 users will find almost as many usability problems as more users would. And if development resources are scarce (and when aren't they?), even this list of problems will probably need to be triaged.
+ 
+So, to summarize:
+
+* **Perform usability studies early.** Don't wait until just before release, or until it is too late to change course. From [1], "Testing one user early in the project is better than testing 50 at the end."
+* **Have 1 to 5 users per study**. Keeping the testing lightweight and small helps it actually happen frequently enough, and anyways more users are only marginally more informative.
+* **Use the results of testing to inform your judgement**. Don't try to "prove a point", or use them as a quantitative tool.
+* **Fix the problems you find**. Make sure that you are ready to act on what you learned soon after the study, i.e. reserve development resources as part of the overall testing plan.
 
 ## References
 
 This is a classic, and a quick read. Highly recommended:
 
-[1] "Don't Make Me Think", Steve Krug [website](https://www.sensible.com/dmmt.html)
+[1] "Don't Make Me Think", Steve Krug. [website](https://www.sensible.com/dmmt.html)
+
+[2] "How Many Test Users in a Usability Study?", Jakob Nielsen (2012). [website](https://www.nngroup.com/articles/how-many-test-users/)
