@@ -2,7 +2,7 @@
 
 Narratives can serve different purposes. This template is for **public Narratives that are like reproducible research papers.** The general structure, images, and content of a science Narrative should resemble those of a peer-reviewed publication. 
 
->**NOTE**: A template for Narrative tutorials (which may have different elements than science Narratives) is being developed. Stay tuned!
+>**NOTE**: A template for Narrative tutorials (which may have different elements than science Narratives) is also being developed. Stay tuned!
 
 ### Author/contributor list
 (i.e., those who wrote the Narrative, not the app and method developers) 
@@ -17,7 +17,7 @@ Narratives can serve different purposes. This template is for **public Narrative
 ### Research Strategy/Approach
 - Describe your data collection methods. If your data is external to KBase, where did it come from, and how was it acquired?
 - Briefly describe the plan to analyze your data and evaluate the results (e.g., what steps need to be done and why?).
-- If your Narrative is long, include a numbered list of steps, linking each step to its place in the Narrative. (See Chris and team’s Narrative [here](https://narrative.kbase.us/narrative/ws.10779.obj.1 for instructions/code for doing this.)
+- If your Narrative is long, include a numbered list of steps, linking each step to its place in the Narrative. (See Chris and team’s Narrative [here](https://narrative.kbase.us/narrative/ws.10779.obj.1) for instructions/code for doing this.)
 
 ### Workflow and Results
 - At each step in the workflow, state what you’re doing and why.
@@ -25,7 +25,7 @@ Narratives can serve different purposes. This template is for **public Narrative
 - Point out the key outcome and explain how it feeds into the downstream step(s).
 
 ### Conclusions
-- What did you learn? What message grew out of your results? Consider including tables that summarize results, as is done [here](https://narrative.kbase.us/narrative/ws.10779.obj.1).
+- What did you learn from your experiment? Consider including tables that summarize results, as is done [here](https://narrative.kbase.us/narrative/ws.10779.obj.1).
 - How did the results relate to the hypotheses, and how has this research impacted the stated problem?
 
 ### Next Steps
