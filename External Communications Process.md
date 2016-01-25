@@ -15,7 +15,7 @@ External communications, in this context, refers to any paper, talk, etc. that w
 
 **External communications process:**
 
-1. KBase members are responsible for generating content for their own KBase-related talks or papers. If you want to give a KBase-related talk or workshop at a meeting, make sure your local Point of Contact (Nomi, Emily, Meghan or Vivek) knows, and you will need to keep track of the deadlines yourself--the UE team is not responsible for reminding you.
+1. KBase members are responsible for generating content for their own KBase-related talks, papers or posters. If you want to give a KBase-related talk or workshop at a meeting, make sure your local Point of Contact (Nomi, Emily, Meghan or Vivek) knows, and you will need to keep track of the deadlines yourself--the UE team is not responsible for reminding you.
 2. After drafting the content for release, the lead author should send it to the External Communications Approval team for editing and approval: communications-approval@kbase.us (or pr-approval@kbase.us). This needs to be done at least two days before the deadline.
 (The External Communications Approval team includes Adam, Rick, Sergei, Bob, Fernando and Nomi.)
 3. Within two days, the External Communications Approval team will either suggest edits or approve the draft as-is. When appropriate, the team will send draft scientific communications (including Narratives) to KBase scientists for review.
