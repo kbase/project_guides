@@ -1,8 +1,8 @@
 **External Communications Process**
 
 *SUMMARY:*
-- Most KBase external communications (conference abstracts, papers, posters, etc.) are written by scientists in KBase.
-- The completed draft of any external communication should be sent to communications-approval@kbase.us for editing and approval.
+- Most KBase external communications (conference abstracts, papers, posters, public Narratives, etc.) are written by scientists in KBase.
+- The completed draft of any external communication should be sent to communications-approval@kbase.us for editing and approval before you release it externally.
 
 External communications, in this context, refers to any paper, talk, etc. that will be released publicly that is about KBase or referring to KBase in a significant way--for example, if your paper describes analyses that were performed in KBase. This includes:
 - Abstracts for conferences or workshops
