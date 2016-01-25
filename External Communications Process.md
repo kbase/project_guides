@@ -24,8 +24,9 @@ External communications, in this context, refers to any paper, talk, etc. that w
 
 *Notes:*
 - You should submit materials for review even if they consist of previously-approved text, so that we can catch previously missed mistakes or make needed updates.
-- Narratives written for public use should be reviewed and edited by the UE team before they are published. When appropriate, the UE team will send scientific Narratives to KBase scientists for review. Scientific Narratives should meet similar criteria to a peer-reviewed paper, including a rationale, methods, results and conclusions. We suggest following the Template for KBase Science Narratives (see draft at https://docs.google.com/document/d/12oASTrvoo_Gh6bN-uyAoJRY6ciCymlGVrcsVdglGGFY/edit).
+- *Narratives written for public use* should be reviewed and edited by the UE team before they are published. When appropriate, the UE team will send scientific Narratives to KBase scientists for review. Scientific Narratives should meet similar criteria to a peer-reviewed paper, including a rationale, methods, results and conclusions. We suggest following the [Template for KBase Science Narratives] (https://github.com/kbase/project_guides/blob/master/Template%20for%20KBase%20Science%20Narratives).
 - Some external communications (such as blog posts and tweets) are typically written by the UE team, but we welcome your input! This can range from a one-liner (e.g., "Review article X cited my KBase paper") to complete news items that you would like us to post on our blog at kbase.us. The UE team will review and write/edit these as needed and show the revised version to the author before posting publicly.
+- KBase material that may provide a helpful starting point (previously written abstracts, slide presentations, KBase brochure, etc.) can be found in our shared [Box folder](https://app.box.com/files/0/f/1326664630/KBaseTeam).
 - Suggested author list for KBase publications, posters, etc.:
 
 1.  First author (person who did the most work or person who is presenting the conference talk--some conferences require that to be the first author)
