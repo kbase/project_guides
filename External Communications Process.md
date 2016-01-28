@@ -16,10 +16,10 @@ External communications, in this context, refers to any paper, talk, etc. that w
 **External communications process:**
 
 1. KBase members are responsible for generating content for their own KBase-related talks, papers or posters. If you want to give a KBase-related talk or workshop at a meeting, make sure your local Point of Contact (Nomi, Emily, Meghan or Vivek) knows, and you will need to keep track of the deadlines yourself--the UE team is not responsible for reminding you.
-2. After drafting the content for release, the lead author should send it to the External Communications Approval team for editing and approval: communications-approval@kbase.us (or pr-approval@kbase.us). This needs to be done at least two days before the deadline.
+2. After drafting the content for release, the lead author should send it to the External Communications Approval team for editing and approval: communications-approval@kbase.us (or, as it was previously known, pr-approval@kbase.us). This needs to be done at least two days before the deadline.
 (The External Communications Approval team includes Adam, Rick, Sergei, Bob, Fernando and Nomi.)
 3. Within two days, the External Communications Approval team will either suggest edits or approve the draft as-is. When appropriate, the team will send draft scientific communications (including Narratives) to KBase scientists for review.
-4. If edits are suggested, the original author will review the suggested edits, incorporate them as appropriate, reply back to PR-approval with the edited document attached, and comment on what was changed.
+4. If edits are suggested, the original author will review the suggested edits, incorporate them as appropriate, reply back to communications-approval@kbase.us with the edited document attached, and comment on what was changed.
 5. Two or more people from the External Communications Approval team need to indicate their approval before the content can be released publicly. If only one approval is received in 48 hours following submission to communications-approval@kbase.us, and the content is not anything controversial or sensitive, the single approval is fine and author can release their content. The author will reply to the approval email and to the communications-approval list, and indicate they are now releasing the content.
 
 *Notes:*
