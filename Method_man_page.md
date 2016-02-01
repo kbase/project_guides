@@ -1,13 +1,15 @@
 Every KBase method / SDK module needs to have at least basic documentation in the form of a "man page."
 These man pages can be accessed from the Apps & Methods panel in the Narrative Interface by clicking the "more..."
 that appears after the app/method description in the input cell or after clicking the "..." that appears next to the method/app name and then the "more" that is thereby exposed.
-[screenshot]
+
+!["more" screenshot](https://github.com/kbase/project_guides/blob/master/images/method-man-page-images/method-more.png)
 
 The method man page is a no-frills web page that explains how a method is used. It is created from the narrative_method_spec configuration file (display.yaml) for that method.
 You can find the URL for the directory in GitHub where the config files live by looking at the bottom of the man page for the "Yaml/Spec location":
-[screenshot]
 
-For example, the man page for Build a Metabolic Model (which is a good example to look at) can be seen at https://github.com/kbase/narrative_method_specs/tree/master/methods/build_a_metabolic_model ,
+![spec location screenshot](https://github.com/kbase/project_guides/blob/master/images/method-man-page-images/man-page-spec-loc.png)
+
+For example, the man page for Build a Metabolic Model (which is a good example to look at) can be seen at https://github.com/kbase/narrative_method_specs/tree/master/methods/build_a_metabolic_model 
 and the config file that it is built from lives in https://github.com/kbase/narrative_method_specs/blob/develop/methods/build_a_metabolic_model/display.yaml .
 
 Method man pages should include:
@@ -20,11 +22,17 @@ Method man pages should include:
   * a sensisble and consistent name ("ui-name")
   * a brief description ("short-hint") that will appear in the input widget next to the parameter field
   * if needed, a longer description ("description") that pops up when the user clicks the “i" after the parameter description. The description can include HTML markup, such as hyperlinks.
-[screenshot]
+
+![param more info screenshot](https://github.com/kbase/project_guides/blob/master/images/method-man-page-images/param-more-info.png)
+
   * if appropriate, text that will appear in gray inside the parameter box when it's empty, to explain what sort of thing you should put in the box ("placeholder”)
-[screenshot]
+
+![param hint screenshot](https://github.com/kbase/project_guides/blob/master/images/method-man-page-images/gray-param-hint.png)
+
 * An explanation of how to interpret the output results or use the output visualization widget (if not totally obvious)
 * Links to any tutorials/narratorials or other useful documentation
 * References/links to publications ("publications" in yaml) or additional resources (see the example display.yaml for how to encode references to publications)
 * Screenshots ("screenshots" in yaml) of output cells or visualization widgets, if needed (optional)
+  * Screenshots should be placed in the "img" subdirectory of the method spec directory for your method
 * Icon for your method ("icon") (optional)
+  * Unclear how this works since no one seems to have assigned an icon to a method yet.
