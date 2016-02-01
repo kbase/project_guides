@@ -1,11 +1,13 @@
-Every KBase method / SDK module needs to have at least basic documentation in the form of a "man page."
+*Please note: the instructions in this guide are for non-SDK modules. The components of the method documentation should be the same for SDK modules, but the location of the documentation will be different, and method pages for SDK-wrapped methods may (in the future) contain additional content such as usage statistics.*
+
+Every KBase method / SDK module needs to have at least basic documentation in the form of a Method Details Page (also known as a "man page").
 These man pages can be accessed from the Apps & Methods panel in the Narrative Interface by clicking the "more..."
 that appears after the app/method description in the input cell or after clicking the "..." that appears next to the method/app name and then the "more" that is thereby exposed.
 
 !["more" screenshot](https://github.com/kbase/project_guides/blob/master/images/method-man-page-images/method-more.png)
 
 The method man page is a no-frills web page that explains how a method is used. It is created from the narrative_method_spec configuration file (display.yaml) for that method.
-You can find the URL for the directory in GitHub where the config files live by looking at the bottom of the man page for the "Yaml/Spec location":
+For non-SDK methods, you can find the URL for the directory in GitHub where the config files live by looking at the bottom of the man page for the "Yaml/Spec location":
 
 ![spec location screenshot](https://github.com/kbase/project_guides/blob/master/images/method-man-page-images/man-page-spec-loc.png)
 
