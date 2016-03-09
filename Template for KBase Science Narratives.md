@@ -7,7 +7,7 @@ Narratives can serve different purposes. This template is for **public Narrative
 ### Author/contributor list
 (i.e., those who wrote the Narrative, not the app and method developers) 
 
-### Introduction ### (includes scientific rationale and problem statement)                    	
+### Introduction (includes scientific rationale and problem statement)                    	
 - State the purpose of the research and describe its importance—that is, how will the results fit into a larger scientific problem?
   - **NOTE: Be sure to describe WHY you performed this computational experiment in addition to describing HOW you did it.**
 - What are the specific questions or problems that are going to be addressed or answered with this analysis?
@@ -32,7 +32,7 @@ Narratives can serve different purposes. This template is for **public Narrative
 - What are the next steps (i.e., what new questions emerged from your analyses and what new experiments are needed)?
 - Link to follow-on Narratives if appropriate.
 
-### References ### (hyperlink if possible)
+### References (hyperlink if possible)
 ---
 ### Notes about Images and Pre-Publication Approval 
 #### Images
