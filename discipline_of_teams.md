@@ -1,11 +1,14 @@
 # The Discipline of Teams
 
-J. R. Katzenbach, D. K. Smith, Harvard Business Review, March 1993.
-PubMed: http://www.ncbi.nlm.nih.gov/pubmed/10124632
+Summary of key points from the following article:
+
+> J. R. Katzenbach, D. K. Smith. The Discipline of Teams. Harvard Business Review, March 1993. [Online page (abstract + purchase full article)](https://hbr.org/product/discipline-of-teams-hbr-bestseller/R0507P-PDF-ENG)
 
 ## Not all groups are teams: How to tell the difference
 
-A "team" is *a small number of people with complementary skills who are committed to a common purpose, set of performance goals, and approach for which they hold themselves mutually accountable.* How is this different from a "working group"?
+A "team" is *a small number of people with complementary skills who are committed to a common purpose, set of performance goals, and approach for which they hold themselves mutually accountable.*
+
+How is this different from a "working group"?
 
 ### Working Group
 
