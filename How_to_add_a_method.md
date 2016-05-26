@@ -1,4 +1,6 @@
-#How to add a method to KBase - Current State
+# WARNING: This document is mostly obsolete. Please visit https://github.com/kbase/kb_sdk for documentation about using KBase's new Software Development Kit (SDK) to integrate external open source tools as KBase apps.
+
+#How to add a method to KBase
 
 **What is a Method?**
 [FIXME: What is the process for deciding whether a proposed new method should become a KBase method? How is the evaluation of the method and the initial code handled? The PR process forces at least some degree of code review whenever there's a change to the code, but how is the *initial* vetting done?]
@@ -27,6 +29,8 @@ should be proposed and reviewed by the project leadership.  If the addition mode
 it should be reviewed by the service lead.  Any development should follow the practices laid out in the Process Guide and other documented processes.
 
 **Detailed Steps**
+
+# WARNING: This document is mostly obsolete. Please visit https://github.com/kbase/kb_sdk for documentation about using KBase's new Software Development Kit (SDK) to integrate external open source tools as KBase apps.
 
 **A. Building a new Service**
 
@@ -129,3 +133,5 @@ This should be built and live in the narrative repo as follows:
 3.  Not strictly necessary, but widgets should have the same name as their filename, for simplicity. E.g., the kbaseGenomeView widget should be use the filename kbaseGenomeView.js
 4.  Register your widget in [*notebook.html*](https://github.com/kbase/narrative/blob/master/src/notebook/ipython_profiles/profile_narrative/kbase_templates/notebook.html) in the narrative repo, below the warning on line 92. This looks like a much larger mess than it is. All widgets in that block get compiled and minified together into a single kbase-narrative.min.js file.
 5.  Submit a pull request to the develop branch of the narrative repo with your widget code and changes.
+
+# WARNING: This document is mostly obsolete. Please visit https://github.com/kbase/kb_sdk for documentation about using KBase's new Software Development Kit (SDK) to integrate external open source tools as KBase apps.
