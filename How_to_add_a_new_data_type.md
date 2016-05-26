@@ -1,4 +1,4 @@
-# WARNING: This document is mostly obsolete. Please visit https://github.com/kbase/kb_sdk for documentation about using KBase's new Software Development Kit (SDK) to integrate external open source tools as KBase apps.
+# WARNING: Some of the information in this document may be obsolete. Please visit https://github.com/kbase/kb_sdk for documentation about using KBase's new Software Development Kit (SDK) to integrate external open source tools as KBase apps.
 
 # How to add a new data type to KBase
 
@@ -380,7 +380,7 @@ Standard input keywords:
 >
 > **output\_file\_name** - the file name to save as the output
 
-# WARNING: This document is mostly obsolete. Please visit https://github.com/kbase/kb_sdk for documentation about using KBase's new Software Development Kit (SDK) to integrate external open source tools as KBase apps.
+# WARNING: Some of the information in this document may be obsolete. Please visit https://github.com/kbase/kb_sdk for documentation about using KBase's new Software Development Kit (SDK) to integrate external open source tools as KBase apps.
 
 1.  Visualization of your data type
 
@@ -446,4 +446,4 @@ Standard input keywords:
 
 > You need three template files defined under your category directory: \<category\>\_header.html, \<category\>\_rows.html, and \<category\>\_expanded.html. The header file defines the table header displayed, rows defines the row contents that match the header, and expanded covers the contents of the expanded view. [FIXME: (many more details could be included here)] You will also need to modify functional-site/assets/css/search.css with field widths and other display details for your data not covered by the templates, and you will need to modify functional-site/js/search.js (need to specify what/where still) in order for the data cart to work properly for your type, because it relies on knowing the correct fields to maintain and copy for your type.
 
-# WARNING: This document is mostly obsolete. Please visit https://github.com/kbase/kb_sdk for documentation about using KBase's new Software Development Kit (SDK) to integrate external open source tools as KBase apps.
+# WARNING: Some of the information in this document may be obsolete. Please visit https://github.com/kbase/kb_sdk for documentation about using KBase's new Software Development Kit (SDK) to integrate external open source tools as KBase apps.
