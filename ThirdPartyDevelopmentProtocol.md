@@ -1,3 +1,5 @@
+# WARNING: This document is mostly obsolete. Please visit https://github.com/kbase/kb_sdk for documentation about using KBase's new Software Development Kit (SDK) to integrate external open source tools as KBase apps.
+
 # Guide to Near-Term Handling of External Developers. 
 
 Many external projects have been planning to add functionality to KBase and in some cases it is in their milestones.
@@ -41,3 +43,5 @@ The proposal and readiness review would involve:
 We will try and point possible 3rd party developers to our principles documents so they understand our standards. 
 We will also be developing standards for service/method design that are relevant (e.g. ensure you are not repackaging existing function).
 We will add the repo to our roadmap and ultimately update the schedule to reflect our estimates of when we will be able to approach integration.
+
+# WARNING: This document is mostly obsolete. Please visit https://github.com/kbase/kb_sdk for documentation about using KBase's new Software Development Kit (SDK) to integrate external open source tools as KBase apps.
