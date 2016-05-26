@@ -1,3 +1,6 @@
+# WARNING: This document is mostly obsolete. Please visit https://github.com/kbase/kb_sdk for documentation about using KBase's new Software Development Kit (SDK) to integrate external open source tools as KBase apps.
+
+
 # How do I become a developer for KBase?
 
 # How do I configure a development environment?
@@ -27,6 +30,8 @@
 > [*Getting Something into Production*](#getting-something-into-production)
 >
 > [*Raw Notes*](#raw-notesremaining)
+
+# WARNING: This document is mostly obsolete. Please visit https://github.com/kbase/kb_sdk for documentation about using KBase's new Software Development Kit (SDK) to integrate external open source tools as KBase apps.
 
 # New developer checklist:
 
@@ -151,4 +156,4 @@ I think the remainder of these are beyond the scope and should be in other how t
 
 -   Learn how to add appropriate authentication and authorization capability to your services
 
-
+# WARNING: This document is mostly obsolete. Please visit https://github.com/kbase/kb_sdk for documentation about using KBase's new Software Development Kit (SDK) to integrate external open source tools as KBase apps.
