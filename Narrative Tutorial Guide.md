@@ -1,6 +1,6 @@
 ## Narrative Tutorial Process
 
-### Process for Creating Tutorials for Apps/Workflows
+### Process for Creating Narrative Tutorials
 1) First draft of tutorials should be written by Product Owners in a Narrative after beta testing and before user testing - draft Introduction, Overview, step by step instructions (Product Owners, developers with UE input)
 
 2) Editors (UE) test steps in tutorial, transfer Narrative tutorial text to Google Doc, revise Narrative tutorial text for clarity, and provide questions/feedback to and get answers/input from product owners, then further revise as necessary.
@@ -15,7 +15,7 @@
 
 7) Narrative Tutorial made public and linked to from Narrative Library on KBase.us with blog post and social media to promote tutorial. UE and Product Owners continue to have editing privileges.
 
-### Continued management of Narrative Tutorials
+### Continued Management of Narrative Tutorials
 
 1) Product owners will communicate with UE about app updates that require changes to the Narrative tutorial and UE will update the tutorial. 
 
