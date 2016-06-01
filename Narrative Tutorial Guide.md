@@ -2,6 +2,7 @@
 
 ### Process for Creating Tutorials for Apps/Workflows
 1) First draft of tutorials should be written by Product Owners in a Narrative after beta testing and before user testing - draft Introduction, Overview, step by step instructions (Product Owners, developers with UE input)
+
 2) Editors (UE) test steps in tutorial, transfer Narrative tutorial text to Google Doc, revise Narrative tutorial text for clarity, and provide questions/feedback to and get answers/input from product owners, then further revise as necessary.
 
 3) Product owners review edits to Narrative text and accept/reject them. If edits are rejected, product owners need to provide explanation or justification. A teleconference should be scheduled to discuss issues if needed.
