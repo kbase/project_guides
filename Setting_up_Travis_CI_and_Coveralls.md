@@ -1,4 +1,21 @@
+### Travis-CI abd Coveralls ###
+
+Travis-CI is a continuous integration service integrated with Github that offers an automated build/test service for
+github based repos. Coveralls is a coverage testing service that is also integrated with Github. Both of these services
+are available free to open source projects such as KBase.
+
+# Current Travis-CI build status for KBase repos:
+
+| Repo | Develop Branch | Master Branch |
+---|---|---
+| KBase/Narrative | ![Develop Branch Build Status](https://travis-ci.org/kbase/narrative.svg?branch=develop) | ![Master Branch Build Status](https://travis-ci.org/kbase/narrative.svg?branch=master) |
+| KBase/kb_sdk | ![Develop Branch Build Status](https://travis-ci.org/kbase/kb_sdk.svg?branch=develop) | ![Master Branch Build Status](https://travis-ci.org/kbase/kb_sdk.svg?branch=master) |
+| KBase/kbase_ui | ![Develop Branch Build Status](https://travis-ci.org/kbase/kbase-ui.svg?branch=develop) | ![Master Branch Build Status](https://travis-ci.org/kbase/kbase-ui.svg?branch=master) |
+| KBase/narrative_method_store | ![Develop Branch Build Status](https://travis-ci.org/kbase/narrative_method_store.svg?branch=develop) | ![Master Branch Build Status](https://travis-ci.org/kbase/narrative_method_store.svg?branch=master) |
+| KBase/narrative_method_specs | ![Develop Branch Build Status](https://travis-ci.org/kbase/narrative_method_specs.svg?branch=develop) | ![Master Branch Build Status](https://travis-ci.org/kbase/narrative_method_specs.svg?branch=master) |
+
 # Setting up Travis-CI and Coveralls for a KBase Github repo
+
 This document will walk through the steps involved in activating Travis-CI for continuous, automated testing, along with Coveralls for reporting code coverage of tests.
 
 [Background and automated testing](#background)  
