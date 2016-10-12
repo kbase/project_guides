@@ -8,23 +8,23 @@ are available free to open source projects such as KBase.
 
 | Repo | Develop Branch | Master Branch |
 ---|---|---
-| KBase/Narrative | ![Develop Branch Build Status](https://travis-ci.org/kbase/narrative.svg?branch=develop) | ![Master Branch Build Status](https://travis-ci.org/kbase/narrative.svg?branch=master) |
-| KBase/kb_sdk | ![Develop Branch Build Status](https://travis-ci.org/kbase/kb_sdk.svg?branch=develop) | ![Master Branch Build Status](https://travis-ci.org/kbase/kb_sdk.svg?branch=master) |
-| KBase/kbase_ui | ![Develop Branch Build Status](https://travis-ci.org/kbase/kbase-ui.svg?branch=develop) | ![Master Branch Build Status](https://travis-ci.org/kbase/kbase-ui.svg?branch=master) |
-| KBase/narrative_method_store | ![Develop Branch Build Status](https://travis-ci.org/kbase/narrative_method_store.svg?branch=develop) | ![Master Branch Build Status](https://travis-ci.org/kbase/narrative_method_store.svg?branch=master) |
-| KBase/narrative_method_specs | ![Develop Branch Build Status](https://travis-ci.org/kbase/narrative_method_specs.svg?branch=develop) | ![Master Branch Build Status](https://travis-ci.org/kbase/narrative_method_specs.svg?branch=master) |
+| KBase/Narrative | [![Develop Branch Build Status](https://travis-ci.org/kbase/narrative.svg?branch=develop)](https://travis-ci.org/kbase/narrative/builds) | [![Master Branch Build Status](https://travis-ci.org/kbase/narrative.svg?branch=master)](https://travis-ci.org/kbase/narrative/builds) |
+| KBase/kb_sdk | [![Develop Branch Build Status](https://travis-ci.org/kbase/kb_sdk.svg?branch=develop)](https://travis-ci.org/kbase/kb_sdk) | [![Master Branch Build Status](https://travis-ci.org/kbase/kb_sdk.svg?branch=master)](https://travis-ci.org/kbase/kb_sdk/builds) |
+| KBase/kbase-ui | [![Develop Branch Build Status](https://travis-ci.org/kbase/kbase-ui.svg?branch=develop)](https://travis-ci.org/kbase/kbase-ui/builds) | [![Master Branch Build Status](https://travis-ci.org/kbase/kbase-ui.svg?branch=master)](https://travis-ci.org/kbase/kbase-ui/builds) |
+| KBase/narrative_method_store | [![Develop Branch Build Status](https://travis-ci.org/kbase/narrative_method_store.svg?branch=develop)](https://travis-ci.org/kbase/narrative_method_store/builds) | [![Master Branch Build Status](https://travis-ci.org/kbase/narrative_method_store.svg?branch=master)](https://travis-ci.org/kbase/narrative_method_store/builds) |
+| KBase/narrative_method_specs | [![Develop Branch Build Status](https://travis-ci.org/kbase/narrative_method_specs.svg?branch=develop)](https://travis-ci.org/kbase/narrative_method_specs/builds) | [![Master Branch Build Status](https://travis-ci.org/kbase/narrative_method_specs.svg?branch=master)](https://travis-ci.org/kbase/narrative_method_specs/builds) |
 
-# Setting up Travis-CI and Coveralls for a KBase Github repo 
+# Setting up Travis-CI and Coveralls for a KBase Github repo
 
 This document will walk through the steps involved in activating Travis-CI for continuous, automated testing, along with Coveralls for reporting code coverage of tests.
 
-[Background and automated testing](#background)  
-[Travis-CI initial setup](#travis-init)  
-[Travis-CI script configuration](#travis-config)  
-[Travis-CI test results](#travis-results)  
-[Coveralls initial setup](#coveralls-init)  
-[Coveralls configuration](#coveralls-config)  
-[KBase Challenges](#kbase-challenges)  
+[Background and automated testing](#background)
+[Travis-CI initial setup](#travis-init)
+[Travis-CI script configuration](#travis-config)
+[Travis-CI test results](#travis-results)
+[Coveralls initial setup](#coveralls-init)
+[Coveralls configuration](#coveralls-config)
+[KBase Challenges](#kbase-challenges)
 
 ### <a name="background"></a>Background and automated testing
 
