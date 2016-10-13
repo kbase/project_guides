@@ -126,6 +126,9 @@ Atom is fairly intuitive, however here are some tutorials:
    * http://flight-manual.atom.io/
    * https://medium.com/@vikram/switching-to-atom-70f18a5848a2#.p815arg9t
 
+And just for hahas:
+   * [Jupyter in Atom](https://github.com/jupyter/atom-notebook)
+
 
 ## Visual Studio Code ##
 [![Visual Studio Code Screenshot](images/VSCodeScreen.png)](https://code.visualstudio.com/)
