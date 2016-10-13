@@ -104,13 +104,13 @@ about payment unless it is licensed.
 ## Atom ##
 [![Atom Screenshot](images/AtomScreen.png)](https://atom.io/)
 
-   Atom is a popular editor with a large community of supporters, in addition to
-it's corporate sponsor, Github. It is popular and can be extended via JS code,
-as well as having a fairly huge pool of plugins and themes. The drawback is that
-it can be slow at times.
+   Atom is a popular free, open source editor with a large community of
+supporters, in addition to it's corporate sponsor, Github. It can be extended
+via JS code, as well as having a fairly huge pool of plugins and themes. The
+drawback is that it can be slow at times.
    When using Atom, we recommend installing the following plugins:
    * [linter](https://atom.io/packages/linter)
-   * [linter-flake8](https://atom.io/packages/linter-flake8)
+   * [linter-flake8](https://atom.io/packages/linter-flake8) - this linter does not seem to honor per project tox.ini files properly - more info as we work out the details
    * [linter-eslint](https://atom.io/packages/linter-eslint)
    * [git-plus](https://atom.io/packages/git-plus)
    * [minimap](https://atom.io/packages/minimap)
@@ -129,3 +129,37 @@ it can be slow at times.
 
 ## Visual Studio Code ##
 [![Visual Studio Code Screenshot](images/VSCodeScreen.png)](https://code.visualstudio.com/)
+
+   Visual Studio Code (VS Code) is a free, open source multiplatform code editor
+from Microsoft. Compared to Atom, it tends to be faster, but seems to have a
+smaller user community. From my initial tests it seems to have more convenient
+Github integration, excellent support for Typescript/JS development, but
+configuration is handled by editing JSON files which is efficient, but somewhat
+lacking usability. VS Code seems to be a good choice for front-end and NodeJS
+developers. In many regards, Visual Studio Code has a nicer feature set than
+Atom.
+
+   The following extensions are recommended for use with Visual Studio Code and
+KBase projects. Install them by using shift-ctrl/cmd-X or the extensions icon
+on the left panel.
+  * [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+  * [Python](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python) - this extension properly works with per project tox.ini files, making Visual Studio Code preferable for Python projects
+
+For emacs users, the following extension adds emacs keybindings:
+  * [vscode-emacs](https://marketplace.visualstudio.com/items?itemName=hiro-sun.vscode-emacs)
+
+
+  VS Code has a built in Markdown preview - from any markdown file,
+pressing ctrl-shift-V ( command-shift-V on Macs) will toggle between markdown
+source code and a fully rendered markdown preview.
+
+The standard github support in VS Code seems to work well without additional
+extensions.
+
+  Sadly there isn't a minimap extension available for VS Code.
+
+  VS Code has many features built in, these tutorials are a good starting point:
+
+   * https://code.visualstudio.com/docs/editor/codebasics
+   * https://code.visualstudio.com/docs/languages/python
+   * https://code.visualstudio.com/blogs/2016/02/23/introducing-chrome-debugger-for-vs-code
