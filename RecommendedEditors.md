@@ -118,11 +118,11 @@ drawback is that it can be slow at times.
    * [atomic-emacs](https://atom.io/packages/atomic-emacs) (adds familiar keyboard bindings for emacs users)
    * [language-ini](https://atom.io/packages/language-ini)
 
-   The following themes/ui provide styling similar to the popular Sublime UI:
+The following themes/ui provide styling similar to the popular Sublime UI:
    * [Seti-UI](https://atom.io/themes/seti-ui)
    * [Monokai-Seti](https://atom.io/themes/monokai-seti)
 
-   Atom is fairly intuitive, however here are some tutorials:
+Atom is fairly intuitive, however here are some tutorials:
    * http://flight-manual.atom.io/
    * https://medium.com/@vikram/switching-to-atom-70f18a5848a2#.p815arg9t
 
@@ -149,7 +149,7 @@ For emacs users, the following extension adds emacs keybindings:
   * [vscode-emacs](https://marketplace.visualstudio.com/items?itemName=hiro-sun.vscode-emacs)
 
 
-  VS Code has a built in Markdown preview - from any markdown file,
+VS Code has a built in Markdown preview - from any markdown file,
 pressing ctrl-shift-V ( command-shift-V on Macs) will toggle between markdown
 source code and a fully rendered markdown preview.
 
