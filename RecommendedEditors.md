@@ -117,10 +117,14 @@ drawback is that it can be slow at times.
    * [autocomplete-python](https://atom.io/packages/autocomplete-python)
    * [atomic-emacs](https://atom.io/packages/atomic-emacs) (adds familiar keyboard bindings for emacs users)
    * [language-ini](https://atom.io/packages/language-ini)
+   * [Symbols-list](https://github.com/kbase/project_guides/blob/master/RecommendedEditors.md) Creates a table on the right side showing all function/method names in the current file
 
 The following themes/ui provide styling similar to the popular Sublime UI:
    * [Seti-UI](https://atom.io/themes/seti-ui)
    * [Monokai-Seti](https://atom.io/themes/monokai-seti)
+
+This screenshot shows the Atom editor window when all of the packages listed above are installed and enabled:
+![Atom Fully Loaded](images/AtomFullyLoaded.png)
 
 Atom is fairly intuitive, however here are some tutorials:
    * http://flight-manual.atom.io/
