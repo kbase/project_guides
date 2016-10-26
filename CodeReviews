@@ -34,3 +34,5 @@ The reviewer must be someone outside of the group working on that particular use
 19. Error Handling: Memory is released, resources are closed, and reference counters are managed under both error and nonerror conditions.
 20. Thread Safety: Global variables are protected by locks or locking subroutines.
 21. Thread Safety: Objects accessed by multiple threads are accessed only through a lock
+
+Comments about the code should be attached to the Pull Request in Github
