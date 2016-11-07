@@ -2,7 +2,7 @@
 
 *SUMMARY:*
 - Most KBase external communications (conference abstracts, papers, posters, public Narratives, etc.) are written by scientists in KBase.
-- The completed draft of any external communication should be sent to communications-approval@kbase.us for editing and approval before you release it externally.
+- The completed draft of any external communication should be sent to the communications-approval mailing list at kbase.us for editing and approval before you release it externally.
 
 External communications, in this context, refers to any paper, talk, etc. that will be released publicly that is about KBase or referring to KBase in a significant way--for example, if your paper describes analyses that were performed in KBase. This includes:
 - Abstracts for conferences or workshops
@@ -16,11 +16,11 @@ External communications, in this context, refers to any paper, talk, etc. that w
 **External communications process:**
 
 1. KBase members are responsible for generating content for their own KBase-related talks, papers or posters. If you want to give a KBase-related talk or workshop at a meeting, make sure your local Point of Contact (Nomi, Emily, Meghan or Vivek) knows, and you will need to keep track of the deadlines yourself--the UE team is not responsible for reminding you.
-2. After drafting the content for release, the lead author should send it to the External Communications Approval team for editing and approval: communications-approval@kbase.us (or, as it was previously known, pr-approval@kbase.us). This needs to be done at least two days before the deadline.
-(The External Communications Approval team includes Adam, Rick, Sergei, Bob, Fernando and Nomi.)
+2. After drafting the content for release, the lead author should send it to the External Communications Approval team for editing and approval via the communications-approval mailing list at kbase.us (the mailing list was previously known as pr-approval). This needs to be done at least two days before the deadline.
+(The External Communications Approval team includes Adam, Chris, Bob, Fernando, Roy and Nomi.)
 3. Within two days, the External Communications Approval team will either suggest edits or approve the draft as-is. When appropriate, the team will send draft scientific communications (including Narratives) to KBase scientists for review.
-4. If edits are suggested, the original author will review the suggested edits, incorporate them as appropriate, reply back to communications-approval@kbase.us with the edited document attached, and comment on what was changed.
-5. Two or more people from the External Communications Approval team need to indicate their approval before the content can be released publicly. If only one approval is received in 48 hours following submission to communications-approval@kbase.us, and the content is not anything controversial or sensitive, the single approval is fine and author can release their content. The author will reply to the approval email and to the communications-approval list, and indicate they are now releasing the content.
+4. If edits are suggested, the original author will review the suggested edits, incorporate them as appropriate, reply back to communications-approval with the edited document attached, and comment on what was changed.
+5. Two or more people from the External Communications Approval team need to indicate their approval before the content can be released publicly. If only one approval is received in 48 hours following submission to communications-approval, and the content is not anything controversial or sensitive, the single approval is fine and author can release their content. The author will reply to the approval email and to the communications-approval list, and indicate they are now releasing the content.
 
 *Notes:*
 - You should submit materials for review even if they consist of previously-approved text, so that we can catch previously missed mistakes or make needed updates.
@@ -32,4 +32,4 @@ External communications, in this context, refers to any paper, talk, etc. that w
 1.  First author (person who did the most work or person who is presenting the conference talk--some conferences require that to be the first author)
 2.  Other people who contributed significantly to the work, including appropriate team leads who coordinated development, core developers, and Communication team lead and personnel who contributed significant editing or content to the product.
 3.  Anyone else from KBase who will be attending the conference.
-4.  Adam, Rick, Bob, Sergei [PIs], "and the KBase Team" to recognize others on the project who are not listed as authors.
+4.  Adam, Chris, Bob [PIs], "and the KBase Team" to recognize others on the project who are not listed as authors.
