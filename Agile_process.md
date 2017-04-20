@@ -326,3 +326,26 @@ If a proposal is rejected, the rejection type will be one of:
 
 This information will be recorded in the proposal ticket, so the submitter will
 have a record of the decision.
+
+
+# Remaining questions
+
+These are a few questions that arose in the previous PR regarding how the Agile
+development process and decisions are made.  We should at least clarify some of
+them:
+
+* A request for more transparency from EC on decision process: agenda and
+  outcomes, as they pertain to the development process, should be shared with
+  the team.
+ 
+* How is work outside of the sprint cycles reported, managed, or decided on? 
+
+* Does the Executive committee review work that is not part of the sprint
+  cycles? 
+
+* How do the working teams get a finer-granularity and updated description of
+  priorities and project vision? This seems critically necessary to have clear
+  objectives and goals that to plan against.  Basically, a dynamic, living
+  version of the project high-level roadmap that is updated periodically by the
+  EC.
+
