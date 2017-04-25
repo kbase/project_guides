@@ -7,7 +7,7 @@ User testing, also called "usability testing", is where one user at a time is sh
 
 ## Organization
 
-Although responsibility for participating in user testing is the responsibility of any team developing a UI component, the User Engagement team will be responsible for leading the process, including communication of the results to the whole group.
+Responsibility for user testing is the responsibility of the Product Team, which is generally responsible for engaging external customers and stakeholders. Part of this responsibility is to document and report the results of user testing, as well as propose changes that will address findings that arise during testing.
 
 Before the test, there should be a written plan of what to do during the test, i.e. either a list of tasks or a plan of what to show the users. One person should be designated the _facilitator_. They will be the main person talking and guiding the user. One or two other _observers_ can also be in the room, but don't have more than a couple since that may make many testing participants anxious or unwilling.
 
