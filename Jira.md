@@ -27,6 +27,9 @@ in your commit message. For example, if a commit id related to Jira ticket TASK-
 ( https://kbase-jira.atlassian.net/browse/TASK-674 ), you would include the "TASK-674"
 in the commit message.
 
+Here is an example of entering a commit message that ties a commit to Jira ticket TASK-704:
+![Git commit referencing TASK-704](images/GitCommitJiraLink.png "Commit message linking to jira ticket TASK-704" )
+
 It is possible to transition your Jira ticket to/from different states in the workflow by
 include #state after the ticket reference. For example, to close Task 674 you would include
 the following in the commit message that closes the ticket:
