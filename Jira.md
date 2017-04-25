@@ -44,4 +44,5 @@ commits and the status of the pull request as it gets merged into different bran
 makes it much easier to track the flow of fixes and feature requests as they propagate
 through the different branches.
 https://kbase-jira.atlassian.net/browse/TASK-674
-
+![Development Panel in Issue](images/JiraGithubIntegration.png "Development Panel in Jira Ticket" )
+![Branches Popup in Issue](images/JiraGithubPRTracking.png "Branches popup in Jira Ticket" )
