@@ -35,3 +35,13 @@ the following in the commit message that closes the ticket:
 Here is a longer document that explains the feature:
 https://confluence.atlassian.com/jirasoftwarecloud/processing-issues-with-smart-commits-788729666.html
 
+As commits are made, they are tracked in the Jira ticket. If a pull request comment
+references a Jira ticket, it is also tracked in the Jira ticket, as well as the flow
+of that particular commit through various merges.
+
+For example, if you check the "Development" section of this Jira ticket, you will find the
+commits and the status of the pull request as it gets merged into different branches. This
+makes it much easier to track the flow of fixes and feature requests as they propagate
+through the different branches.
+https://kbase-jira.atlassian.net/browse/TASK-674
+
