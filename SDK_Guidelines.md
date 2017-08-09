@@ -13,6 +13,11 @@ In order to transition an app from Development to Beta and, finally, Release, th
 1.	All components of the tool are licensed for unrestricted open source use--for example, they cannot be “Free for academic use (but commercial users must pay to use it)”.
 2.	Documentation for app is clear and includes any appropriate references (e.g., published papers on a tool or method) - See [Method Man pages document](Method_man_page.md).
 3.	The app includes a public example Narrative demonstrating the app in action on real data.
-4.	The repository contains minimal tests (e.g., at least one unit test per app with some coverage of important parameters and inputs).
+4.	The repository contains minimal tests (e.g., at least one unit test per app with some coverage of important parameters and inputs). Ideally 70% code coverage for testing, but this is an ideal and not a hard requirement
+5. All of the tests above must pass
+6. Has the code been reviewed by KBase Implementation Team staff? A basic expectation is that for Python code is that flake8 shows no errors or warnings, see [this document](https://github.com/kbase/project_guides/blob/master/RecommendedEditors.md#flake8-configuration) for details on flake8 configuration
+7. Is the provenance information for output objects properly generated? As a rule, outputting your objects using the [DataFileUtils](https://narrative.kbase.us/#catalog/modules/DataFileUtil) API will take care of filling out the provenance information. In general it is best to use [DataFileUtils](https://narrative.kbase.us/#catalog/modules/DataFileUtil) whenever possible for input and output.
+8. Is there a basic travis-ci configuration that [minimally performs a "kb-sdk validate"](https://github.com/kbaseapps/kb_Velvet/blob/master/.travis.yml), or [ideally performs a "kb-sdk test"](https://github.com/kbaseapps/kb_ballgown/blob/master/.travis.yml)
+
 
 See also: [KBase product requirements](https://github.com/kbase/roadmap/blob/master/KBase%20product%20requirements.md)
