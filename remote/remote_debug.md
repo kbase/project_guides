@@ -1,13 +1,13 @@
 Currently this guide focuses on debugging Python running inside Docker through Visual Studio Code, though some of the methods are generalizable. Further methods for debugging code remotely should be added here with a pull request.
 
 
-### Python Debug setup
+## Python Debug setup
 
 based on [https://donjayamanne.github.io/pythonVSCodeDocs/docs/debugging_remote-debugging/](https://donjayamanne.github.io/pythonVSCodeDocs/docs/debugging_remote-debugging/)
 
 You wish to debug a Python program (possibly a KBase app) in a visual debugger but that app isn't running on your local machine (possibly inside a docker container on your machine)
 
-## setting the remote machine or Docker container
+### setting the remote machine or Docker container
 
 on your local machine you should install ptvsd 3.0.0 using pip
 	pip install ptvsd==3.0.0
@@ -18,7 +18,7 @@ In Docker configuration can be done by adding these two lines to your Dockerfile
 
 if not using docker you need to somehow expose a port to your local machine and install ptvsd 3.0.0
 
-## Configuring the code for debugging
+### Configuring the code for debugging
 
 In the Python File you wish to debug add
 	import ptvsd
@@ -28,7 +28,7 @@ as well as code for configuring and attaching the debugger
     ptvsd.break_into_debugger()
 replace mysecret with whatever you would like to use, here we have used port 3000 for the debugger
 
-## Configuring VSCode
+### Configuring VSCode
 
 edit the launch.json file for your workspace settings
 
@@ -50,7 +50,7 @@ add a new configuration
 
 remote root has been set here to be configured for a KBase SDK app, host should be your remote host, set it to localhost if using Docker and link the ports when running your container
 
-## Linking Docker port to localhost
+### Linking Docker port to localhost
 
 When running docker use the -p flag to link ports. To use port 3000 inside docker with port 3000 on the local machine this means adding -p 3000:3000
 
@@ -62,7 +62,7 @@ cd $script_dir/..
 $script_dir/run_docker.sh run -v $script_dir/workdir:/kb/module/work -p 3000:3000 -e "SDK_CALLBACK_URL=$1" test/myappname:latest test
 ```
 
-## Debugging in VSCode
+### Debugging in VSCode
 
 1. First run the app remotely or inside Docker (kb-sdk test)
 2. Wait for the execution of your remote enviorment to break where you inserted the debug Python Code
