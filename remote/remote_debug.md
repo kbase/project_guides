@@ -36,7 +36,7 @@ add a new configuration
 
 ```json
 {
-	"name": "Attach to remote Python",
+    "name": "Attach to remote Python",
     "type": "python",
     "request": "attach",
     "localRoot": "${workspaceRoot}",
