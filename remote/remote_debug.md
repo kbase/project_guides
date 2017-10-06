@@ -62,7 +62,7 @@ cd $script_dir/..
 $script_dir/run_docker.sh run -v $script_dir/workdir:/kb/module/work -p 3000:3000 -e "SDK_CALLBACK_URL=$1" test/myappname:latest test
 ```
 
-##Debugging in VSCode
+## Debugging in VSCode
 
 1. First run the app remotely or inside Docker (kb-sdk test)
 2. Wait for the execution of your remote enviorment to break where you inserted the debug Python Code
