@@ -1,5 +1,4 @@
-Currently this guide focuses on debugging Python running inside Docker through Visual Studio Code, though some of the methods are generalizable. Further methods for debugging code remotely should be added here with a pull request.
-
+Currently this guide focuses on debugging Python running inside Docker through Visual Studio Code, though some of the methods are generalizable. Further methods for debugging code remotely should be added here with a pull request. With some slight changes this should also work for a truly remote machine or in Visual Studio with PTVS rather than VSCode.
 
 ## Python Debug setup
 
@@ -11,7 +10,7 @@ You wish to debug a Python program (possibly a KBase app) in a visual debugger b
 
 on your local machine you should install ptvsd 3.0.0 using pip
 	pip install ptvsd==3.0.0
-
+(it is important to use version 3.0.0 if using VSCode, newer versions use a different protocol not yet supported)
 In Docker configuration can be done by adding these two lines to your Dockerfile:
 	RUN pip install ptvsd==3.0.0
     EXPOSE 3000
@@ -29,6 +28,7 @@ as well as code for configuring and attaching the debugger
 replace mysecret with whatever you would like to use, here we have used port 3000 for the debugger
 
 ### Configuring VSCode
+note: this assumes you already have the Python extension by Don Jayamanne installed
 
 edit the launch.json file for your workspace settings
 
