@@ -192,7 +192,8 @@ an example global Json
     "editor.fontLigatures": true,
     "workbench.iconTheme": "vscode-icons",
     "python.pythonPath": "python2",
-    "python.linting.flake8Enabled": true
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false
 }
 ```
 And workspace for SDK App
