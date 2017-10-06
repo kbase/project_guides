@@ -181,7 +181,7 @@ Configuration in done through Json files, workspace settings will ovveride globa
 * For Python you will need to enable Flake8 Support and possibly configure your python path
 * If you are editing an app created using the KBase SDK then any modules you install will not be available by default to intellisense so you will need to add the lib directory: "python.autoComplete.extraPaths": ["lib/"]
 
-To open these files use ctrl-shift-p/cmd-shift-p and enter "preferences: open workspace settings" or "preferences: open user settings
+To open these files use ctrl-shift-p/cmd-shift-p and enter "preferences: open workspace settings" or "preferences: open user settings, you can also click the gear in the bottom left and then click Settings.
 
 an example global Json
 ```Json
