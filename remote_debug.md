@@ -1,5 +1,7 @@
 Currently this guide focuses on debugging Python running inside Docker through Visual Studio Code, though some of the methods are generalizable. Further methods for debugging code remotely should be added here with a pull request. With some slight changes this should also work for a truly remote machine or in Visual Studio with PTVS rather than VSCode.
 
+[![Visual Studio Code Debugging Screenshot](images/VSCodeDebugScreen.png)](https://code.visualstudio.com/)
+
 ## Python Debug setup
 
 based on [https://donjayamanne.github.io/pythonVSCodeDocs/docs/debugging_remote-debugging/](https://donjayamanne.github.io/pythonVSCodeDocs/docs/debugging_remote-debugging/)
