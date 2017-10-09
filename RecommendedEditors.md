@@ -146,27 +146,64 @@ lacking usability. VS Code seems to be a good choice for front-end and NodeJS
 developers. In many regards, Visual Studio Code has a nicer feature set than
 Atom.
 
-   The following extensions are recommended for use with Visual Studio Code and
-KBase projects. Install them by using shift-ctrl/cmd-X or the extensions icon
+   The following extensions are recommended for use with Visual Studio Code and KBase projects. Install them by using ctrl-shift-p/cmd-shift-p to open the command window and entering "extensions: install extensions" or by clicking the extensions icon
 on the left panel.
   * [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
   * [Python](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python) - this extension properly works with per project tox.ini files, making Visual Studio Code preferable for Python projects
+  * [Docker](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker)
 
 For emacs users, the following extension adds emacs keybindings:
   * [vscode-emacs](https://marketplace.visualstudio.com/items?itemName=hiro-sun.vscode-emacs)
 
 
+If you would like to use the same editor for Java as well, though this is not yet fully functional for all proejct types:
+* https://code.visualstudio.com/docs/languages/java
+* [Java-Extension-Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+Currently it will work well if you first open a java project in eclipse (and make sure all jars are referenced properly) and then later open it in VScode (it can read the files eclipse creates to understand the classpath)
+
 VS Code has a built in Markdown preview - from any markdown file,
 pressing ctrl-shift-V ( command-shift-V on Macs) will toggle between markdown
 source code and a fully rendered markdown preview.
 
-The standard github support in VS Code seems to work well without additional
-extensions.
+The standard github support in VS Code works well without additional
+extensions, but if you want even more in editor Git:
+* [git-lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
-  Sadly there isn't a minimap extension available for VS Code.
+Code minimap is a built in feature now.
 
   VS Code has many features built in, these tutorials are a good starting point:
 
    * https://code.visualstudio.com/docs/editor/codebasics
    * https://code.visualstudio.com/docs/languages/python
    * https://code.visualstudio.com/blogs/2016/02/23/introducing-chrome-debugger-for-vs-code
+
+Configuration in done through Json files, workspace settings will ovveride global settings so if you want different globals than these configurations add them to workspace settings for your project
+* For Python you will need to enable Flake8 Support and possibly configure your python path
+* If you are editing an app created using the KBase SDK then any modules you install will not be available by default to intellisense so you will need to add the lib directory: "python.autoComplete.extraPaths": ["lib/"]
+
+To open these files use ctrl-shift-p/cmd-shift-p and enter "preferences: open workspace settings" or "preferences: open user settings, you can also click the gear in the bottom left and then click Settings.
+
+an example global Json
+```Json
+{
+    "terminal.integrated.fontFamily": "Fira Code",
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    "workbench.iconTheme": "vscode-icons",
+    "python.pythonPath": "python2",
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false
+}
+```
+And workspace for SDK App
+```Json
+{
+    "python.autoComplete.extraPaths": [
+        "lib/"
+    ]
+}
+```
+
+VSCode also comes with an integrated visual debugger, debugging remotely or inside of Docker can take some configuration so there is seperate documentation for doing that
+* [remote-debug](remote_debug.md)
