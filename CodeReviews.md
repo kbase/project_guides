@@ -16,7 +16,7 @@ This is a comprehensive list of things that could be checked (in decreasing prio
 2. **Testing: Unit tests exist for new code and cover 70% of the overall code. Needly to say, the unit tests must pass.**
 3. **Testing: Integration tests that cover reasonable example usages exist and the code passes**
 4. **Testing: Unit and integration tests are added for new code paths or behaviors.**
-5. **Testing: A Travis-CI .travis.yml file exists and works properly to run kb-sdk validate on a module upon checkin.** For "extra credit" the Travis configuration can run through unit tests and code coverage reports, however concerns about properly managing KBase credentials in Travis-CI make this optional and not required (until Mini-KBase is ready)
+5. **Testing: A Travis-CI .travis.yml file exists and works properly to run kb-sdk validate on a module upon checkin.** For "extra credit" the Travis configuration can run through unit tests and code coverage reports, however concerns about properly managing KBase credentials in Travis-CI make this currently (October 2017) optional. Must make use of [Travis CI encrypted variables](https://docs.travis-ci.com/user/environment-variables/#Defining-encrypted-variables-in-.travis.yml) and not cleartext credentials
 5. **Documentation: All methods are commented in clear language.**
 5. **Make sure that workspace references are used to store object references, not conventional names, and that actual @id type is used, not string type**
 5. **Verify that objects updated/created have proper provenance generated - typically by using standard utility modules such as DataFileUtils**
