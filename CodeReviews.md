@@ -11,7 +11,7 @@ accepted. These kind of lightweight reviews seem to hit the 80/20 rule for code 
 
 The reviewer must be someone outside of the group working on that particular user story, and ideally someone who is a downstream consumer of that service. The commits being reviewed for merge should be small - no more than a week's worth of development (preferably only a couple of days worth). This approach enshrines rapid, actionable feedback on what is being developed so that groups are not working for long periods of time without constructive feedback on their work products. Hopefully this will surface disconnects between what a team believes it should be building, and what other teams believe they should be building - in lieu of strict formal requirements, we perform constant lightweight reviews of the code and incremental integration testing.
 
- Here is a comprehensive list of things that could be checked for (in decreasing priority). Only the top 7 need to be "checked off", the rest are general guidelines for problems that may be found in code:
+ Here is a comprehensive list of things that could be checked for (in decreasing priority). Only the top 8 need to be "checked off", the rest are general guidelines for problems that may be found in code:
 
 1. **Testing: Code passed static analysis with no errors or coding convention violations**
 2. **Testing: Unit tests exist and cover 70% of the code and pass**
@@ -20,6 +20,7 @@ The reviewer must be someone outside of the group working on that particular use
 5. **Testing: A Travis-CI .travis.yml file exists and works properly to run kb-sdk validate on a module upon checkin.** For "extra credit" the Travis configuration can run through unit tests and code coverage reports, however concerns about properly managing KBase credentials in Travis-CI make this optional and not required (until Mini-KBase is ready)
 5. **Documentation: All methods are commented in clear language.**
 5. **Make sure that workspace references are used to store object references, not conventional names, and that actual @id type is used, not string type**
+5. **Verify that objects updated/created have proper provenance generated - typically by using standard utility modules such as DataFileUtils**
 6. Documentation: Describe what happens with corner-case input.
 7. Testing: Unit tests cover errors and invalid parameter cases.
 8. Documentation: Complex algorithms are explained and justified.
