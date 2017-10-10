@@ -19,7 +19,8 @@ The reviewer must be someone outside of the group working on that particular use
 4. **Testing: Unit and integration tests are added for new code paths or behaviors.**
 5. **Testing: A Travis-CI .travis.yml file exists and works properly to run kb-sdk validate on a module upon checkin.** For "extra credit" the Travis configuration can run through unit tests and code coverage reports, however concerns about properly managing KBase credentials in Travis-CI make this optional and not required (until Mini-KBase is ready)
 5. **Documentation: All methods are commented in clear language.**
-6. **Documentation: Describe what happens with corner-case input.**
+5. **Make sure that workspace references are used to store object references, not conventional names, and that actual @id type is used, not string type**
+6. Documentation: Describe what happens with corner-case input.
 7. Testing: Unit tests cover errors and invalid parameter cases.
 8. Documentation: Complex algorithms are explained and justified.
 9. Documentation: Code that depends on non-obvious behavior in external libraries is documented with reference to external documentation.
