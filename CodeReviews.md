@@ -6,15 +6,14 @@ References:
 * [Atlassian article on code reviews](https://www.atlassian.com/agile/code-reviews)
 * [Review of effective Code Review Practices](http://www.ibm.com/developerworks/rational/library/11-proven-practices-for-peer-review/)
 
-The idea is to have a standard checklist of high value things to check for, and perform the review for smaller chunks of without needing to schedule facetime. It is very specific and targeted and the goal is for it to take something on either side of 30 minutes when the reviewer has some time to do it "asynchronously". The review would happen before a merge or pull request would be 
-accepted. These kind of lightweight reviews seem to hit the 80/20 rule for code review benefits.
+The goal is to have smaller code reviews that target specific fixes or new functionality along with a standard checklist of high value things to look for. Pull requests should only contain 100-400 lines of new code (not counting unit test code), and a code review should take 30-90 minutes to complete "asynchronously" (don't need to schedule face time). The review would happen before a merge or pull request is accepted. These kinds of lightweight reviews have been shown to catch a majority of software defects balanced against lowering the review burden on developers.
 
-The reviewer must be someone outside of the group working on that particular user story, and ideally someone who is a downstream consumer of that service. The commits being reviewed for merge should be small - no more than a week's worth of development (preferably only a couple of days worth). This approach enshrines rapid, actionable feedback on what is being developed so that groups are not working for long periods of time without constructive feedback on their work products. Hopefully this will surface disconnects between what a team believes it should be building, and what other teams believe they should be building - in lieu of strict formal requirements, we perform constant lightweight reviews of the code and incremental integration testing.
+The reviewer must be someone outside of the group working on that particular user story, and ideally someone who is a downstream consumer of that service.
 
- Here is a comprehensive list of things that could be checked for (in decreasing priority). Only the top 8 need to be "checked off", the rest are general guidelines for problems that may be found in code:
+This is a comprehensive list of things that could be checked (in decreasing priority). Only the top 8 need to be "checked off", the rest are general guidelines for problems that may be found in code:
 
 1. **Testing: Code passed static analysis with no errors or coding convention violations**
-2. **Testing: Unit tests exist and cover 70% of the code and pass**
+2. **Testing: Unit tests exist for new code and cover 70% of the overall code. Needly to say, the unit tests must pass.**
 3. **Testing: Integration tests that cover reasonable example usages exist and the code passes**
 4. **Testing: Unit and integration tests are added for new code paths or behaviors.**
 5. **Testing: A Travis-CI .travis.yml file exists and works properly to run kb-sdk validate on a module upon checkin.** For "extra credit" the Travis configuration can run through unit tests and code coverage reports, however concerns about properly managing KBase credentials in Travis-CI make this optional and not required (until Mini-KBase is ready)
