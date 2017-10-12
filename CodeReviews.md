@@ -14,7 +14,8 @@ This is a comprehensive list of things that could be checked (in decreasing prio
 
 1. **Testing: Code passed static analysis with no errors or coding convention violations**
 2. **Testing: Unit tests exist for new code and cover 70% of the overall code. Needly to say, the unit tests must pass.**
-2.1 **If this is a bug fix, is it possible to include a new test for this bug in the test suite?**
+  2.1 **If this is a bug fix, is it possible to include a new test for this bug in the test suite?**  
+  2.1 **For a given level of coverage, it is better to have more granularity than less.**  
 3. **Testing: Integration tests that cover reasonable example usages exist and the code passes**
 4. **Testing: Unit and integration tests are added for new code paths or behaviors.**
 5. **Testing: A Travis-CI .travis.yml file exists and works properly to run kb-sdk validate on a module upon checkin.** For "extra credit" the Travis configuration can run through unit tests and code coverage reports, however concerns about properly managing KBase credentials in Travis-CI make this currently (October 2017) optional. Must make use of [Travis CI encrypted variables](https://docs.travis-ci.com/user/environment-variables/#Defining-encrypted-variables-in-.travis.yml) and not cleartext credentials
