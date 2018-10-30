@@ -15,3 +15,15 @@ Dockerhub is where all KBase core services docker images are kept, as well as wi
 ![Dockerhub build status](images/DockerhubBuildStatus.png)
 1. If the build completes successfully, it should result in a new Docker image listed under the Tags tab:  
 ![Dockerhub image tags](images/DockerhubImageTags.png)
+
+## Notes/References ##
+
+* Dockerfiles for images should contain the following metadata fields as a "LABEL" directive (see the sample Dockerfile for details )
+  * org.label-schema.build-date
+  * org.label-schema.vcs-url
+  * org.label-schema.vcs-ref
+  * org.label-schema.schema-version
+  * us.kbase.vcs-branch
+  * maintainer
+* Overview of how to setup Dockerhub Builds: https://docs.docker.com/docker-hub/builds/
+* Notes on environment variables available to the scripts: https://docs.docker.com/docker-cloud/builds/advanced/
