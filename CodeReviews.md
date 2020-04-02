@@ -13,7 +13,7 @@ The reviewer must be someone outside of the group working on that particular use
 This is a comprehensive list of things that could be checked (in decreasing priority). Only the top 8 need to be "checked off", the rest are general guidelines for problems that may be found in code:
 
 1. **Testing: Code passed static analysis with no errors or coding convention violations**
-2. **Testing: Unit tests exist for new code and cover 70% of the overall code. Needly to say, the unit tests must pass.**  
+2. **Testing: Unit tests exist for new code and cover 70% of the overall code. Needless to say, the unit tests must pass.**  
 2.1 **If this is a bug fix, is it possible to include a new test for this bug in the test suite?**  
 2.2 **For a given level of coverage, it is better to have more granularity than less.**  
 3. **Testing: Integration tests that cover reasonable example usages exist and the code passes**
