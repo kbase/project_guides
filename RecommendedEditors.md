@@ -19,7 +19,7 @@ for the overall KBase developer community.
 
 ## Python
 
-For Python, our standard is Python 2.7.x and the use of flake8 to enforce
+For Python, our standard is Python 3.6.x and the use of flake8 to enforce
 [PEP8/pycodestyle](https://www.python.org/dev/peps/pep-0008/) and
 [pyflakes](https://pypi.python.org/pypi/pyflakes) on new code. This will require
 that developers install the python package flake8 via
