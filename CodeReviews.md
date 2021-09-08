@@ -18,7 +18,7 @@ This is a comprehensive list of things that could be checked (in decreasing prio
 2.2 **For a given level of coverage, it is better to have more granularity than less.**  
 3. **Testing: Integration tests that cover reasonable example usages exist and the code passes**
 4. **Testing: Unit and integration tests are added for new code paths or behaviors.**
-5. **Testing: A Travis-CI .travis.yml file exists and works properly to run kb-sdk validate on a module upon checkin.** For "extra credit" the Travis configuration can run through unit tests and code coverage reports, however concerns about properly managing KBase credentials in Travis-CI make this currently (October 2017) optional. Must make use of [Travis CI encrypted variables](https://docs.travis-ci.com/user/environment-variables/#Defining-encrypted-variables-in-.travis.yml) and not cleartext credentials
+5. **Testing: A Github actions workflow is in the repo and works properly to run kb-sdk validate on a module upon checkin, or the equivalent grandfathered Travis-CI setup ** For "extra credit" the configuration can run through unit tests and code coverage reports. Tests should make use of the [secrets available in the KBase Github Repository](https://github.com/organizations/kbase/settings/secrets/actions) for authentication  and not cleartext credentials
 5. **Documentation: All methods are commented in clear language.**
 5. **Make sure that workspace references are used to store object references, not conventional names, and that actual @id type is used, not string type**
 5. **Verify that objects updated/created have proper provenance generated - typically by using standard utility modules such as DataFileUtils**
