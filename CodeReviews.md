@@ -22,21 +22,26 @@ This is a comprehensive list of things that could be checked (in decreasing prio
 5. **Documentation: All methods are commented in clear language.**
 5. **Make sure that workspace references are used to store object references, not conventional names, and that actual @id type is used, not string type**
 5. **Verify that objects updated/created have proper provenance generated - typically by using standard utility modules such as DataFileUtils**
-6. Documentation: Describe what happens with corner-case input.
-7. Testing: Unit tests cover errors and invalid parameter cases.
-8. Documentation: Complex algorithms are explained and justified.
-9. Documentation: Code that depends on non-obvious behavior in external libraries is documented with reference to external documentation.
-10. Documentation: Incomplete code is indicated with appropriate distinctive markers (e.g. “TODO” or “FIXME”).
-11. Documentation: User-facing documentation is updated (online help, contextual help, tool-tips, version history).
-12. Testing: Possible null pointers always checked before use.
-13. Testing: Array indexes checked to avoid out-of-bound errors.
-14. Testing: Don’t write new code that is already implemented in an existing, tested API.
-15. Testing: New code fixes/implements the issue in question.
-16. Error Handling: Invalid parameter values are handled properly early in the method.
-17. Error Handling: Error values of null pointers from method invocations are checked.
-18. Error Handling: Error handlers clean up state and resources no matter where an error occurs.
-19. Error Handling: Memory is released, resources are closed, and reference counters are managed under both error and nonerror conditions.
-20. Thread Safety: Global variables are protected by locks or locking subroutines.
-21. Thread Safety: Objects accessed by multiple threads are accessed only through a lock
+
+
+
+The following items are good coding practices that developers should aspire to in their code, but are not strict requirements for code reviews.
+
+1. Documentation: Describe what happens with corner-case input.
+2. Testing: Unit tests cover errors and invalid parameter cases.
+3. Documentation: Complex algorithms are explained and justified.
+4. Documentation: Code that depends on non-obvious behavior in external libraries is documented with reference to external documentation.
+5. Documentation: Incomplete code is indicated with appropriate distinctive markers (e.g. “TODO” or “FIXME”).
+6. Documentation: User-facing documentation is updated (online help, contextual help, tool-tips, version history).
+7. Testing: Possible null pointers always checked before use.
+8. Testing: Array indexes checked to avoid out-of-bound errors.
+9. Testing: Don’t write new code that is already implemented in an existing, tested API.
+10. Testing: New code fixes/implements the issue in question.
+11. Error Handling: Invalid parameter values are handled properly early in the method.
+12. Error Handling: Error values of null pointers from method invocations are checked.
+13. Error Handling: Error handlers clean up state and resources no matter where an error occurs.
+14. Error Handling: Memory is released, resources are closed, and reference counters are managed under both error and nonerror conditions.
+15. Thread Safety: Global variables are protected by locks or locking subroutines.
+16. Thread Safety: Objects accessed by multiple threads are accessed only through a lock
 
 Comments about the code should be attached to the Pull Request in Github
